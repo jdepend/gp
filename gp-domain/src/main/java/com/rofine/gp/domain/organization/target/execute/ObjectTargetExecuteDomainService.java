@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,17 +33,17 @@ public class ObjectTargetExecuteDomainService {
 
 	@Autowired
 	private ApplicationContext applicationContext;
+	
+	@Autowired
+	@Qualifier(value="deptObjectTargetExecuteDataLoader")
+	private ObjectTargetExecuteDataLoader loader;
 
 	public List<ObjectTargetExecute> getFillingExecutes(String schemeId, User user) {
-		Date sysDate = DateUtil.getSysDate();
-		return executeRepo.findBySchemeIdAndObjectCodeAndStateAndStartDateLessThanAndEndDateGreaterThan(schemeId,
-				user.getDeptId(), ObjectTargetExecute.State_Filling, sysDate, sysDate);
+		return loader.getFillingExecutes(schemeId, user);
 	}
 
 	public List<ObjectTargetExecute> getEvaluatingExecutes(String schemeId, User user) {
-		Date sysDate = DateUtil.getSysDate();
-		return executeRepo.findBySchemeIdAndSubjectIdAndStateAndStartDateLessThanAndEndDateGreaterThan(schemeId,
-				user.getDeptId(), ObjectTargetExecute.State_Evaluating, sysDate, sysDate);
+		return loader.getEvaluatingExecutes(schemeId, user);
 	}
 
 	public List<ObjectTargetExecute> getOperatedExecutes(String schemeId, User user) {

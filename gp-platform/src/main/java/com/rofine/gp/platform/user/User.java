@@ -1,5 +1,7 @@
 package com.rofine.gp.platform.user;
 
+import java.util.List;
+
 public interface User {
 
 	public String getId();
@@ -17,4 +19,8 @@ public interface User {
 	public String getOrgId();
 
 	public void setOrgId(String orgId);
+
+	public List<String> getRoleIds();
+
+	public void setRoleIds(List<String> roleIds);
 }

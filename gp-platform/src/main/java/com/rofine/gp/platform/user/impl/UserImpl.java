@@ -1,8 +1,10 @@
 package com.rofine.gp.platform.user.impl;
 
+import java.util.List;
+
 import com.rofine.gp.platform.user.User;
 
-public class UserImpl implements User{
+public class UserImpl implements User {
 
 	private String id;
 
@@ -11,6 +13,8 @@ public class UserImpl implements User{
 	private String deptId;
 
 	private String orgId;
+
+	private List<String> roleIds;
 
 	public String getId() {
 		return id;
@@ -42,5 +46,15 @@ public class UserImpl implements User{
 
 	public void setOrgId(String orgId) {
 		this.orgId = orgId;
+	}
+
+	@Override
+	public List<String> getRoleIds() {
+		return this.roleIds;
+	}
+
+	@Override
+	public void setRoleIds(List<String> roleIds) {
+		this.roleIds = roleIds;
 	}
 }
