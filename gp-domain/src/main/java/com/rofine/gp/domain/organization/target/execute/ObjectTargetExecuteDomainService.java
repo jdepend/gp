@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
-import com.rofine.gp.domain.organization.target.scheme.SchemeStartedEvent;
 import com.rofine.gp.domain.organization.target.scheme.Target;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.util.DateUtil;

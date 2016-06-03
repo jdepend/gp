@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Login</title>
-<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 	<form name="loginForm" method="POST">
 		<div>
-			<label for="schemeName">用户Id:</label> <input type="text"
-				name="id" th:value="${userId}" />
+			<label for="schemeName">用户Id:</label> <input type="text" name="id"
+				th:value="${userId}" />
 		</div>
 		<div>
 			<label for="schemeName">orgId:</label> <input type="text"
@@ -20,6 +20,10 @@
 		<div>
 			<label for="schemeName">deptId:</label> <input type="text"
 				name="deptId" th:value="${deptId}" />
+		</div>
+		<div>
+			<label for="schemeName">roleIds:</label> <input type="text"
+				name="roleIds" th:value="${roleIds}" />
 		</div>
 		<div>
 			<button type="submit">submit</button>
