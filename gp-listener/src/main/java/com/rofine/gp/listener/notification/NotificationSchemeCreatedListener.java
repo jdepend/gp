@@ -2,6 +2,7 @@ package com.rofine.gp.listener.notification;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.rofine.gp.application.notification.NotificationService;
