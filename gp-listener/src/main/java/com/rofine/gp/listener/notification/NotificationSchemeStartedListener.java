@@ -1,4 +1,4 @@
-package com.rofine.gp.listener;
+package com.rofine.gp.listener.notification;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Service;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.rofine.gp.domain.organization.target.scheme.SchemeStartedEvent;
 
 @Service
-public class TestListener implements ApplicationListener<SchemeStartedEvent> {
+public class NotificationSchemeStartedListener implements ApplicationListener<SchemeStartedEvent> {
 
 	@Override
 	public void onApplicationEvent(SchemeStartedEvent event) {
