@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.rofine.gp.platform.bean.ApplicationContextUtil;
@@ -13,6 +14,7 @@ import com.rofine.gp.platform.bean.ApplicationContextUtil;
 @EnableJpaRepositories(basePackages = { "com.rofine.gp.*" })
 @EntityScan(basePackages = { "com.rofine.gp.*" })
 @ComponentScan(basePackages = { "com.rofine.gp.*" })
+@ImportResource(locations={"classpath:application-bean.xml"})
 public class Application {
 
 	public static void main(String[] args) {
