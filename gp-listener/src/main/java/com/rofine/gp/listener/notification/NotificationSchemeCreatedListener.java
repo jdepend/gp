@@ -21,7 +21,9 @@ public class NotificationSchemeCreatedListener implements ApplicationListener<Sc
 		
 		NotificationVO notificationVO = new NotificationVO();
 		
-		//notificationVO.setSourceId(scheme.getc);
+		notificationVO.setSourceId(scheme.getCreator());
+		notificationVO.addReceiver("xxx");
+		notificationVO.setMessage("msg");
 		
 		notificationService.notify(notificationVO );
 	}

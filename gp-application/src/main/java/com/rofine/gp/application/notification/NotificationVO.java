@@ -1,12 +1,13 @@
 package com.rofine.gp.application.notification;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationVO {
 
 	private String message;
 
-	private List<String> receivers;
+	private List<String> receivers = new ArrayList<String>();
 
 	private String sourceId;
 
@@ -24,6 +25,10 @@ public class NotificationVO {
 
 	public void setReceivers(List<String> receivers) {
 		this.receivers = receivers;
+	}
+	
+	public void addReceiver(String receiver){
+		this.receivers.add(receiver);
 	}
 
 	public String getSourceId() {

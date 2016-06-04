@@ -17,5 +17,10 @@
 			<artifactId>gp-application</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.rofine.gp</groupId>
+			<artifactId>gp-listener</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
 	</dependencies>
 </project>
