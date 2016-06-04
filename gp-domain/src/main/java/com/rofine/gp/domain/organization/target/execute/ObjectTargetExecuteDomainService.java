@@ -34,7 +34,7 @@ public class ObjectTargetExecuteDomainService {
 	private ApplicationContext applicationContext;
 	
 	@Autowired
-	@Qualifier(value="deptObjectTargetExecuteDataLoader")
+	@Qualifier(value="objectTargetExecuteDataLoader")
 	private ObjectTargetExecuteDataLoader loader;
 
 	public List<ObjectTargetExecute> getFillingExecutes(String schemeId, User user) {
