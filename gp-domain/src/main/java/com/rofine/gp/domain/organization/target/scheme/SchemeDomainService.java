@@ -15,6 +15,8 @@ import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
 import com.rofine.gp.domain.organization.target.target.score.TargetScoreCalculatorFactory;
 import com.rofine.gp.platform.exception.GpException;
+import com.rofine.gp.platform.user.User;
+import com.rofine.gp.platform.util.DateUtil;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -97,8 +99,12 @@ public class SchemeDomainService {
 		applicationContext.publishEvent(new SchemeStartedEvent(scheme));
 	}
 
-	public void createScheme(Scheme scheme) {
+	public void createScheme(Scheme scheme, User user) {
 		scheme.setState(Scheme.State_Init);
+		scheme.setCreateDate(DateUtil.getSysDate());
+		scheme.setCreateOrg(user.getOrgId());
+		scheme.setCreator(user.getId());
+		
 		scheme.save();
 		
 		applicationContext.publishEvent(new SchemeCreatedEvent(scheme));

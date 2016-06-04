@@ -2,9 +2,8 @@
 
 package com.rofine.gp.domain.organization.target.scheme;
 
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,7 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.persistence.UniqueConstraint;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -51,6 +49,15 @@ public class Scheme extends IdEntity {
 
 	@OneToMany(mappedBy = "scheme", cascade = { CascadeType.ALL })
 	private List<SchemeObject> schemeObjects;
+
+	@Column
+	private String creator;
+
+	@Column(name = "create_date")
+	private Date createDate;
+
+	@Column(name = "create_org")
+	private String createOrg;
 
 	public static final String State_Init = "init";
 
@@ -219,4 +226,29 @@ public class Scheme extends IdEntity {
 	public void setSchemeObjects(List<SchemeObject> schemeObjects) {
 		this.schemeObjects = schemeObjects;
 	}
+
+	public String getCreator() {
+		return creator;
+	}
+
+	public void setCreator(String creator) {
+		this.creator = creator;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public String getCreateOrg() {
+		return createOrg;
+	}
+
+	public void setCreateOrg(String createOrg) {
+		this.createOrg = createOrg;
+	}
+
 }
