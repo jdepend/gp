@@ -16,6 +16,7 @@ import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObjectVO;
 import com.rofine.gp.domain.organization.target.scheme.Target;
 import com.rofine.gp.domain.organization.target.scheme.TargetType;
+import com.rofine.gp.platform.user.User;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -53,9 +54,8 @@ public class PlanAppService {
 		schemeDomainService.startScheme(schemeId);
 	}
 
-	public void createScheme(Scheme scheme) {
-		schemeDomainService.createScheme(scheme);
-
+	public void createScheme(Scheme scheme, User user) {
+		schemeDomainService.createScheme(scheme, user);
 	}
 
 	public void createTarget(Target target) throws TargetException {
