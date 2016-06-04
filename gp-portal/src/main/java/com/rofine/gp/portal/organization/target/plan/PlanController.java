@@ -22,6 +22,9 @@ import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
 import com.rofine.gp.domain.organization.target.scheme.Target;
 import com.rofine.gp.domain.organization.target.scheme.TargetType;
+import com.rofine.gp.platform.exception.GpException;
+import com.rofine.gp.platform.user.User;
+import com.rofine.gp.platform.user.UserUtil;
 
 @Controller
 @RequestMapping(value = "/scheme")
@@ -38,9 +41,11 @@ public class PlanController {
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String, Object> createScheme(@ModelAttribute("scheme") Scheme scheme) {
+	public Map<String, Object> createScheme(@ModelAttribute("scheme") Scheme scheme) throws GpException {
+		
+		User user = UserUtil.getUser();
 
-		planAppService.createScheme(scheme);
+		planAppService.createScheme(scheme, user);
 
 		Map<String, Object> rtn = new HashMap<String, Object>();
 
