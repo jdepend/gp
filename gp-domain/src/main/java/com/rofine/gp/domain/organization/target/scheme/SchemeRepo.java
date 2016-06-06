@@ -2,8 +2,8 @@
 
 package com.rofine.gp.domain.organization.target.scheme;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface SchemeRepo extends CrudRepository<Scheme, String> {
+public interface SchemeRepo extends PagingAndSortingRepository<Scheme, String> {
 
 }

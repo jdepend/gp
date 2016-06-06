@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -43,7 +46,7 @@ public class PlanController {
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Object> createScheme(@ModelAttribute("scheme") SchemeVO scheme) throws GpException {
-		
+
 		User user = UserUtil.getUser();
 
 		planAppService.createScheme(scheme, user);
@@ -55,6 +58,17 @@ public class PlanController {
 
 		return rtn;
 
+	}
+
+	@RequestMapping(value = "/list/page/{page}/size/{size}", method = RequestMethod.GET)
+	public String listScheme(Model model, @PathVariable int page, @PathVariable int size) {
+
+		Pageable pageable = new PageRequest(page, size);
+		Page<SchemeVO> schemes = planAppService.listScheme(pageable);
+
+		model.addAttribute("schemes", schemes);
+
+		return "scheme_list";
 	}
 
 	@RequestMapping(value = "/{schemeId}/object/create", method = RequestMethod.GET)
@@ -79,7 +93,7 @@ public class PlanController {
 		return rtn;
 
 	}
-	
+
 	@RequestMapping(value = "/{schemeId}/target/type/create", method = RequestMethod.GET)
 	public String createRootTargetType(@PathVariable String schemeId, Model model) {
 
@@ -87,10 +101,11 @@ public class PlanController {
 
 		return "target_type_root_create";
 	}
-	
+
 	@RequestMapping(value = "/{schemeId}/target/type/create", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String, Object> createTargetType(@ModelAttribute("targetType") TargetType targetType) throws TargetException {
+	public Map<String, Object> createTargetType(@ModelAttribute("targetType") TargetType targetType)
+			throws TargetException {
 
 		planAppService.createTargetType(targetType);
 
@@ -102,21 +117,20 @@ public class PlanController {
 		return rtn;
 
 	}
-	
+
 	@RequestMapping(value = "/{schemeId}/target/type/{parentId}/target/type/create", method = RequestMethod.GET)
 	public String createChildTargetType(@PathVariable String schemeId, @PathVariable String parentId, Model model) {
-		
+
 		model.addAttribute("schemeId", schemeId);
 		model.addAttribute("parentId", parentId);
-		
+
 		return "target_type_child_create";
 	}
-	
-
 
 	@RequestMapping(value = "/{schemeId}/target/type/{parentId}/target/type/create", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String, Object> createTargetType(@PathVariable String parentId, @ModelAttribute("targetType") TargetType targetType) throws TargetException {
+	public Map<String, Object> createTargetType(@PathVariable String parentId,
+			@ModelAttribute("targetType") TargetType targetType) throws TargetException {
 
 		planAppService.createTargetType(targetType);
 
@@ -151,9 +165,9 @@ public class PlanController {
 		return rtn;
 
 	}
-	
+
 	@RequestMapping(value = "/{schemeId}/target/type/{targetTypeId}/target/create", method = RequestMethod.GET)
-	public String createLefTarget(@PathVariable String schemeId, @PathVariable String targetTypeId,  Model model) {
+	public String createLefTarget(@PathVariable String schemeId, @PathVariable String targetTypeId, Model model) {
 
 		model.addAttribute("schemeId", schemeId);
 		model.addAttribute("targetTypeId", targetTypeId);
@@ -175,10 +189,10 @@ public class PlanController {
 		return rtn;
 
 	}
-	
+
 	@RequestMapping(value = "/{schemeId}/target/{targetId}/update", method = RequestMethod.GET)
 	public String updateTarget(@PathVariable String schemeId, @PathVariable String targetId, Model model) {
-		
+
 		Target target = planAppService.getTarget(schemeId, targetId);
 
 		model.addAttribute("target", target);
@@ -225,12 +239,12 @@ public class PlanController {
 		return rtn;
 
 	}
-	
+
 	/**
-	 * @throws TargetException 
+	 * @throws TargetException
 	 * @roseuid 573C0E4F033F
 	 */
-	@RequestMapping(value = "/{schemeId}/start", method = {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value = "/{schemeId}/start", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public Map<String, Object> start(@PathVariable String schemeId) throws TargetException {
 

@@ -3,9 +3,14 @@
 package com.rofine.gp.application.organization.target.plan;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -93,5 +98,32 @@ public class PlanAppService {
 
 	public void updateTarget(Target target) throws TargetException {
 		schemeDomainService.updateTarget(target);
+	}
+
+	public Page<SchemeVO> listScheme(Pageable pageable) {
+		
+		Page<Scheme> schemes = schemeDomainService.listScheme(pageable);
+		
+		List<String> schemeIds = new ArrayList<String>();
+		for(Scheme scheme : schemes.getContent()){
+			schemeIds.add(scheme.getId());
+		}
+		
+		List<SchemeExt> schemeExts = schemeExtRepo.findByIdIn(schemeIds);
+		Map<String, SchemeExt> schemeExtMap = new HashMap<String, SchemeExt>();
+		for(SchemeExt schemeExt : schemeExts){
+			schemeExtMap.put(schemeExt.getId(), schemeExt);
+		}
+		
+		List<SchemeVO> schemeList = new ArrayList<SchemeVO>();
+		SchemeVO schemeVO;
+		for(Scheme scheme : schemes){
+			schemeVO = new SchemeVO(scheme, schemeExtMap.get(scheme.getId()));
+			schemeList.add(schemeVO);
+		}
+		
+		Page<SchemeVO> schemePage = new PageImpl<SchemeVO>(schemeList, pageable, schemes.getTotalElements());
+		
+		return schemePage;
 	}
 }

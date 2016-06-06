@@ -27,6 +27,19 @@ public class SchemeVO {
 
 	private String createOrg;
 
+	public SchemeVO() {
+		super();
+	}
+
+	public SchemeVO(Scheme scheme, SchemeExt schemeExt) {
+		if (scheme != null) {
+			BeanUtils.copyProperties(scheme, this);
+		}
+		if (schemeExt != null) {
+			BeanUtils.copyProperties(schemeExt, this);
+		}
+	}
+
 	public String getId() {
 		return id;
 	}

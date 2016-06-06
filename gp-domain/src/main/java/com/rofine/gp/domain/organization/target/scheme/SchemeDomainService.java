@@ -8,6 +8,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.ApplicationContext;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -48,7 +51,7 @@ public class SchemeDomainService {
 		}
 
 		scheme.target2object(targetId, objects);
-		
+
 		applicationContext.publishEvent(new Target2ObjectCreatedEvent(schemeId, targetId, objects));
 
 	}
@@ -104,9 +107,9 @@ public class SchemeDomainService {
 		scheme.setCreateDate(DateUtil.getSysDate());
 		scheme.setCreateOrg(user.getOrgId());
 		scheme.setCreator(user.getId());
-		
+
 		scheme.save();
-		
+
 		applicationContext.publishEvent(new SchemeCreatedEvent(scheme));
 	}
 
@@ -200,5 +203,9 @@ public class SchemeDomainService {
 		t.update(target);
 
 		applicationContext.publishEvent(new TargetUpdatedEvent(t));
+	}
+
+	public Page<Scheme> listScheme(Pageable pageable) {
+		return this.schemeRepo.findAll(pageable);
 	}
 }
