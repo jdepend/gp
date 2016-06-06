@@ -11,6 +11,7 @@ import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeCreatedEvent;
 
 @Service
+//@Async
 public class NotificationSchemeCreatedListener implements ApplicationListener<SchemeCreatedEvent> {
 
 	@Autowired

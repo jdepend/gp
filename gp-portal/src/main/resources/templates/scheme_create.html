@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Bootstrap 101 Template</title>
-<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 	<form name="createSchemeForm" method="POST">
@@ -14,8 +14,7 @@
 				name="name" value="我的方案" />
 		</div>
 		<div>
-			<label for="targetName">year:</label> 
-			<select name="year">
+			<label for="targetName">year:</label> <select name="year">
 				<option value="2016">2016</option>
 				<option value="2015">2015</option>
 			</select>
@@ -23,6 +22,10 @@
 		<div>
 			<label for="schemeName">targetLevel:</label> <input type="text"
 				name="targetLevelCount" value="3" />
+		</div>
+		<div>
+			<label for="description">description:</label> <input type="text"
+				name="description" value="这是一个方案" />
 		</div>
 		<div>
 			<button type="submit">submit</button>

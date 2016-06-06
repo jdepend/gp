@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.rofine.gp.application.organization.target.plan.PlanAppService;
+import com.rofine.gp.application.organization.target.plan.SchemeVO;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
@@ -41,7 +42,7 @@ public class PlanController {
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String, Object> createScheme(@ModelAttribute("scheme") Scheme scheme) throws GpException {
+	public Map<String, Object> createScheme(@ModelAttribute("scheme") SchemeVO scheme) throws GpException {
 		
 		User user = UserUtil.getUser();
 

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExt;
+import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExtRepo;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
@@ -24,6 +26,9 @@ public class PlanAppService {
 
 	@Autowired
 	private SchemeDomainService schemeDomainService;
+	
+	@Autowired
+	private SchemeExtRepo schemeExtRepo;
 
 	/**
 	 * @throws TargetException
@@ -54,8 +59,13 @@ public class PlanAppService {
 		schemeDomainService.startScheme(schemeId);
 	}
 
-	public void createScheme(Scheme scheme, User user) {
+	public void createScheme(SchemeVO schemeVO, User user) {
+		Scheme scheme = schemeVO.getScheme();
 		schemeDomainService.createScheme(scheme, user);
+		
+		SchemeExt schemeExt = schemeVO.getSchemeExt();
+		schemeExt.setId(scheme.getId());
+		schemeExtRepo.save(schemeExt);
 	}
 
 	public void createTarget(Target target) throws TargetException {
