@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExt;
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExtRepo;
+import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExtService;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
@@ -31,9 +32,9 @@ public class PlanAppService {
 
 	@Autowired
 	private SchemeDomainService schemeDomainService;
-	
+
 	@Autowired
-	private SchemeExtRepo schemeExtRepo;
+	private SchemeExtService schemeExtService;
 
 	/**
 	 * @throws TargetException
@@ -67,10 +68,11 @@ public class PlanAppService {
 	public void createScheme(SchemeVO schemeVO, User user) {
 		Scheme scheme = schemeVO.getScheme();
 		schemeDomainService.createScheme(scheme, user);
-		
+
 		SchemeExt schemeExt = schemeVO.getSchemeExt();
 		schemeExt.setId(scheme.getId());
-		schemeExtRepo.save(schemeExt);
+
+		schemeExtService.createSchemeExt(schemeExt, user);
 	}
 
 	public void createTarget(Target target) throws TargetException {
@@ -101,29 +103,25 @@ public class PlanAppService {
 	}
 
 	public Page<SchemeVO> listScheme(Pageable pageable) {
-		
+
 		Page<Scheme> schemes = schemeDomainService.listScheme(pageable);
-		
+
 		List<String> schemeIds = new ArrayList<String>();
-		for(Scheme scheme : schemes.getContent()){
+		for (Scheme scheme : schemes.getContent()) {
 			schemeIds.add(scheme.getId());
 		}
-		
-		List<SchemeExt> schemeExts = schemeExtRepo.findByIdIn(schemeIds);
-		Map<String, SchemeExt> schemeExtMap = new HashMap<String, SchemeExt>();
-		for(SchemeExt schemeExt : schemeExts){
-			schemeExtMap.put(schemeExt.getId(), schemeExt);
-		}
-		
+
+		Map<String, SchemeExt> schemeExtMap = schemeExtService.listScheme(schemeIds);
+
 		List<SchemeVO> schemeList = new ArrayList<SchemeVO>();
 		SchemeVO schemeVO;
-		for(Scheme scheme : schemes){
+		for (Scheme scheme : schemes) {
 			schemeVO = new SchemeVO(scheme, schemeExtMap.get(scheme.getId()));
 			schemeList.add(schemeVO);
 		}
-		
+
 		Page<SchemeVO> schemePage = new PageImpl<SchemeVO>(schemeList, pageable, schemes.getTotalElements());
-		
+
 		return schemePage;
 	}
 }
