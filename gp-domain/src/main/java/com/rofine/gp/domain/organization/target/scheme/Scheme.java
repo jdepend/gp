@@ -21,7 +21,7 @@ import com.rofine.gp.platform.entity.IdEntity;
 import com.rofine.gp.platform.exception.GpException;
 
 @Entity
-@Table(name = "scheme", uniqueConstraints = { @UniqueConstraint(columnNames = "name") })
+@Table(name = "scheme", uniqueConstraints = { @UniqueConstraint(columnNames = "name", name="方案名称不能重复") })
 public class Scheme extends IdEntity {
 
 	@NotEmpty

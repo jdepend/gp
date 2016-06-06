@@ -122,4 +122,12 @@ public class PlanAppService {
 
 		return schemePage;
 	}
+
+	public SchemeVO getScheme(String schemeId) {
+		Scheme scheme = schemeDomainService.getScheme(schemeId);
+		
+		SchemeExt schemeExt = schemeExtService.getScheme(schemeId);
+		
+		return null;
+	}
 }

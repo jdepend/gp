@@ -71,6 +71,16 @@ public class PlanController {
 		return "scheme_list";
 	}
 
+	@RequestMapping(value = "/{schemeId}/view", method = RequestMethod.GET)
+	public String viewScheme(@PathVariable String schemeId, Model model) {
+
+		SchemeVO scheme = planAppService.getScheme(schemeId);
+
+		model.addAttribute("scheme", scheme);
+
+		return "scheme_view";
+	}
+
 	@RequestMapping(value = "/{schemeId}/object/create", method = RequestMethod.GET)
 	public String createSchemeObject(@PathVariable String schemeId, Model model) {
 

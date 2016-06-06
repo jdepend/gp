@@ -28,4 +28,8 @@ public class SchemeExtService {
 
 		return schemeExtMap;
 	}
+
+	public SchemeExt getScheme(String schemeId) {
+		return schemeExtRepo.findOne(schemeId);
+	}
 }
