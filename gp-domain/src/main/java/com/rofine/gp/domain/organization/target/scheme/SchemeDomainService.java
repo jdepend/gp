@@ -208,4 +208,8 @@ public class SchemeDomainService {
 	public Page<Scheme> listScheme(Pageable pageable) {
 		return this.schemeRepo.findAll(pageable);
 	}
+
+	public List<Scheme> listScheme(int year) {
+		return this.schemeRepo.findByYear(year);
+	}
 }

@@ -2,8 +2,12 @@
 
 package com.rofine.gp.domain.organization.target.scheme;
 
+import java.util.List;
+
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface SchemeRepo extends PagingAndSortingRepository<Scheme, String> {
+
+	public List<Scheme> findByYear(int year);
 
 }
