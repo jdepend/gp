@@ -3,7 +3,6 @@
 package com.rofine.gp.application.organization.target.plan;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExt;
-import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExtRepo;
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExtService;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
