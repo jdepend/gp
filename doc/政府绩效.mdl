@@ -34028,7 +34028,7 @@
 				    icon_style 	"Icon"
 				    anchor     	2
 				    nlines     	2
-				    max_width  	237
+				    max_width  	238
 				    justify    	0)
 				width      	58
 				height     	58
@@ -34076,7 +34076,7 @@
 				    icon_style 	"Icon"
 				    anchor     	2
 				    nlines     	2
-				    max_width  	237
+				    max_width  	238
 				    justify    	0)
 				width      	58
 				height     	58
@@ -34323,7 +34323,7 @@
 				    icon_style 	"Icon"
 				    anchor     	2
 				    nlines     	2
-				    max_width  	509
+				    max_width  	516
 				    justify    	0)
 				width      	58
 				height     	58
@@ -35519,7 +35519,7 @@
 				    (2190, 8224))
 				line_style 	0)
 			    (object NoteView @1414
-				location   	(438, 7893)
+				location   	(429, 8232)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -35531,24 +35531,27 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@1414
-				    location   	(128, 7824)
+				    location   	(119, 8101)
 				    fill_color 	13434879
-				    nlines     	2
+				    nlines     	5
 				    max_width  	584
 				    justify    	1
-				    label      	"9.通过监听DomainEvent来实现对核心模型的逻辑扩展")
+				    label      	
+|9.通过监听DomainEvent来实现对核心模型的逻辑扩展
+|通过添加@Async可实现异步监听（不影响原有业务）；
+				    )
 				line_color 	3342489
 				fill_color 	13434879
 				width      	644
-				height     	150)
+				height     	275)
 			    (object AttachView "" @1415
 				stereotype 	TRUE
 				line_color 	3342489
 				client     	@1414
 				supplier   	@1411
 				vertices   	(list Points
-				    (641, 7968)
-				    (1036, 8115))
+				    (751, 8232)
+				    (997, 8232))
 				line_style 	0))))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
