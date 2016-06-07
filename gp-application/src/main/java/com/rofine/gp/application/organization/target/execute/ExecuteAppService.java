@@ -67,7 +67,7 @@ public class ExecuteAppService {
 		executeDomainService.deleteExecutes(executeIds);
 	}
 
-	@Scheduled(fixedRate = 5000)
+	@Scheduled(cron = "0 0 01 * * ?")//每天早1点执行一次
 	public void remind() {
 
 		List<ObjectTargetExecute> executes = executeDomainService.getRemindExecutes();
