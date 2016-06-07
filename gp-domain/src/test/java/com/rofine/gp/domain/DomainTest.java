@@ -1,5 +1,8 @@
 package com.rofine.gp.domain;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +16,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
+import com.rofine.gp.platform.exception.GpException;
+import com.rofine.gp.platform.user.User;
+import com.rofine.gp.platform.user.UserUtil;
+import com.rofine.gp.platform.user.impl.UserImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
@@ -35,12 +42,30 @@ public class DomainTest {
 		
 	}
 	
-	@Test
-	public void testCreateScheme(){
+	@Before
+	public void testInitUser(){
 		
-//		Scheme scheme = new Scheme();
-//		scheme.setName("我的方案");
-//		schemeDomainService.createScheme(scheme, user);
+		User user = new UserImpl();
+		
+		user.setId("test");
+		user.setName("测试用户");
+		user.setOrgId("org111");
+		user.setDeptId("dept111");
+		user.setRoleIds(Arrays.asList("role111", "role222"));
+		
+		UserUtil.setUser(user);
+	}
+	
+	@Test
+	public void testCreateScheme() throws GpException{
+		
+		User user = UserUtil.getUser();
+		
+		Scheme scheme = new Scheme();
+		scheme.setName("我的方案");
+		
+		
+		schemeDomainService.createScheme(scheme, user);
 		
 		
 	}
