@@ -2,13 +2,16 @@
 
 package com.rofine.gp.application.organization.target.execute;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rofine.gp.application.notification.NotificationService;
+import com.rofine.gp.application.notification.NotificationVO;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
 import com.rofine.gp.domain.organization.target.execute.FillVO;
@@ -22,9 +25,9 @@ import com.rofine.gp.platform.user.User;
 public class ExecuteAppService {
 	@Autowired
 	private ObjectTargetExecuteDomainService executeDomainService;
-	
+
 	@Autowired
-	private NotificationService notificationService; 
+	private NotificationService notificationService;
 
 	public List<ObjectTargetExecute> getFillingExecutes(String schemeId, User user) {
 		return executeDomainService.getFillingExecutes(schemeId, user);
@@ -33,7 +36,7 @@ public class ExecuteAppService {
 	public List<ObjectTargetExecute> getEvaluatingExecutes(String schemeId, User user) {
 		return executeDomainService.getEvaluatingExecutes(schemeId, user);
 	}
-	
+
 	public void fill(List<FillVO> fills, User user) {
 		executeDomainService.fill(fills, user);
 	}
@@ -51,7 +54,7 @@ public class ExecuteAppService {
 	public List<ObjectTargetExecute> getOperatedExecutes(String schemeId, User user) {
 		return executeDomainService.getOperatedExecutes(schemeId, user);
 	}
-	
+
 	/**
 	 * @param schemeId
 	 * @roseuid 573B1224022D
@@ -62,5 +65,29 @@ public class ExecuteAppService {
 
 	public void deleteExecutes(List<String> executeIds) {
 		executeDomainService.deleteExecutes(executeIds);
+	}
+
+	@Scheduled(fixedRate = 5000)
+	public void remind() {
+
+		List<ObjectTargetExecute> executes = executeDomainService.getRemindExecutes();
+
+		String receiver;
+		for (ObjectTargetExecute execute : executes) {
+			receiver = null;
+			if (execute.getState().equals(ObjectTargetExecute.State_Filling)) {
+				receiver = execute.getPlanFillId();
+			} else if (execute.getState().equals(ObjectTargetExecute.State_Evaluating)) {
+				receiver = execute.getPlanEvaluateId();
+			}
+			if (receiver != null) {
+				List<String> receivers = new ArrayList<String>();
+				receivers.add(receiver);
+				NotificationVO notificationVO = new NotificationVO();
+				notificationVO.setSourceId("system");
+				notificationVO.setReceivers(receivers);
+				notificationVO.setMessage("考核方案[" + execute.getScheme().getName() + "]需要您及时参与填报和打分");
+			}
+		}
 	}
 }

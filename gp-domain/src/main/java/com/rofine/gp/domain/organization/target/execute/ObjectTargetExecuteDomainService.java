@@ -48,6 +48,11 @@ public class ObjectTargetExecuteDomainService {
 	public List<ObjectTargetExecute> getOperatedExecutes(String schemeId, User user) {
 		return executeRepo.findOperateExecutes(schemeId, user.getId());
 	}
+	
+	public List<ObjectTargetExecute> getRemindExecutes(){
+		Date sysDate = DateUtil.getSysDate();
+		return executeRepo.findRemindExecutes(sysDate);
+	}
 
 	/**
 	 * @param evaluates
@@ -93,6 +98,12 @@ public class ObjectTargetExecuteDomainService {
 		executeRepo.save(executes);
 
 		applicationContext.publishEvent(new ObjectTargetExecuteFilledEvent(executes));
+	}
+	
+	public void deleteExecutes(List<String> executeIds) {
+		for (String executeId : executeIds) {
+			executeRepo.delete(executeId);
+		}
 	}
 
 	/**
@@ -144,9 +155,5 @@ public class ObjectTargetExecuteDomainService {
 		return targetStatVOMap;
 	}
 
-	public void deleteExecutes(List<String> executeIds) {
-		for (String executeId : executeIds) {
-			executeRepo.delete(executeId);
-		}
-	}
+
 }

@@ -2,6 +2,7 @@
 
 package com.rofine.gp.domain.organization.target.execute;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
@@ -13,8 +14,11 @@ public interface ObjectTargetExecuteRepo extends CrudRepository<ObjectTargetExec
 	@Query("select e from ObjectTargetExecute e where e.scheme.id = :schemeId and (e.fillId = :operator or e.evaluateId = :operator)")  
 	public List<ObjectTargetExecute> findOperateExecutes(@Param("schemeId") String schemeId, @Param("operator") String operator);
 
+	@Query("select e from ObjectTargetExecute e where e.remindDate >= :sysDate and (e.state = 'filling' or e.state = 'evaluating')")  
+	public List<ObjectTargetExecute> findRemindExecutes(@Param("sysDate") Date sysDate);
 	
 	public List<ObjectTargetExecute> findByIdIn(List<String> ids);
 
 	public List<ObjectTargetExecute> findBySchemeId(String schemeId);
+
 }
