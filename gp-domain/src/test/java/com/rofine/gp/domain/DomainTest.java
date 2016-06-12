@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.validation.constraints.AssertTrue;
 
+import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -27,6 +28,7 @@ import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
 import com.rofine.gp.domain.organization.target.execute.FillVO;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecuteDomainService;
+import com.rofine.gp.domain.organization.target.execute.TargetStatVO;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
@@ -274,7 +276,7 @@ public class DomainTest {
 
 		UserUtil.setUser(evaluateUser);
 
-		// 获取填报数据
+		// 获取打分数据
 		List<ObjectTargetExecute> executeEvaluates = objectTargetExecuteDomainService.getEvaluatingExecutes(
 				scheme.getId(), evaluateUser);
 
@@ -291,6 +293,15 @@ public class DomainTest {
 		}
 
 		objectTargetExecuteDomainService.evaluate(evaluates, evaluateUser);
+		
+		//监控指标执行
+		List<Target> targetStats = objectTargetExecuteDomainService.getTargetStats(scheme.getId());
+		TargetStatVO targetStatVO;
+		for(Target target : targetStats){
+			targetStatVO = target.getTargetStatVO();
+			
+			Logger.getLogger(DomainTest.class).info(targetStatVO);
+		}
 	}
 
 }

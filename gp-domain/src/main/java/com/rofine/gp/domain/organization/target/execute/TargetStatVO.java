@@ -3,17 +3,17 @@
 package com.rofine.gp.domain.organization.target.execute;
 
 public class TargetStatVO {
-	
+
 	private String targetId;
-	
+
 	private String frequencyCode;
-	
+
 	private int waitEvaluateCount;
-	
+
 	private int evaluatingCount;
-	
+
 	private int evaluatedCount;
-	
+
 	private int overdueEvaluateCount;
 
 	public String getTargetId() {
@@ -64,4 +64,10 @@ public class TargetStatVO {
 		this.overdueEvaluateCount = overdueEvaluateCount;
 	}
 
+	@Override
+	public String toString() {
+		return "TargetStatVO [targetId=" + targetId + ", frequencyCode=" + frequencyCode + ", waitEvaluateCount="
+				+ waitEvaluateCount + ", evaluatingCount=" + evaluatingCount + ", evaluatedCount=" + evaluatedCount
+				+ ", overdueEvaluateCount=" + overdueEvaluateCount + "]";
+	}
 }
