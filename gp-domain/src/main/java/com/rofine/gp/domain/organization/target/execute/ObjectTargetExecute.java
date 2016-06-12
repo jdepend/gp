@@ -152,6 +152,10 @@ public class ObjectTargetExecute extends IdEntity {
 	public void start() {
 		this.state = State_Filling;
 	}
+	
+	public void close() {
+		this.state = State_Close;
+	}
 
 	public String getTargetName() {
 		return targetName;
@@ -344,5 +348,7 @@ public class ObjectTargetExecute extends IdEntity {
 	public void setPlanEvaluateId(String planEvaluateId) {
 		this.planEvaluateId = planEvaluateId;
 	}
+
+
 
 }

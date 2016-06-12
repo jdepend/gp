@@ -84,24 +84,6 @@ public class SchemeDomainService {
 
 	}
 
-	/**
-	 * @param schemeId
-	 * @throws TargetException
-	 * @roseuid 573C0EBC0297
-	 */
-	public void startScheme(String schemeId) throws TargetException {
-		Scheme scheme = this.schemeRepo.findOne(schemeId);
-		if (scheme == null) {
-			throw new TargetException("schemeId=" + schemeId + "不存在");
-		}
-
-		applicationContext.publishEvent(new SchemeStartBeforeEvent(scheme));
-
-		scheme.start();
-
-		applicationContext.publishEvent(new SchemeStartedEvent(scheme));
-	}
-
 	public Scheme createScheme(Scheme scheme, User user) {
 		scheme.setState(Scheme.State_Init);
 		scheme.setCreateDate(DateUtil.getSysDate());
@@ -192,6 +174,38 @@ public class SchemeDomainService {
 			throw new TargetException("指标所在方案[" + scheme.getName() + "]已经处于[" + scheme.getState() + "]状态，不能新增和修改");
 		}
 
+	}
+	
+	/**
+	 * @param schemeId
+	 * @throws TargetException
+	 * @roseuid 573C0EBC0297
+	 */
+	public void startScheme(String schemeId) throws TargetException {
+		Scheme scheme = this.schemeRepo.findOne(schemeId);
+		if (scheme == null) {
+			throw new TargetException("schemeId=" + schemeId + "不存在");
+		}
+
+		applicationContext.publishEvent(new SchemeStartBeforeEvent(scheme));
+
+		scheme.start();
+
+		applicationContext.publishEvent(new SchemeStartedEvent(scheme));
+	}
+	
+	public void closeScheme(String schemeId) throws TargetException {
+		
+		Scheme scheme = this.schemeRepo.findOne(schemeId);
+		if (scheme == null) {
+			throw new TargetException("schemeId=" + schemeId + "不存在");
+		}
+
+		applicationContext.publishEvent(new SchemeCloseBeforeEvent(scheme));
+
+		scheme.close();
+
+		applicationContext.publishEvent(new SchemeClosedEvent(scheme));
 	}
 
 	public TargetType getTargetType(String id) {

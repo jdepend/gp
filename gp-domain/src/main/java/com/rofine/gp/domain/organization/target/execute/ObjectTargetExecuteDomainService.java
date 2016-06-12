@@ -133,6 +133,7 @@ public class ObjectTargetExecuteDomainService {
 			if (targetStatVO == null) {
 				targetStatVO = new TargetStatVO();
 				targetStatVO.setTargetId(execute.getTarget().getId());
+				targetStatVO.setFrequencyCode(execute.getFrequencyCode());
 				targetStatVOMap.put(execute.getTarget().getId(), targetStatVO);
 			}
 			if (execute.getState().equals(ObjectTargetExecute.State_Evaluated)) {

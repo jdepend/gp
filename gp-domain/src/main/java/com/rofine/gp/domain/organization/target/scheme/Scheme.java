@@ -155,6 +155,22 @@ public class Scheme extends IdEntity {
 		this.save();
 
 	}
+	
+
+	public void close() {
+		this.state = State_Closed;
+		
+		for (Target target : targets) {
+			for (ObjectTarget objectTarget : target.getObjectTargets()) {
+				for (ObjectTargetExecute execute : objectTarget.getObjectTargetExecutes()) {
+					execute.close();
+				}
+			}
+		}
+
+		this.save();
+		
+	}
 
 	/**
 	 * @roseuid 573C224D015D

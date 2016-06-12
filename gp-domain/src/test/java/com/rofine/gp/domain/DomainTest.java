@@ -293,15 +293,26 @@ public class DomainTest {
 		}
 
 		objectTargetExecuteDomainService.evaluate(evaluates, evaluateUser);
-		
-		//监控指标执行
+
+		// 监控指标执行
 		List<Target> targetStats = objectTargetExecuteDomainService.getTargetStats(scheme.getId());
 		TargetStatVO targetStatVO;
-		for(Target target : targetStats){
+		for (Target target : targetStats) {
 			targetStatVO = target.getTargetStatVO();
-			
+
+			if (targetStatVO.getTargetId().equals(target1.getId())) {
+				assertTrue(targetStatVO.getWaitEvaluateCount() == 0);
+				assertTrue(targetStatVO.getEvaluatingCount() == 0);
+				assertTrue(targetStatVO.getEvaluatedCount() == 1);
+				assertTrue(targetStatVO.getOverdueEvaluateCount() == 0);
+			}
+
 			Logger.getLogger(DomainTest.class).info(targetStatVO);
 		}
+		
+		//关闭方案
+		schemeDomainService.closeScheme(scheme.getId());
+
 	}
 
 }
