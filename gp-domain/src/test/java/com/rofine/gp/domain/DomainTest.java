@@ -1,6 +1,8 @@
 package com.rofine.gp.domain;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -21,6 +23,7 @@ import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
+import com.rofine.gp.domain.organization.target.scheme.SchemeObjectVO;
 import com.rofine.gp.domain.organization.target.scheme.Target;
 import com.rofine.gp.domain.organization.target.scheme.TargetType;
 import com.rofine.gp.platform.bean.ApplicationContextUtil;
@@ -77,14 +80,41 @@ public class DomainTest {
 		schemeDomainService.createScheme(scheme, user);
 
 		// 创建被考核对象
-		SchemeObject object = new SchemeObject();
+		SchemeObject object222 = new SchemeObject();
 
-		object.setObjectId("dept222");
-		object.setName("被考核部门222");
-		object.setType(SchemeObject.TYPE_DEPT);
-		object.setScheme(scheme);
+		object222.setObjectId("dept222");
+		object222.setName("被考核部门222");
+		object222.setType(SchemeObject.TYPE_DEPT);
+		object222.setScheme(scheme);
 
-		schemeDomainService.createSchemeObject(object);
+		schemeDomainService.createSchemeObject(object222);
+		
+		SchemeObject object333 = new SchemeObject();
+
+		object333.setObjectId("dept333");
+		object333.setName("被考核部门333");
+		object333.setType(SchemeObject.TYPE_DEPT);
+		object333.setScheme(scheme);
+
+		schemeDomainService.createSchemeObject(object333);
+		
+		SchemeObject object444 = new SchemeObject();
+
+		object444.setObjectId("dept444");
+		object444.setName("被考核部门444");
+		object444.setType(SchemeObject.TYPE_DEPT);
+		object444.setScheme(scheme);
+
+		schemeDomainService.createSchemeObject(object444);
+		
+		SchemeObject object555 = new SchemeObject();
+
+		object555.setObjectId("dept555");
+		object555.setName("被考核部门555");
+		object555.setType(SchemeObject.TYPE_DEPT);
+		object555.setScheme(scheme);
+
+		schemeDomainService.createSchemeObject(object555);
 
 		// 创建指标层次
 		TargetType targetType_a = new TargetType();
@@ -160,6 +190,36 @@ public class DomainTest {
 		target4.setFrequencyType(Target.TargetFrequencyType_HalfYear);
 
 		schemeDomainService.createTarget(target4);
+		
+		//将指标关联被考核对象
+		List<SchemeObjectVO> objects;
+		SchemeObjectVO object;
+		
+		objects = new ArrayList<SchemeObjectVO>();
+		
+		object = new SchemeObjectVO();
+		object.setObjectId(object222.getId());
+		objects.add(object);
+		
+		object = new SchemeObjectVO();
+		object.setObjectId(object333.getId());
+		objects.add(object);
+		
+		schemeDomainService.target2object(scheme.getId(), target1.getId(), objects);
+		schemeDomainService.target2object(scheme.getId(), target2.getId(), objects);
+		
+		objects = new ArrayList<SchemeObjectVO>();
+		
+		object = new SchemeObjectVO();
+		object.setObjectId(object444.getId());
+		objects.add(object);
+		
+		object = new SchemeObjectVO();
+		object.setObjectId(object555.getId());
+		objects.add(object);
+		
+		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
+		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
 
 	}
 

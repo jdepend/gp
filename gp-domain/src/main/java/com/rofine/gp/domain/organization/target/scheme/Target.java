@@ -74,8 +74,7 @@ public class Target extends TargetComponent {
 
 			this.objectTargets.add(objectTarget);
 		}
-		;
-
+		
 		this.save();
 	}
 
