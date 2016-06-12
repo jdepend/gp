@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.constraints.AssertTrue;
 
@@ -24,6 +25,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.rofine.gp.domain.organization.score.UnitScoreService;
 import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
 import com.rofine.gp.domain.organization.target.execute.FillVO;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
@@ -54,6 +56,9 @@ public class DomainTest {
 
 	@Autowired
 	private ObjectTargetExecuteDomainService objectTargetExecuteDomainService;
+	
+	@Autowired
+	private UnitScoreService unitScoreService;
 
 	@BeforeClass
 	public static void testInit() {
@@ -312,6 +317,11 @@ public class DomainTest {
 		schemeDomainService.closeScheme(scheme.getId());
 		
 		//汇总部门成绩
+		unitScoreService.create(2016);
+		
+		Map<String, Float> scores = unitScoreService.getScores(2016);
+		
+		Logger.getLogger(DomainTest.class).info(scores);
 
 	}
 
