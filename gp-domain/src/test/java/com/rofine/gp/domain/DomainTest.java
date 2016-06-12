@@ -1,8 +1,12 @@
 package com.rofine.gp.domain;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.validation.constraints.AssertTrue;
 
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -19,6 +23,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
+import com.rofine.gp.domain.organization.target.execute.FillVO;
+import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecuteDomainService;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
@@ -41,6 +49,9 @@ public class DomainTest {
 
 	@Autowired
 	private SchemeAdminDomainService schemeAdminDomainService;
+
+	@Autowired
+	private ObjectTargetExecuteDomainService objectTargetExecuteDomainService;
 
 	@BeforeClass
 	public static void testInit() {
@@ -87,7 +98,7 @@ public class DomainTest {
 		object222.setScheme(scheme);
 
 		schemeDomainService.createSchemeObject(object222);
-		
+
 		SchemeObject object333 = new SchemeObject();
 
 		object333.setObjectId("dept333");
@@ -96,7 +107,7 @@ public class DomainTest {
 		object333.setScheme(scheme);
 
 		schemeDomainService.createSchemeObject(object333);
-		
+
 		SchemeObject object444 = new SchemeObject();
 
 		object444.setObjectId("dept444");
@@ -105,7 +116,7 @@ public class DomainTest {
 		object444.setScheme(scheme);
 
 		schemeDomainService.createSchemeObject(object444);
-		
+
 		SchemeObject object555 = new SchemeObject();
 
 		object555.setObjectId("dept555");
@@ -167,7 +178,7 @@ public class DomainTest {
 		target2.setFrequencyType(Target.TargetFrequencyType_Year);
 
 		schemeDomainService.createTarget(target2);
-		
+
 		Target target3 = new Target();
 
 		target3.setName("指标3");
@@ -189,37 +200,97 @@ public class DomainTest {
 		target4.setFrequencyType(Target.TargetFrequencyType_HalfYear);
 
 		schemeDomainService.createTarget(target4);
-		
-		//将指标关联被考核对象
+
+		// 将指标关联被考核对象
 		List<SchemeObjectVO> objects;
 		SchemeObjectVO object;
-		
+
 		objects = new ArrayList<SchemeObjectVO>();
-		
+
 		object = new SchemeObjectVO();
 		object.setObjectId(object222.getId());
 		objects.add(object);
-		
+
 		object = new SchemeObjectVO();
 		object.setObjectId(object333.getId());
 		objects.add(object);
-		
+
 		schemeDomainService.target2object(scheme.getId(), target1.getId(), objects);
 		schemeDomainService.target2object(scheme.getId(), target2.getId(), objects);
-		
+
 		objects = new ArrayList<SchemeObjectVO>();
-		
+
 		object = new SchemeObjectVO();
 		object.setObjectId(object444.getId());
 		objects.add(object);
-		
+
 		object = new SchemeObjectVO();
 		object.setObjectId(object555.getId());
 		objects.add(object);
-		
+
 		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
 		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
 
+		// 启动方案
+		schemeDomainService.startScheme(scheme.getId());
+
+		// 填报用户登录
+		User fillUser = new UserImpl();
+
+		fillUser.setId("filler222");
+		fillUser.setName("填报用户222");
+		fillUser.setOrgId("org222");
+		fillUser.setDeptId("dept222");
+		fillUser.setRoleIds(Arrays.asList("role_filler_111", "role_filler_222"));
+
+		UserUtil.setUser(fillUser);
+
+		// 获取填报数据
+		List<ObjectTargetExecute> executeFills = objectTargetExecuteDomainService.getFillingExecutes(scheme.getId(),
+				fillUser);
+
+		assertTrue(executeFills.size() == 2);
+
+		List<FillVO> fills = new ArrayList<FillVO>();
+		FillVO fill;
+		for (ObjectTargetExecute execute : executeFills) {
+			fill = new FillVO();
+			fill.setExecuteId(execute.getId());
+			fill.setScore(40.0F);
+
+			fills.add(fill);
+		}
+
+		objectTargetExecuteDomainService.fill(fills, fillUser);
+
+		// 考核用户登录
+		User evaluateUser = new UserImpl();
+
+		evaluateUser.setId("evaluater999");
+		evaluateUser.setName("考核用户999");
+		evaluateUser.setOrgId("org999");
+		evaluateUser.setDeptId("dept999");
+		evaluateUser.setRoleIds(Arrays.asList("role_evaluate_999", "role_evaluate_999"));
+
+		UserUtil.setUser(evaluateUser);
+
+		// 获取填报数据
+		List<ObjectTargetExecute> executeEvaluates = objectTargetExecuteDomainService.getEvaluatingExecutes(
+				scheme.getId(), evaluateUser);
+
+		assertTrue(executeEvaluates.size() == 1);
+
+		List<EvaluateVO> evaluates = new ArrayList<EvaluateVO>();
+		EvaluateVO evaluate;
+		for (ObjectTargetExecute execute : executeEvaluates) {
+			evaluate = new EvaluateVO();
+			evaluate.setExecuteId(execute.getId());
+			evaluate.setScore(50.0F);
+
+			evaluates.add(evaluate);
+		}
+
+		objectTargetExecuteDomainService.evaluate(evaluates, evaluateUser);
 	}
 
 }
