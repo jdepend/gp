@@ -62,6 +62,10 @@ public class PlanAppService {
 	public void startScheme(String schemeId) throws TargetException {
 		schemeDomainService.startScheme(schemeId);
 	}
+	
+	public void closeScheme(String schemeId) throws TargetException {
+		schemeDomainService.closeScheme(schemeId);
+	}
 
 	public void createScheme(SchemeVO schemeVO, User user) {
 		Scheme scheme = schemeVO.getScheme();

@@ -268,4 +268,23 @@ public class PlanController {
 		return rtn;
 
 	}
+	
+	/**
+	 * @throws TargetException
+	 * @roseuid 573C0E4F033F
+	 */
+	@RequestMapping(value = "/{schemeId}/close", method = { RequestMethod.GET, RequestMethod.POST })
+	@ResponseBody
+	public Map<String, Object> close(@PathVariable String schemeId) throws TargetException {
+
+		planAppService.closeScheme(schemeId);
+
+		Map<String, Object> rtn = new HashMap<String, Object>();
+
+		rtn.put("code", "1");
+		rtn.put("msg", "操作成功");
+
+		return rtn;
+
+	}
 }
