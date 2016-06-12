@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -206,20 +205,20 @@ public class DomainTest {
 		objects.add(object);
 		
 		schemeDomainService.target2object(scheme.getId(), target1.getId(), objects);
-		schemeDomainService.target2object(scheme.getId(), target2.getId(), objects);
-		
-		objects = new ArrayList<SchemeObjectVO>();
-		
-		object = new SchemeObjectVO();
-		object.setObjectId(object444.getId());
-		objects.add(object);
-		
-		object = new SchemeObjectVO();
-		object.setObjectId(object555.getId());
-		objects.add(object);
-		
-		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
-		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
+//		schemeDomainService.target2object(scheme.getId(), target2.getId(), objects);
+//		
+//		objects = new ArrayList<SchemeObjectVO>();
+//		
+//		object = new SchemeObjectVO();
+//		object.setObjectId(object444.getId());
+//		objects.add(object);
+//		
+//		object = new SchemeObjectVO();
+//		object.setObjectId(object555.getId());
+//		objects.add(object);
+//		
+//		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
+//		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
 
 	}
 
