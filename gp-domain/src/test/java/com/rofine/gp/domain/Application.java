@@ -17,7 +17,7 @@ import com.rofine.gp.platform.bean.ApplicationContextUtil;
 @EntityScan(basePackages = { "com.rofine.gp.*" })
 @ComponentScan(basePackages = { "com.rofine.gp.*" })
 @ImportResource(locations={"classpath:application-bean.xml"})
-@EnableScheduling
+//@EnableScheduling
 @EnableAsync
 public class Application {
 

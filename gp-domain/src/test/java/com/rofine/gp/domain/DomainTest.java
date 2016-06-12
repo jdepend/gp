@@ -17,6 +17,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
@@ -33,7 +34,6 @@ import com.rofine.gp.platform.user.impl.UserImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
-@FixMethodOrder(MethodSorters.DEFAULT)
 public class DomainTest {
 
 	@Autowired
@@ -205,20 +205,20 @@ public class DomainTest {
 		objects.add(object);
 		
 		schemeDomainService.target2object(scheme.getId(), target1.getId(), objects);
-//		schemeDomainService.target2object(scheme.getId(), target2.getId(), objects);
-//		
-//		objects = new ArrayList<SchemeObjectVO>();
-//		
-//		object = new SchemeObjectVO();
-//		object.setObjectId(object444.getId());
-//		objects.add(object);
-//		
-//		object = new SchemeObjectVO();
-//		object.setObjectId(object555.getId());
-//		objects.add(object);
-//		
-//		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
-//		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
+		schemeDomainService.target2object(scheme.getId(), target2.getId(), objects);
+		
+		objects = new ArrayList<SchemeObjectVO>();
+		
+		object = new SchemeObjectVO();
+		object.setObjectId(object444.getId());
+		objects.add(object);
+		
+		object = new SchemeObjectVO();
+		object.setObjectId(object555.getId());
+		objects.add(object);
+		
+		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
+		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
 
 	}
 

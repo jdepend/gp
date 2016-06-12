@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -75,7 +76,7 @@ public class Target extends TargetComponent {
 			this.objectTargets.add(objectTarget);
 		}
 		
-		this.save();
+//		this.save();
 	}
 
 	public void save() throws TargetException {
