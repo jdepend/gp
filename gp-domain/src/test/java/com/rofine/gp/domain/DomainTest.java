@@ -21,6 +21,8 @@ import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
+import com.rofine.gp.domain.organization.target.scheme.Target;
+import com.rofine.gp.domain.organization.target.scheme.TargetType;
 import com.rofine.gp.platform.bean.ApplicationContextUtil;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
@@ -70,7 +72,7 @@ public class DomainTest {
 		Scheme scheme = new Scheme();
 		scheme.setName("我的方案");
 		scheme.setYear(2016);
-		scheme.setTargetLevelCount(2);
+		scheme.setTargetLevelCount(4);
 
 		schemeDomainService.createScheme(scheme, user);
 		
@@ -83,6 +85,41 @@ public class DomainTest {
 		object.setScheme(scheme);
 
 		schemeDomainService.createSchemeObject(object);
+		
+		//创建指标层次
+		TargetType targetType_a = new TargetType();
+		targetType_a.setName("指标类型a");
+		targetType_a.setScheme(scheme);
+		
+		schemeDomainService.createTargetType(targetType_a);
+		
+		TargetType targetType_b = new TargetType();
+		targetType_b.setName("指标类型b");
+		targetType_b.setParent(targetType_a);
+		targetType_b.setScheme(scheme);
+		
+		schemeDomainService.createTargetType(targetType_b);
+		
+		TargetType targetType_c1 = new TargetType();
+		targetType_c1.setName("指标类型c1");
+		targetType_c1.setParent(targetType_b);
+		targetType_c1.setScheme(scheme);
+		targetType_c1.setWeight(50);
+		
+		schemeDomainService.createTargetType(targetType_c1);
+		
+		TargetType targetType_c2 = new TargetType();
+		targetType_c2.setName("指标类型c2");
+		targetType_c2.setParent(targetType_b);
+		targetType_c2.setScheme(scheme);
+		targetType_c2.setWeight(50);
+		
+		schemeDomainService.createTargetType(targetType_c2);
+		
+		//创建指标
+		Target target = new Target();
+		schemeDomainService.createTarget(target);
+		
 	}
 
 	

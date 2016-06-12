@@ -111,7 +111,7 @@ public class SchemeDomainService {
 		scheme.save();
 
 		applicationContext.publishEvent(new SchemeCreatedEvent(scheme));
-		
+
 		return scheme;
 	}
 
@@ -174,13 +174,18 @@ public class SchemeDomainService {
 				targetType.setLevel(1);
 			} else {
 				TargetType parent = this.targetTypeRepo.findOne(targetType.getParent().getId());
-				if (scheme.getTargetLevelCount() <= parent.getLevel() + 1) {
-					throw new TargetException("已经超过了方案规定的指标层次（" + scheme.getTargetLevelCount() + "）");
-				}
 				if (parent == null) {
 					throw new TargetException("targetTypeId=" + targetType.getParent().getId() + "不存在");
 				}
+				if (scheme.getTargetLevelCount() <= parent.getLevel() + 1) {
+					throw new TargetException("已经超过了方案规定的指标层次（" + scheme.getTargetLevelCount() + "）");
+				}
 				targetType.setLevel(parent.getLevel() + 1);
+			}
+
+			// 设置默认权重
+			if (targetType.getWeight() == 0) {
+				targetType.setWeight(TargetType.DEFAULT_WEIGHT);
 			}
 			targetType.save();
 		} else {

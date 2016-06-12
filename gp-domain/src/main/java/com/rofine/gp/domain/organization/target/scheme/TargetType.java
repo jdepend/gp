@@ -19,8 +19,7 @@ public class TargetType extends TargetComponent {
 
 	@OneToMany(mappedBy = "parent", cascade = { CascadeType.ALL })
 	private List<Target> targets = new ArrayList<Target>();
-
-
+	
 	public List<TargetType> getChildren() {
 		return children;
 	}

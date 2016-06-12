@@ -29,6 +29,8 @@ public abstract class TargetComponent extends IdEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "scheme_id")
 	private Scheme scheme;
+	
+	public static final int DEFAULT_WEIGHT = 100;
 
 	public Scheme getScheme() {
 		return scheme;
