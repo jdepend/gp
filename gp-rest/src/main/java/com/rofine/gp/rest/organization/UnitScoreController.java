@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rofine.gp.domain.organization.score.UnitScoreService;
 import com.rofine.gp.platform.exception.GpException;
 
 @RestController

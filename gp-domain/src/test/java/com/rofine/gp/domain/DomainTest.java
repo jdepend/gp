@@ -310,6 +310,8 @@ public class DomainTest {
 		
 		//关闭方案
 		schemeDomainService.closeScheme(scheme.getId());
+		
+		//汇总部门成绩
 
 	}
 

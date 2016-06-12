@@ -1,4 +1,4 @@
-package com.rofine.gp.rest.organization;
+package com.rofine.gp.domain.organization.score;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
