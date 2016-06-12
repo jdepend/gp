@@ -65,8 +65,8 @@ public class DomainTest {
 		Page<Scheme> schemes = schemeDomainService.listScheme(pageable);
 
 		schemeAdminDomainService.deleteSchemes(schemes.getContent());
-		
-		//创建方案
+
+		// 创建方案
 		User user = UserUtil.getUser();
 
 		Scheme scheme = new Scheme();
@@ -75,8 +75,8 @@ public class DomainTest {
 		scheme.setTargetLevelCount(4);
 
 		schemeDomainService.createScheme(scheme, user);
-		
-		//创建被考核对象
+
+		// 创建被考核对象
 		SchemeObject object = new SchemeObject();
 
 		object.setObjectId("dept222");
@@ -85,43 +85,82 @@ public class DomainTest {
 		object.setScheme(scheme);
 
 		schemeDomainService.createSchemeObject(object);
-		
-		//创建指标层次
+
+		// 创建指标层次
 		TargetType targetType_a = new TargetType();
 		targetType_a.setName("指标类型a");
 		targetType_a.setScheme(scheme);
-		
+
 		schemeDomainService.createTargetType(targetType_a);
-		
+
 		TargetType targetType_b = new TargetType();
 		targetType_b.setName("指标类型b");
 		targetType_b.setParent(targetType_a);
 		targetType_b.setScheme(scheme);
-		
+
 		schemeDomainService.createTargetType(targetType_b);
-		
+
 		TargetType targetType_c1 = new TargetType();
 		targetType_c1.setName("指标类型c1");
 		targetType_c1.setParent(targetType_b);
 		targetType_c1.setScheme(scheme);
 		targetType_c1.setWeight(50);
-		
+
 		schemeDomainService.createTargetType(targetType_c1);
-		
+
 		TargetType targetType_c2 = new TargetType();
 		targetType_c2.setName("指标类型c2");
 		targetType_c2.setParent(targetType_b);
 		targetType_c2.setScheme(scheme);
 		targetType_c2.setWeight(50);
-		
-		schemeDomainService.createTargetType(targetType_c2);
-		
-		//创建指标
-		Target target = new Target();
-		schemeDomainService.createTarget(target);
-		
-	}
 
-	
+		schemeDomainService.createTargetType(targetType_c2);
+
+		// 创建指标
+		Target target1 = new Target();
+
+		target1.setName("指标1");
+		target1.setParent(targetType_c1);
+		target1.setWeight(30);
+		target1.setScheme(scheme);
+		target1.setSubjectId("dept999");
+		target1.setFrequencyType(Target.TargetFrequencyType_Year);
+
+		schemeDomainService.createTarget(target1);
+
+		Target target2 = new Target();
+
+		target2.setName("指标2");
+		target2.setParent(targetType_c1);
+		target2.setWeight(70);
+		target2.setScheme(scheme);
+		target2.setSubjectId("dept888");
+		target2.setFrequencyType(Target.TargetFrequencyType_Year);
+
+		schemeDomainService.createTarget(target2);
+		
+		Target target3 = new Target();
+
+		target3.setName("指标3");
+		target3.setParent(targetType_c2);
+		target3.setWeight(50);
+		target3.setScheme(scheme);
+		target3.setSubjectId("dept777");
+		target3.setFrequencyType(Target.TargetFrequencyType_HalfYear);
+
+		schemeDomainService.createTarget(target3);
+
+		Target target4 = new Target();
+
+		target4.setName("指标4");
+		target4.setParent(targetType_c2);
+		target4.setWeight(50);
+		target4.setScheme(scheme);
+		target4.setSubjectId("dept666");
+		target4.setFrequencyType(Target.TargetFrequencyType_HalfYear);
+
+		schemeDomainService.createTarget(target4);
+
+	}
 
 }

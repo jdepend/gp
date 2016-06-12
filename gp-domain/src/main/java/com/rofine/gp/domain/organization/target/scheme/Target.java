@@ -47,6 +47,10 @@ public class Target extends TargetComponent {
 
 	@Transient
 	private TargetStatVO targetStatVO;
+	
+	public static final String TargetFrequencyType_Year = "year";
+
+	public static final String TargetFrequencyType_HalfYear = "half_year";
 
 	/**
 	 * @param objectIds
