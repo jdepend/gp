@@ -35,12 +35,9 @@ public class SchemeObject extends SchemeObjectComponent {
 	@OneToMany(mappedBy = "object", cascade = { CascadeType.ALL })
 	private List<ObjectTarget> objectTargets;
 
-	/**
-	 * @roseuid 573ADE31003A
-	 */
-	public void calculate() {
-
-	}
+	public final static String TYPE_ORG = "org";
+	
+	public final static String TYPE_DEPT = "dept";
 
 	public SchemeObjectGroup getGroup() {
 		return group;

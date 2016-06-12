@@ -102,7 +102,7 @@ public class SchemeDomainService {
 		applicationContext.publishEvent(new SchemeStartedEvent(scheme));
 	}
 
-	public void createScheme(Scheme scheme, User user) {
+	public Scheme createScheme(Scheme scheme, User user) {
 		scheme.setState(Scheme.State_Init);
 		scheme.setCreateDate(DateUtil.getSysDate());
 		scheme.setCreateOrg(user.getOrgId());
@@ -111,6 +111,8 @@ public class SchemeDomainService {
 		scheme.save();
 
 		applicationContext.publishEvent(new SchemeCreatedEvent(scheme));
+		
+		return scheme;
 	}
 
 	public Scheme getScheme(String schemeId) {
