@@ -60,17 +60,6 @@ public class DomainTest {
 		// 初始化Context
 		ApplicationContext applicationContext = SpringApplication.run(Application.class);
 		ApplicationContextUtil.setApplicationContext(applicationContext);
-		// 初始化User
-		User user = new UserImpl();
-
-		user.setId("test");
-		user.setName("测试用户");
-		user.setOrgId("org111");
-		user.setDeptId("dept111");
-		user.setRoleIds(Arrays.asList("role111", "role222"));
-
-		UserUtil.setUser(user);
-
 	}
 
 	@Test
@@ -80,16 +69,25 @@ public class DomainTest {
 		Page<Scheme> schemes = schemeDomainService.listScheme(pageable);
 
 		schemeAdminDomainService.deleteSchemes(schemes.getContent());
+		
+		// 初始化方案制定User
+		User adminUser = new UserImpl();
+
+		adminUser.setId("test");
+		adminUser.setName("测试用户");
+		adminUser.setOrgId("org111");
+		adminUser.setDeptId("dept111");
+		adminUser.setRoleIds(Arrays.asList("role111", "role222"));
+
+		UserUtil.setUser(adminUser);
 
 		// 创建方案
-		User user = UserUtil.getUser();
-
 		Scheme scheme = new Scheme();
 		scheme.setName("我的方案");
 		scheme.setYear(2016);
 		scheme.setTargetLevelCount(4);
 
-		schemeDomainService.createScheme(scheme, user);
+		schemeDomainService.createScheme(scheme, adminUser);
 
 		// 创建被考核对象
 		SchemeObject object222 = new SchemeObject();
@@ -241,7 +239,7 @@ public class DomainTest {
 
 		fillUser.setId("filler222");
 		fillUser.setName("填报用户222");
-		fillUser.setOrgId("org222");
+		fillUser.setOrgId("org111");
 		fillUser.setDeptId("dept222");
 		fillUser.setRoleIds(Arrays.asList("role_filler_111", "role_filler_222"));
 
@@ -270,7 +268,7 @@ public class DomainTest {
 
 		evaluateUser.setId("evaluater999");
 		evaluateUser.setName("考核用户999");
-		evaluateUser.setOrgId("org999");
+		evaluateUser.setOrgId("org111");
 		evaluateUser.setDeptId("dept999");
 		evaluateUser.setRoleIds(Arrays.asList("role_evaluate_999", "role_evaluate_999"));
 
