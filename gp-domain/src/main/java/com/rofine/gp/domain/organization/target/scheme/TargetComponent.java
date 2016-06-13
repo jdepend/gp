@@ -13,7 +13,7 @@ import com.rofine.gp.platform.entity.IdEntity;
 @MappedSuperclass
 public abstract class TargetComponent extends IdEntity {
 
-	@Column
+	@Column(length=512)
 	private String name;
 	
 	@Column

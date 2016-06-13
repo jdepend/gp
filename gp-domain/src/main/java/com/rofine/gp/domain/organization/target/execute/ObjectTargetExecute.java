@@ -22,13 +22,13 @@ import com.rofine.gp.platform.entity.IdEntity;
 @Table(name = "object_target_execute")
 public class ObjectTargetExecute extends IdEntity {
 
-	@Column(name = "target_name")
+	@Column(name = "target_name", length = 512)
 	private String targetName;
 
-	@Column(name = "frequency_code")
+	@Column(name = "frequency_code", length = 32)
 	private String frequencyCode;
 
-	@Column(name = "frequency_name")
+	@Column(name = "frequency_name", length = 64)
 	private String frequencyName;
 
 	@Column(name = "start_date")
@@ -46,47 +46,47 @@ public class ObjectTargetExecute extends IdEntity {
 	@Column(name = "fill_score")
 	private Float fillScore;
 
-	@Column(name = "fill_id")
+	@Column(name = "fill_id", length = 36)
 	private String fillId;
 
 	@Column(name = "fill_date")
 	private Date fillDate;
 
-	@Column
+	@Column(length = 32)
 	private String state;
 
-	@Column(name = "subject_id")
+	@Column(name = "subject_id", length = 36)
 	private String subjectId;
 
 	@Column(name = "evaluate_score")
 	private Float evaluateScore;
 
-	@Column(name = "evaluate_id")
+	@Column(name = "evaluate_id", length = 36)
 	private String evaluateId;
 
 	@Column(name = "evaluate_date")
 	private Date evaluateDate;
 
-	@Column(name = "plan_fill_id")
+	@Column(name = "plan_fill_id", length = 36)
 	private String planFillId;
 
-	@Column(name = "plan_fill_role_id")
+	@Column(name = "plan_fill_role_id", length = 36)
 	private String planFillRoleId;
 
-	@Column(name = "plan_evaluate_id")
+	@Column(name = "plan_evaluate_id", length = 36)
 	private String planEvaluateId;
 
-	@Column(name = "plan_evaluate_role_id")
+	@Column(name = "plan_evaluate_role_id", length = 36)
 	private String planEvaluateRoleId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "object_target_id")
 	private ObjectTarget objectTarget;
 
-	@Column(name = "object_code")
+	@Column(name = "object_code", length = 36)
 	private String objectCode;
 
-	@Column(name = "object_type")
+	@Column(name = "object_type", length = 32)
 	private String objectType;
 
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -132,10 +132,10 @@ public class ObjectTargetExecute extends IdEntity {
 		this.objectTarget = objectTarget;
 		this.objectCode = objectTarget.getObjectCode();
 		this.objectType = objectTarget.getObjectType();
-		
+
 		this.planFillId = objectTarget.getFillId();
 		this.planFillRoleId = objectTarget.getRoleId();
-		
+
 		this.planEvaluateId = target.getEvaluateId();
 		this.planEvaluateRoleId = target.getEvaluateRoleId();
 
@@ -152,7 +152,7 @@ public class ObjectTargetExecute extends IdEntity {
 	public void start() {
 		this.state = State_Filling;
 	}
-	
+
 	public void close() {
 		this.state = State_Close;
 	}
@@ -348,7 +348,5 @@ public class ObjectTargetExecute extends IdEntity {
 	public void setPlanEvaluateId(String planEvaluateId) {
 		this.planEvaluateId = planEvaluateId;
 	}
-
-
 
 }

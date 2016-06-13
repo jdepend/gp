@@ -7,14 +7,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import javax.validation.constraints.AssertTrue;
-
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -23,7 +19,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.rofine.gp.domain.organization.score.UnitScoreService;
 import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
@@ -67,6 +62,20 @@ public class DomainTest {
 		ApplicationContextUtil.setApplicationContext(applicationContext);
 	}
 
+	/**
+	 * 在单位org111下，有9个部门，3个用户（admin，filler222，evaluater999）；
+	 * 创建1个方案，4个被考评部门（222，333，444，555），4个叶子指标（1，2，3，4），分别由部门999，888，777，666考核；
+	 * 建立指标和被考核部门的关联：
+	 * 1->222 1->333;
+	 * 2->222 2->333;
+	 * 3->444 3->555;
+	 * 4->444 4->555;
+	 * 222部门用户filler222进行填报；
+	 * 999部门用户evaluater999进行打分；
+	 * 确定部门222分数为50分；
+	 * 
+	 * @throws GpException
+	 */
 	@Test
 	public void testDomain() throws GpException {
 		// 清空方案信息
@@ -78,8 +87,8 @@ public class DomainTest {
 		// 初始化方案制定User
 		User adminUser = new UserImpl();
 
-		adminUser.setId("test");
-		adminUser.setName("测试用户");
+		adminUser.setId("admin");
+		adminUser.setName("管理员用户");
 		adminUser.setOrgId("org111");
 		adminUser.setDeptId("dept111");
 		adminUser.setRoleIds(Arrays.asList("role111", "role222"));
@@ -168,7 +177,7 @@ public class DomainTest {
 		target1.setParent(targetType_c1);
 		target1.setWeight(30);
 		target1.setScheme(scheme);
-		target1.setSubjectId("dept999");
+		target1.setSubjectId("dept999");//设置考核部门
 		target1.setFrequencyType(Target.TargetFrequencyType_Year);
 
 		schemeDomainService.createTarget(target1);
@@ -179,7 +188,7 @@ public class DomainTest {
 		target2.setParent(targetType_c1);
 		target2.setWeight(70);
 		target2.setScheme(scheme);
-		target2.setSubjectId("dept888");
+		target2.setSubjectId("dept888");//设置考核部门
 		target2.setFrequencyType(Target.TargetFrequencyType_Year);
 
 		schemeDomainService.createTarget(target2);
@@ -190,7 +199,7 @@ public class DomainTest {
 		target3.setParent(targetType_c2);
 		target3.setWeight(50);
 		target3.setScheme(scheme);
-		target3.setSubjectId("dept777");
+		target3.setSubjectId("dept777");//设置考核部门
 		target3.setFrequencyType(Target.TargetFrequencyType_HalfYear);
 
 		schemeDomainService.createTarget(target3);
@@ -201,7 +210,7 @@ public class DomainTest {
 		target4.setParent(targetType_c2);
 		target4.setWeight(50);
 		target4.setScheme(scheme);
-		target4.setSubjectId("dept666");
+		target4.setSubjectId("dept666");//设置考核部门
 		target4.setFrequencyType(Target.TargetFrequencyType_HalfYear);
 
 		schemeDomainService.createTarget(target4);
@@ -220,7 +229,9 @@ public class DomainTest {
 		object.setObjectId(object333.getId());
 		objects.add(object);
 
+		//target1->222,333
 		schemeDomainService.target2object(scheme.getId(), target1.getId(), objects);
+		//target2->222,333
 		schemeDomainService.target2object(scheme.getId(), target2.getId(), objects);
 
 		objects = new ArrayList<SchemeObjectVO>();
@@ -233,7 +244,9 @@ public class DomainTest {
 		object.setObjectId(object555.getId());
 		objects.add(object);
 
+		//target3->444,555
 		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
+		//target4->444,555
 		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
 
 		// 启动方案
@@ -245,8 +258,8 @@ public class DomainTest {
 		fillUser.setId("filler222");
 		fillUser.setName("填报用户222");
 		fillUser.setOrgId("org111");
-		fillUser.setDeptId("dept222");
-		fillUser.setRoleIds(Arrays.asList("role_filler_111", "role_filler_222"));
+		fillUser.setDeptId("dept222");//填报部门
+		fillUser.setRoleIds(Arrays.asList("role_fill_111", "role_fill_222"));
 
 		UserUtil.setUser(fillUser);
 
@@ -274,7 +287,7 @@ public class DomainTest {
 		evaluateUser.setId("evaluater999");
 		evaluateUser.setName("考核用户999");
 		evaluateUser.setOrgId("org111");
-		evaluateUser.setDeptId("dept999");
+		evaluateUser.setDeptId("dept999");//考核部门
 		evaluateUser.setRoleIds(Arrays.asList("role_evaluate_999", "role_evaluate_999"));
 
 		UserUtil.setUser(evaluateUser);

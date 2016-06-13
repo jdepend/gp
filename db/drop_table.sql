@@ -1,3 +1,7 @@
+DROP TABLE app_notification;
+DROP TABLE app_scheme_ext;
+DROP TABLE unit_score;
+
 DROP TABLE object_target_execute;
 DROP TABLE object_target;
 

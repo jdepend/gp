@@ -22,21 +22,21 @@ public class SchemeObject extends SchemeObjectComponent {
 	@Column
 	private Float score;
 
-	@Column
+	@Column(length = 32)
 	private String type;
 
-	@Column(name="object_id")
+	@Column(name = "object_id", length = 36)
 	private String objectId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "group_id")
 	private SchemeObjectGroup group;
-	
+
 	@OneToMany(mappedBy = "object", cascade = { CascadeType.ALL })
 	private List<ObjectTarget> objectTargets;
 
 	public final static String TYPE_ORG = "org";
-	
+
 	public final static String TYPE_DEPT = "dept";
 
 	public SchemeObjectGroup getGroup() {
@@ -46,7 +46,7 @@ public class SchemeObject extends SchemeObjectComponent {
 	public void setGroup(SchemeObjectGroup group) {
 		this.group = group;
 	}
-	
+
 	public Float getScore() {
 		return score;
 	}

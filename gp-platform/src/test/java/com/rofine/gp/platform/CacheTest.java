@@ -23,5 +23,9 @@ public class CacheTest {
 		cacheTestService.testEhcache("test");
 	}
 
+	@Test
+	public void testEhcacheDelete() {
+		cacheTestService.testDeleteEhcache("test");
+	}
 
 }

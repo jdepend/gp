@@ -24,11 +24,12 @@ import com.rofine.gp.platform.exception.GpException;
 @Table(name = "scheme", uniqueConstraints = { @UniqueConstraint(columnNames = "name", name="方案名称不能重复") })
 public class Scheme extends IdEntity {
 
-	@NotEmpty
-	@Column
+	@NotEmpty(message="名称不能为空")
+	@Column(length = 128)
 	private String name;
 
-	@Column
+	@NotEmpty(message="状态不能为空")
+	@Column(length = 32)
 	private String state;
 
 	@Column
@@ -50,13 +51,16 @@ public class Scheme extends IdEntity {
 	@OneToMany(mappedBy = "scheme", cascade = { CascadeType.ALL })
 	private List<SchemeObject> schemeObjects;
 
-	@Column
+	@Column(length = 32)
 	private String creator;
+	
+	@Column(name="creator_name",length = 64)
+	private String creatorName;
 
 	@Column(name = "create_date")
 	private Date createDate;
 
-	@Column(name = "create_org")
+	@Column(name = "create_org",length = 128)
 	private String createOrg;
 
 	public static final String State_Init = "init";

@@ -23,19 +23,19 @@ import com.rofine.gp.domain.organization.target.execute.TargetStatVO;
 @Table(name = "target")
 public class Target extends TargetComponent {
 
-	@Column(name = "subject_id")
+	@Column(name = "subject_id", length = 36)
 	private String subjectId;
 
-	@Column(name = "evaluate_role_id")
+	@Column(name = "evaluate_role_id", length = 36)
 	private String evaluateRoleId;
 
-	@Column(name = "evaluate_id")
+	@Column(name = "evaluate_id", length = 36)
 	private String evaluateId;
 
 	@OneToMany(mappedBy = "target", cascade = { CascadeType.ALL })
 	private List<ObjectTarget> objectTargets;
 
-	@Column(name = "frequency_type")
+	@Column(name = "frequency_type", length = 32)
 	private String frequencyType;
 
 	/**
@@ -48,7 +48,7 @@ public class Target extends TargetComponent {
 
 	@Transient
 	private TargetStatVO targetStatVO;
-	
+
 	public static final String TargetFrequencyType_Year = "year";
 
 	public static final String TargetFrequencyType_HalfYear = "half_year";
@@ -75,8 +75,8 @@ public class Target extends TargetComponent {
 
 			this.objectTargets.add(objectTarget);
 		}
-		
-//		this.save();
+
+		// this.save();
 	}
 
 	public void save() throws TargetException {

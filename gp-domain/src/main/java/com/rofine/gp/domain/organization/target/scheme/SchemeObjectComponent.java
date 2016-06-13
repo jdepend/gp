@@ -17,7 +17,7 @@ public abstract class SchemeObjectComponent extends IdEntity {
 	@JoinColumn(name = "scheme_id")
 	private Scheme scheme;
 
-	@Column
+	@Column(length = 128)
 	private String name;
 
 	public Scheme getScheme() {
