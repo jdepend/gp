@@ -10,11 +10,14 @@ import com.rofine.gp.platform.entity.IdEntity;
 @Table(name = "unit_score")
 public class UnitScore extends IdEntity {
 
-	@Column(name = "unit_id")
+	@Column(name = "unit_id", length = 36)
 	private String unitId;
 
-	@Column(name = "unit_type")
+	@Column(name = "unit_type", length = 32)
 	private String unitType;
+
+	@Column(length = 32)
+	private String source;
 
 	private int year;
 
@@ -50,6 +53,14 @@ public class UnitScore extends IdEntity {
 
 	public void setScore(Float score) {
 		this.score = score;
+	}
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
 	}
 
 }
