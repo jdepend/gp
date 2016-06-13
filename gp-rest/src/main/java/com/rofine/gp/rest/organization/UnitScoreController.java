@@ -1,6 +1,7 @@
 package com.rofine.gp.rest.organization;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rofine.gp.domain.organization.score.UnitScore;
 import com.rofine.gp.domain.organization.score.UnitScoreService;
 import com.rofine.gp.platform.exception.GpException;
 
@@ -22,7 +24,7 @@ public class UnitScoreController {
 	@RequestMapping(value = "/year/{year}/get", method = RequestMethod.GET)
 	public Map<String, Object> getScore(@PathVariable int year) throws GpException {
 		
-		Map<String, Float> scores = unitScoreService.getScores(year);
+		List<UnitScore> scores = unitScoreService.getScores(year);
 
 		Map<String, Object> rtn = new HashMap<String, Object>();
 

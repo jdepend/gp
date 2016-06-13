@@ -17,6 +17,6 @@ public interface UnitScoreLoader {
 	 * @param year
 	 * @return
 	 */
-	public Map<String, Float> calScore(int year);
+	public Map<String, Float> loadScore(int year);
 
 }

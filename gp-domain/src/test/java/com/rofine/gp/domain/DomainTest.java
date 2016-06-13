@@ -20,6 +20,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.rofine.gp.domain.organization.score.UnitScore;
 import com.rofine.gp.domain.organization.score.UnitScoreService;
 import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
 import com.rofine.gp.domain.organization.target.execute.FillVO;
@@ -332,7 +333,7 @@ public class DomainTest {
 		//汇总部门成绩
 		unitScoreService.create(2016);
 		
-		Map<String, Float> scores = unitScoreService.getScores(2016);
+		List<UnitScore> scores = unitScoreService.getScores(2016);
 		
 		Logger.getLogger(DomainTest.class).info(scores);
 

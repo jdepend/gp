@@ -19,16 +19,8 @@ public class UnitScoreService {
 	@Autowired
 	private List<UnitScoreLoader> loaders;
 
-	public Map<String, Float> getScores(int year) {
-		Map<String, Float> scores = new HashMap<String, Float>();
-
-		List<UnitScore> unitScores = unitScoreRepo.findByYear(year);
-		for (UnitScore unitScore : unitScores) {
-			scores.put(unitScore.getUnitId(), unitScore.getScore());
-		}
-
-		return scores;
-
+	public List<UnitScore> getScores(int year) {
+		return unitScoreRepo.findByYear(year);
 	}
 
 	public void create(int year) {
@@ -36,7 +28,7 @@ public class UnitScoreService {
 		unitScoreRepo.deleteByYear(year);
 
 		for (UnitScoreLoader loader : loaders) {
-			Map<String, Float> scores = loader.calScore(year);
+			Map<String, Float> scores = loader.loadScore(year);
 
 			List<UnitScore> unitScores = new ArrayList<UnitScore>();
 			UnitScore unitScore;

@@ -16,7 +16,7 @@ public class TargetUnitScoreLoader implements UnitScoreLoader {
 	private SchemeDomainService schemeDomainService;
 
 	@Override
-	public Map<String, Float> calScore(int year) {
+	public Map<String, Float> loadScore(int year) {
 		
 		List<Scheme> schemes = schemeDomainService.listScheme(year);
 

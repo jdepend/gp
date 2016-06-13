@@ -63,4 +63,9 @@ public class UnitScore extends IdEntity {
 		this.source = source;
 	}
 
+	@Override
+	public String toString() {
+		return "UnitScore [unitId=" + unitId + ", unitType=" + unitType + ", source=" + source + ", year=" + year
+				+ ", score=" + score + "]";
+	}
 }
