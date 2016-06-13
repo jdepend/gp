@@ -7263,11 +7263,11 @@
 								vertices   	(list Points
 								    (3918, 2482)
 								    (3918, 2603)
-								    (2849, 2603)
-								    (2849, 2356))
+								    (2848, 2603)
+								    (2848, 2356))
 								line_style 	3
 								origin_attachment 	(3918, 2482)
-								terminal_attachment 	(2849, 2356)
+								terminal_attachment 	(2848, 2356)
 								label      	(object SegLabel @298
 								    Parent_View 	@297
 								    location   	(2912, 2499)
@@ -7599,11 +7599,11 @@
 								supplier   	@299
 								vertices   	(list Points
 								    (3119, 1357)
-								    (2238, 1357)
-								    (2238, 1496))
+								    (2235, 1357)
+								    (2235, 1496))
 								line_style 	3
 								origin_attachment 	(3119, 1357)
-								terminal_attachment 	(2238, 1496)
+								terminal_attachment 	(2235, 1496)
 								label      	(object SegLabel @315
 								    Parent_View 	@314
 								    location   	(2313, 1426)
@@ -9712,11 +9712,11 @@
 								supplier   	@400
 								vertices   	(list Points
 								    (506, 3441)
-								    (388, 3441)
-								    (388, 2956))
+								    (387, 3441)
+								    (387, 2956))
 								line_style 	3
 								origin_attachment 	(506, 3441)
-								terminal_attachment 	(388, 2956)
+								terminal_attachment 	(387, 2956)
 								label      	(object SegLabel @410
 								    Parent_View 	@409
 								    location   	(451, 3016)
@@ -13952,11 +13952,11 @@
 								supplier   	@527
 								vertices   	(list Points
 								    (342, 1692)
-								    (159, 1692)
-								    (159, 1039))
+								    (158, 1692)
+								    (158, 1039))
 								line_style 	3
 								origin_attachment 	(342, 1692)
-								terminal_attachment 	(159, 1039)
+								terminal_attachment 	(158, 1039)
 								label      	(object SegLabel @568
 								    Parent_View 	@567
 								    location   	(216, 1576)
@@ -14561,11 +14561,11 @@
 								supplier   	@580
 								vertices   	(list Points
 								    (2573, 1999)
-								    (2714, 1999)
-								    (2714, 1048))
+								    (2713, 1999)
+								    (2713, 1048))
 								line_style 	3
 								origin_attachment 	(2573, 1999)
-								terminal_attachment 	(2714, 1048))))
+								terminal_attachment 	(2713, 1048))))
 						    (object AttachView "" @599
 							stereotype 	TRUE
 							line_color 	3342489
@@ -26271,24 +26271,6 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"5739B14302AB"
-					compartment 	(object Compartment
-					    Parent_View 	@1019
-					    location   	(1611, 1790)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	4
-					    max_width  	363
-					    justify    	1)
 					width      	384
 					height     	332
 					annotation 	8
@@ -26319,24 +26301,6 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"573A87A00353"
-					compartment 	(object Compartment
-					    Parent_View 	@1020
-					    location   	(1601, 2531)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	4
-					    max_width  	431
-					    justify    	1)
 					width      	452
 					height     	332
 					annotation 	8
@@ -26367,24 +26331,6 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"5754EEEB02C7"
-					compartment 	(object Compartment
-					    Parent_View 	@1021
-					    location   	(1609, 2983)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	2
-					    max_width  	172
-					    justify    	1)
 					width      	394
 					height     	232
 					annotation 	8
@@ -26470,24 +26416,6 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"5754EF1A00E8"
-					compartment 	(object Compartment
-					    Parent_View 	@1024
-					    location   	(413, 2941)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	2
-					    max_width  	422
-					    justify    	1)
 					width      	686
 					height     	232
 					annotation 	8
@@ -26568,24 +26496,6 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"573A86B30181"
-					compartment 	(object Compartment
-					    Parent_View 	@1027
-					    location   	(573, 2189)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	4
-					    max_width  	400
-					    justify    	1)
 					width      	420
 					height     	332
 					annotation 	8
@@ -26616,24 +26526,6 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"5739B21C00DB"
-					compartment 	(object Compartment
-					    Parent_View 	@1028
-					    location   	(607, 1751)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	4
-					    max_width  	331
-					    justify    	1)
 					width      	352
 					height     	332
 					annotation 	8
@@ -26778,103 +26670,7 @@
 					quidu      	"5739AE780121"
 					width      	1456
 					height     	1632)
-				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::score::UnitScoreService" @1037
-					ShowCompartmentStereotypes 	TRUE
-					IncludeAttribute 	TRUE
-					IncludeOperation 	TRUE
-					location   	(3003, 1104)
-					font       	(object Font
-					    size       	10
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object ItemLabel
-					    Parent_View 	@1037
-					    location   	(2825, 950)
-					    fill_color 	13434879
-					    nlines     	1
-					    max_width  	356
-					    justify    	0
-					    label      	"UnitScoreService")
-					icon_style 	"Icon"
-					line_color 	3342489
-					fill_color 	13434879
-					quidu      	"57563DB50211"
-					compartment 	(object Compartment
-					    Parent_View 	@1037
-					    location   	(2825, 1055)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	4
-					    max_width  	263
-					    justify    	1)
-					width      	374
-					height     	332
-					annotation 	8
-					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::score::UnitScoreLoader" @1038
-					ShowCompartmentStereotypes 	TRUE
-					IncludeAttribute 	TRUE
-					IncludeOperation 	TRUE
-					location   	(3741, 1017)
-					font       	(object Font
-					    size       	10
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object ItemLabel
-					    Parent_View 	@1038
-					    location   	(3740, 1128)
-					    anchor_loc 	1
-					    nlines     	2
-					    max_width  	270
-					    justify    	0
-					    label      	"UnitScoreLoader")
-					icon       	"Interface"
-					icon_style 	"Icon"
-					line_color 	3342489
-					fill_color 	13434879
-					quidu      	"575E1D660101"
-					compartment 	(object Compartment
-					    Parent_View 	@1038
-					    location   	(3607, 1238)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    anchor     	2
-					    nlines     	3
-					    max_width  	263
-					    justify    	0)
-					width      	56
-					height     	63
-					annotation 	8
-					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::scheme::TargetUnitScoreLoader" @1039
+				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::scheme::TargetUnitScoreLoader" @1037
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -26889,7 +26685,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1039
+					    Parent_View 	@1037
 					    location   	(2764, 1576)
 					    fill_color 	13434879
 					    nlines     	1
@@ -26904,7 +26700,7 @@
 					height     	172
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeDomainService" @1040
+				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeDomainService" @1038
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -26919,7 +26715,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1040
+					    Parent_View 	@1038
 					    location   	(2758, 1859)
 					    fill_color 	13434879
 					    nlines     	1
@@ -26930,29 +26726,11 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"5739B724019A"
-					compartment 	(object Compartment
-					    Parent_View 	@1040
-					    location   	(2758, 1964)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	7
-					    max_width  	494
-					    justify    	1)
 					width      	514
 					height     	482
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetScoreCalculator" @1041
+				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetScoreCalculator" @1039
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -26967,7 +26745,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1041
+					    Parent_View 	@1039
 					    location   	(3776, 2109)
 					    anchor_loc 	1
 					    nlines     	2
@@ -26979,28 +26757,11 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"573AD127018A"
-					compartment 	(object Compartment
-					    Parent_View 	@1041
-					    location   	(3652, 2219)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    anchor     	2
-					    nlines     	2
-					    max_width  	238
-					    justify    	0)
 					width      	58
 					height     	58
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteDomainService" @1042
+				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteDomainService" @1040
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -27015,7 +26776,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1042
+					    Parent_View 	@1040
 					    location   	(2753, 2548)
 					    fill_color 	13434879
 					    nlines     	1
@@ -27026,29 +26787,11 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"573A68A401F2"
-					compartment 	(object Compartment
-					    Parent_View 	@1042
-					    location   	(2753, 2653)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    fill_color 	13434879
-					    anchor     	2
-					    nlines     	5
-					    max_width  	725
-					    justify    	1)
 					width      	746
 					height     	382
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteDataLoader" @1043
+				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteDataLoader" @1041
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -27063,7 +26806,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1043
+					    Parent_View 	@1041
 					    location   	(3785, 2832)
 					    anchor_loc 	1
 					    nlines     	2
@@ -27075,25 +26818,69 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"5751386B0035"
-					compartment 	(object Compartment
-					    Parent_View 	@1043
-					    location   	(3538, 2942)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    icon_style 	"Icon"
-					    anchor     	2
-					    nlines     	3
-					    max_width  	491
-					    justify    	0)
 					width      	58
 					height     	58
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::score::UnitScoreLoader" @1042
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(3741, 1017)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@1042
+					    location   	(3740, 1128)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	270
+					    justify    	0
+					    label      	"UnitScoreLoader")
+					icon       	"Interface"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"575E1D660101"
+					width      	56
+					height     	63
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::score::UnitScoreService" @1043
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(3003, 1104)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@1043
+					    location   	(2825, 950)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	356
+					    justify    	0
+					    label      	"UnitScoreService")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"57563DB50211"
+					width      	374
+					height     	332
 					annotation 	8
 					autoResize 	TRUE)
 				    (object AssociationViewNew "$UNNAMED$219" @1044
@@ -27127,7 +26914,7 @@
 						line_color 	3342489
 						quidu      	"575E1E500212"
 						client     	@1044
-						supplier   	@1038
+						supplier   	@1042
 						vertices   	(list Points
 						    (3451, 1026)
 						    (3713, 1026))
@@ -27171,7 +26958,7 @@
 						line_color 	3342489
 						quidu      	"575E1E50021C"
 						client     	@1044
-						supplier   	@1037
+						supplier   	@1043
 						vertices   	(list Points
 						    (3451, 1026)
 						    (3190, 1026))
@@ -27203,30 +26990,30 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"575E1E0F0373"
-					client     	@1039
-					supplier   	@1038
+					client     	@1037
+					supplier   	@1042
 					vertices   	(list Points
 					    (3088, 1563)
-					    (3601, 1131))
+					    (3653, 1088))
 					line_style 	0)
 				    (object UsesView "" @1050
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"575640BB0349"
-					client     	@1040
-					supplier   	@1041
+					client     	@1038
+					supplier   	@1039
 					vertices   	(list Points
 					    (3263, 2131)
-					    (3508, 2131))
+					    (3690, 2131))
 					line_style 	3
 					origin_attachment 	(3263, 2131)
-					terminal_attachment 	(3508, 2131))
+					terminal_attachment 	(3690, 2131))
 				    (object UsesView "" @1051
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"575E1D3C016A"
 					client     	@1029
-					supplier   	@1037
+					supplier   	@1043
 					vertices   	(list Points
 					    (2003, 1119)
 					    (2816, 1119))
@@ -27238,7 +27025,7 @@
 					line_color 	3342489
 					quidu      	"57563D0F0261"
 					client     	@1019
-					supplier   	@1040
+					supplier   	@1038
 					vertices   	(list Points
 					    (1986, 1926)
 					    (2749, 1926))
@@ -27250,7 +27037,7 @@
 					line_color 	3342489
 					quidu      	"57563CED0061"
 					client     	@1020
-					supplier   	@1042
+					supplier   	@1040
 					vertices   	(list Points
 					    (2044, 2628)
 					    (2744, 2628))
@@ -27261,8 +27048,8 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"575E1E17034A"
-					client     	@1039
-					supplier   	@1040
+					client     	@1037
+					supplier   	@1038
 					vertices   	(list Points
 					    (2988, 1736)
 					    (2988, 1847))
@@ -27273,14 +27060,14 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"57563BBA0311"
-					client     	@1042
-					supplier   	@1043
+					client     	@1040
+					supplier   	@1041
 					vertices   	(list Points
 					    (3490, 2753)
-					    (3630, 2753))
+					    (3699, 2753))
 					line_style 	3
 					origin_attachment 	(3490, 2753)
-					terminal_attachment 	(3630, 2753))))))
+					terminal_attachment 	(3699, 2753))))))
 		    (object Class_Category "用例实现"
 			quid       	"5731953B0288"
 			exportControl 	"Public"
@@ -34937,7 +34724,7 @@
 			max_height 	28350
 			max_width  	21600
 			origin_x   	0
-			origin_y   	8147
+			origin_y   	14930
 			items      	(list diagram_item_list
 			    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectScoreCalculator" @1403
 				ShowCompartmentStereotypes 	TRUE
@@ -34966,6 +34753,23 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573AD13403E4"
+				compartment 	(object Compartment
+				    Parent_View 	@1403
+				    location   	(1207, 367)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    anchor     	2
+				    nlines     	2
+				    max_width  	238
+				    justify    	0)
 				width      	58
 				height     	58
 				annotation 	8
@@ -34997,6 +34801,23 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573AD1030125"
+				compartment 	(object Compartment
+				    Parent_View 	@1404
+				    location   	(1183, 877)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    anchor     	2
+				    nlines     	2
+				    max_width  	238
+				    justify    	0)
 				width      	58
 				height     	58
 				annotation 	8
@@ -35028,6 +34849,23 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573AD127018A"
+				compartment 	(object Compartment
+				    Parent_View 	@1405
+				    location   	(1207, 1402)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    anchor     	2
+				    nlines     	2
+				    max_width  	238
+				    justify    	0)
 				width      	58
 				height     	58
 				annotation 	8
@@ -35144,17 +34982,35 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@1412
-				    location   	(1083, 2122)
+				    location   	(1080, 2122)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	462
+				    max_width  	468
 				    justify    	0
 				    label      	"ObjectTargetExecute")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573A6826014A"
-				width      	480
+				compartment 	(object Compartment
+				    Parent_View 	@1412
+				    location   	(1080, 2227)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	14
+				    max_width  	466
+				    justify    	1)
+				width      	486
 				height     	832
 				annotation 	8
 				autoResize 	TRUE)
@@ -35165,7 +35021,7 @@
 				supplier   	@1412
 				vertices   	(list Points
 				    (618, 2526)
-				    (1073, 2526))
+				    (1070, 2526))
 				line_style 	0)
 			    (object NoteView @1414
 				location   	(354, 4419)
@@ -35240,6 +35096,23 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573A69CA015C"
+				compartment 	(object Compartment
+				    Parent_View 	@1416
+				    location   	(1041, 1918)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    anchor     	2
+				    nlines     	2
+				    max_width  	516
+				    justify    	0)
 				width      	58
 				height     	58
 				annotation 	8
@@ -35269,17 +35142,35 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@1418
-				    location   	(1814, 2893)
+				    location   	(1813, 2893)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	410
+				    max_width  	412
 				    justify    	0
 				    label      	"Target")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"5739B84900EE"
-				width      	428
+				compartment 	(object Compartment
+				    Parent_View 	@1418
+				    location   	(1813, 2998)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	8
+				    max_width  	409
+				    justify    	1)
+				width      	430
 				height     	532
 				annotation 	8
 				autoResize 	TRUE)
@@ -35299,17 +35190,35 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@1419
-				    location   	(1871, 3596)
+				    location   	(1870, 3596)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	272
+				    max_width  	274
 				    justify    	0
 				    label      	"TargetType")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573A75C103E6"
-				width      	290
+				compartment 	(object Compartment
+				    Parent_View 	@1419
+				    location   	(1870, 3701)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	4
+				    max_width  	272
+				    justify    	1)
+				width      	292
 				height     	332
 				annotation 	8
 				autoResize 	TRUE)
@@ -35329,17 +35238,35 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@1420
-				    location   	(1128, 3306)
+				    location   	(1125, 3306)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	390
+				    max_width  	396
 				    justify    	0
 				    label      	"TargetComponent")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573A76FE027A"
-				width      	408
+				compartment 	(object Compartment
+				    Parent_View 	@1420
+				    location   	(1125, 3411)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	3
+				    max_width  	394
+				    justify    	1)
+				width      	414
 				height     	282
 				annotation 	8
 				autoResize 	TRUE)
@@ -35350,7 +35277,7 @@
 				supplier   	@1420
 				vertices   	(list Points
 				    (713, 3436)
-				    (1118, 3435))
+				    (1115, 3435))
 				line_style 	0)
 			    (object InheritView "" @1422
 				stereotype 	TRUE
@@ -35359,18 +35286,18 @@
 				client     	@1418
 				supplier   	@1420
 				vertices   	(list Points
-				    (1804, 3234)
-				    (1527, 3349))
+				    (1803, 3235)
+				    (1530, 3348))
 				line_style 	0)
 			    (object AssociationViewNew "$UNNAMED$223" @1423
-				location   	(1508, 3739)
+				location   	(1511, 3732)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"573A776501B1"
 				roleview_list 	(list RoleViews
 				    (object RoleView "parent" @1424
 					Parent_View 	@1423
-					location   	(182, 67)
+					location   	(185, 60)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -35382,7 +35309,7 @@
 					    default_color 	TRUE)
 					label      	(object SegLabel @1425
 					    Parent_View 	@1424
-					    location   	(1790, 3698)
+					    location   	(1791, 3691)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -35407,14 +35334,14 @@
 					client     	@1423
 					supplier   	@1419
 					vertices   	(list Points
-					    (1508, 3739)
-					    (1862, 3739))
+					    (1511, 3732)
+					    (1861, 3732))
 					line_style 	3
-					origin_attachment 	(1508, 3739)
-					terminal_attachment 	(1862, 3739)
+					origin_attachment 	(1511, 3732)
+					terminal_attachment 	(1861, 3732)
 					label      	(object SegLabel @1426
 					    Parent_View 	@1424
-					    location   	(1827, 3793)
+					    location   	(1825, 3786)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -35435,7 +35362,7 @@
 					    orientation 	1))
 				    (object RoleView "children" @1427
 					Parent_View 	@1423
-					location   	(182, 67)
+					location   	(185, 60)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -35472,11 +35399,11 @@
 					client     	@1423
 					supplier   	@1420
 					vertices   	(list Points
-					    (1508, 3739)
-					    (1317, 3739)
+					    (1511, 3732)
+					    (1317, 3732)
 					    (1317, 3576))
 					line_style 	3
-					origin_attachment 	(1508, 3739)
+					origin_attachment 	(1511, 3732)
 					terminal_attachment 	(1317, 3576)
 					label      	(object SegLabel @1429
 					    Parent_View 	@1427
@@ -35506,8 +35433,8 @@
 				client     	@1419
 				supplier   	@1420
 				vertices   	(list Points
-				    (1861, 3681)
-				    (1527, 3528))
+				    (1860, 3681)
+				    (1530, 3529))
 				line_style 	0)
 			    (object NoteView @1431
 				location   	(450, 5010)
@@ -35558,6 +35485,24 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573BCCA5039D"
+				compartment 	(object Compartment
+				    Parent_View 	@1432
+				    location   	(991, 5008)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	2
+				    max_width  	553
+				    justify    	1)
 				width      	574
 				height     	232
 				annotation 	8
@@ -35597,6 +35542,24 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573A75220298"
+				compartment 	(object Compartment
+				    Parent_View 	@1434
+				    location   	(1742, 5395)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	2
+				    max_width  	456
+				    justify    	1)
 				width      	476
 				height     	232
 				annotation 	8
@@ -35637,6 +35600,24 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573A73F201FB"
+				compartment 	(object Compartment
+				    Parent_View 	@1436
+				    location   	(1795, 4295)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	7
+				    max_width  	344
+				    justify    	1)
 				width      	364
 				height     	482
 				annotation 	8
@@ -35819,6 +35800,23 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"5751386B0035"
+				compartment 	(object Compartment
+				    Parent_View 	@1446
+				    location   	(1490, 6034)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    anchor     	2
+				    nlines     	3
+				    max_width  	491
+				    justify    	0)
 				width      	58
 				height     	58
 				annotation 	8
@@ -35951,7 +35949,7 @@
 				supplier   	@1446
 				vertices   	(list Points
 				    (680, 6408)
-				    (1652, 5886))
+				    (1489, 5972))
 				line_style 	0)
 			    (object RealizeView "" @1452
 				stereotype 	TRUE
@@ -35961,7 +35959,7 @@
 				supplier   	@1446
 				vertices   	(list Points
 				    (1369, 6408)
-				    (1653, 5974))
+				    (1518, 6183))
 				line_style 	0)
 			    (object RealizeView "" @1453
 				stereotype 	TRUE
@@ -35971,7 +35969,7 @@
 				supplier   	@1446
 				vertices   	(list Points
 				    (2065, 6405)
-				    (1815, 5974))
+				    (1936, 6183))
 				line_style 	0)
 			    (object RealizeView "" @1454
 				stereotype 	TRUE
@@ -35981,7 +35979,7 @@
 				supplier   	@1446
 				vertices   	(list Points
 				    (2794, 6402)
-				    (1825, 5885))
+				    (1988, 5972))
 				line_style 	0)
 			    (object NoteView @1455
 				location   	(453, 5850)
@@ -36071,6 +36069,24 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"573A7335005D"
+				compartment 	(object Compartment
+				    Parent_View 	@1458
+				    location   	(1909, 7366)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	11
+				    max_width  	350
+				    justify    	1)
 				width      	370
 				height     	682
 				annotation 	8
@@ -36101,6 +36117,24 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"5754E9C202A1"
+				compartment 	(object Compartment
+				    Parent_View 	@1459
+				    location   	(1951, 6913)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	2
+				    max_width  	247
+				    justify    	1)
 				width      	268
 				height     	232
 				annotation 	8
@@ -36192,6 +36226,24 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"5754EF1A00E8"
+				compartment 	(object Compartment
+				    Parent_View 	@1465
+				    location   	(1007, 8233)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	2
+				    max_width  	422
+				    justify    	1)
 				width      	686
 				height     	232
 				annotation 	8
@@ -36222,6 +36274,24 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"5754EEEB02C7"
+				compartment 	(object Compartment
+				    Parent_View 	@1466
+				    location   	(2200, 8224)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	2
+				    max_width  	172
+				    justify    	1)
 				width      	394
 				height     	232
 				annotation 	8
@@ -36270,7 +36340,129 @@
 				vertices   	(list Points
 				    (751, 8232)
 				    (997, 8232))
-				line_style 	0))))))
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::score::UnitScoreLoader" @1470
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(2103, 8724)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1470
+				    location   	(2102, 8832)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	226
+				    justify    	0
+				    label      	"UnitScoreLoader")
+				icon       	"Interface"
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"575E1D660101"
+				compartment 	(object Compartment
+				    Parent_View 	@1470
+				    location   	(1969, 8942)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    anchor     	2
+				    nlines     	3
+				    max_width  	263
+				    justify    	0)
+				width      	58
+				height     	58
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::DesignModel::DesignElement::domain::organization::target::scheme::TargetUnitScoreLoader" @1471
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(1425, 9333)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1471
+				    location   	(1201, 9259)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	448
+				    justify    	0
+				    label      	"TargetUnitScoreLoader")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"575E1DE6026E"
+				width      	466
+				height     	172
+				annotation 	8
+				autoResize 	TRUE)
+			    (object RealizeView "" @1472
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"575E1E0F0373"
+				client     	@1471
+				supplier   	@1470
+				vertices   	(list Points
+				    (1518, 9246)
+				    (1985, 8828))
+				line_style 	0)
+			    (object NoteView @1473
+				location   	(420, 8799)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1473
+				    location   	(104, 8659)
+				    fill_color 	13434879
+				    nlines     	5
+				    max_width  	596
+				    justify    	1
+				    label      	"10.通过Loader可以汇总多种分数来源的组织单元的年度成绩")
+				line_color 	3342489
+				fill_color 	13434879
+				width      	656
+				height     	293)
+			    (object AttachView "" @1474
+				stereotype 	TRUE
+				line_color 	3342489
+				client     	@1473
+				supplier   	@1470
+				vertices   	(list Points
+				    (748, 8818)
+				    (1986, 8818))
+				line_style 	3
+				origin_attachment 	(748, 8818)
+				terminal_attachment 	(1986, 8818)))))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
 		quid       	"572BE87D0130"
@@ -36281,7 +36473,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object CategoryView "Use Case View::01.业务用例模型" @1470
+		    (object CategoryView "Use Case View::01.业务用例模型" @1475
 			location   	(1758, 438)
 			font       	(object Font
 			    size       	10
@@ -36293,7 +36485,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1470
+			    Parent_View 	@1475
 			    location   	(1559, 354)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36306,7 +36498,7 @@
 			quidu      	"572BE98D011D"
 			width      	410
 			height     	180)
-		    (object CategoryView "Logical View::02.业务分析模型" @1471
+		    (object CategoryView "Logical View::02.业务分析模型" @1476
 			location   	(1758, 888)
 			font       	(object Font
 			    size       	10
@@ -36318,7 +36510,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1471
+			    Parent_View 	@1476
 			    location   	(1546, 804)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36331,7 +36523,7 @@
 			quidu      	"572BE99F01ED"
 			width      	437
 			height     	181)
-		    (object CategoryView "Use Case View::03.系统用例模型" @1472
+		    (object CategoryView "Use Case View::03.系统用例模型" @1477
 			location   	(1755, 1323)
 			font       	(object Font
 			    size       	10
@@ -36343,7 +36535,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1472
+			    Parent_View 	@1477
 			    location   	(1546, 1235)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36356,7 +36548,7 @@
 			quidu      	"573179720188"
 			width      	430
 			height     	188)
-		    (object CategoryView "Logical View::04.分析模型" @1473
+		    (object CategoryView "Logical View::04.分析模型" @1478
 			location   	(1758, 1779)
 			font       	(object Font
 			    size       	10
@@ -36368,7 +36560,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1473
+			    Parent_View 	@1478
 			    location   	(1549, 1685)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36381,7 +36573,7 @@
 			quidu      	"573194DC036D"
 			width      	431
 			height     	200)
-		    (object CategoryView "Logical View::DesignModel" @1474
+		    (object CategoryView "Logical View::DesignModel" @1479
 			location   	(1764, 2178)
 			font       	(object Font
 			    size       	10
@@ -36393,7 +36585,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1474
+			    Parent_View 	@1479
 			    location   	(1620, 2094)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36406,7 +36598,7 @@
 			quidu      	"5731951C038E"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::06.数据模型" @1475
+		    (object CategoryView "Logical View::06.数据模型" @1480
 			location   	(1176, 2583)
 			font       	(object Font
 			    size       	10
@@ -36418,7 +36610,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1475
+			    Parent_View 	@1480
 			    location   	(963, 2498)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36431,7 +36623,7 @@
 			quidu      	"5731954801AC"
 			width      	438
 			height     	182)
-		    (object CategoryView "Logical View::08.部署模型" @1476
+		    (object CategoryView "Logical View::08.部署模型" @1481
 			location   	(2400, 2574)
 			font       	(object Font
 			    size       	10
@@ -36443,7 +36635,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1476
+			    Parent_View 	@1481
 			    location   	(2181, 2490)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36456,7 +36648,7 @@
 			quidu      	"5734486D036C"
 			width      	450
 			height     	181)
-		    (object CategoryView "Logical View::07.开发模型" @1477
+		    (object CategoryView "Logical View::07.开发模型" @1482
 			location   	(1755, 2583)
 			font       	(object Font
 			    size       	10
@@ -36468,7 +36660,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1477
+			    Parent_View 	@1482
 			    location   	(1548, 2493)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36481,77 +36673,77 @@
 			quidu      	"5734489802D4"
 			width      	426
 			height     	193)
-		    (object ImportView "" @1478
+		    (object ImportView "" @1483
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573448BA034E"
-			client     	@1470
-			supplier   	@1471
+			client     	@1475
+			supplier   	@1476
 			vertices   	(list Points
 			    (1758, 528)
 			    (1758, 743))
 			line_style 	0)
-		    (object ImportView "" @1479
+		    (object ImportView "" @1484
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573448BC03AE"
-			client     	@1471
-			supplier   	@1472
+			client     	@1476
+			supplier   	@1477
 			vertices   	(list Points
 			    (1757, 978)
 			    (1755, 1174))
 			line_style 	0)
-		    (object ImportView "" @1480
+		    (object ImportView "" @1485
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573448BF00D6"
-			client     	@1472
-			supplier   	@1473
+			client     	@1477
+			supplier   	@1478
 			vertices   	(list Points
 			    (1755, 1417)
 			    (1756, 1624))
 			line_style 	0)
-		    (object ImportView "" @1481
+		    (object ImportView "" @1486
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573448C3010E"
-			client     	@1473
-			supplier   	@1474
+			client     	@1478
+			supplier   	@1479
 			vertices   	(list Points
 			    (1759, 1879)
 			    (1761, 2033))
 			line_style 	0)
-		    (object ImportView "" @1482
+		    (object ImportView "" @1487
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573448C70146"
-			client     	@1474
-			supplier   	@1475
+			client     	@1479
+			supplier   	@1480
 			vertices   	(list Points
 			    (1631, 2268)
 			    (1383, 2437))
 			line_style 	0)
-		    (object ImportView "" @1483
+		    (object ImportView "" @1488
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573448C9033E"
-			client     	@1474
-			supplier   	@1476
+			client     	@1479
+			supplier   	@1481
 			vertices   	(list Points
 			    (1910, 2268)
 			    (2174, 2433))
 			line_style 	0)
-		    (object ImportView "" @1484
+		    (object ImportView "" @1489
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573448CC01DE"
-			client     	@1474
-			supplier   	@1477
+			client     	@1479
+			supplier   	@1482
 			vertices   	(list Points
 			    (1761, 2268)
 			    (1757, 2432))
 			line_style 	0)
-		    (object NoteView @1485
+		    (object NoteView @1490
 			location   	(2508, 351)
 			font       	(object Font
 			    size       	10
@@ -36563,7 +36755,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1485
+			    Parent_View 	@1490
 			    location   	(2283, 261)
 			    fill_color 	13434879
 			    nlines     	3
@@ -36574,16 +36766,16 @@
 			fill_color 	13434879
 			width      	475
 			height     	193)
-		    (object AttachView "" @1486
+		    (object AttachView "" @1491
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1485
-			supplier   	@1470
+			client     	@1490
+			supplier   	@1475
 			vertices   	(list Points
 			    (2270, 377)
 			    (1963, 413))
 			line_style 	0)
-		    (object NoteView @1487
+		    (object NoteView @1492
 			location   	(2517, 813)
 			font       	(object Font
 			    size       	10
@@ -36595,7 +36787,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1487
+			    Parent_View 	@1492
 			    location   	(2279, 710)
 			    fill_color 	13434879
 			    nlines     	4
@@ -36606,16 +36798,16 @@
 			fill_color 	13434879
 			width      	501
 			height     	219)
-		    (object AttachView "" @1488
+		    (object AttachView "" @1493
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1487
-			supplier   	@1471
+			client     	@1492
+			supplier   	@1476
 			vertices   	(list Points
 			    (2266, 836)
 			    (1976, 865))
 			line_style 	0)
-		    (object NoteView @1489
+		    (object NoteView @1494
 			location   	(2559, 1221)
 			font       	(object Font
 			    size       	10
@@ -36627,7 +36819,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1489
+			    Parent_View 	@1494
 			    location   	(2290, 1112)
 			    fill_color 	13434879
 			    nlines     	4
@@ -36638,16 +36830,16 @@
 			fill_color 	13434879
 			width      	563
 			height     	231)
-		    (object AttachView "" @1490
+		    (object AttachView "" @1495
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1489
-			supplier   	@1472
+			client     	@1494
+			supplier   	@1477
 			vertices   	(list Points
 			    (2277, 1255)
 			    (1970, 1294))
 			line_style 	0)
-		    (object NoteView @1491
+		    (object NoteView @1496
 			location   	(2571, 1689)
 			font       	(object Font
 			    size       	10
@@ -36659,7 +36851,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1491
+			    Parent_View 	@1496
 			    location   	(2292, 1583)
 			    fill_color 	13434879
 			    nlines     	4
@@ -36670,16 +36862,16 @@
 			fill_color 	13434879
 			width      	582
 			height     	225)
-		    (object AttachView "" @1492
+		    (object AttachView "" @1497
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1491
-			supplier   	@1473
+			client     	@1496
+			supplier   	@1478
 			vertices   	(list Points
 			    (2279, 1719)
 			    (1973, 1754))
 			line_style 	0)
-		    (object NoteView @1493
+		    (object NoteView @1498
 			location   	(2640, 2067)
 			font       	(object Font
 			    size       	10
@@ -36691,7 +36883,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1493
+			    Parent_View 	@1498
 			    location   	(2293, 1964)
 			    fill_color 	13434879
 			    nlines     	4
@@ -36702,16 +36894,16 @@
 			fill_color 	13434879
 			width      	719
 			height     	219)
-		    (object AttachView "" @1494
+		    (object AttachView "" @1499
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1493
-			supplier   	@1474
+			client     	@1498
+			supplier   	@1479
 			vertices   	(list Points
 			    (2280, 2111)
 			    (1914, 2158))
 			line_style 	0)
-		    (object NoteView @1495
+		    (object NoteView @1500
 			location   	(957, 2937)
 			font       	(object Font
 			    size       	10
@@ -36723,7 +36915,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1495
+			    Parent_View 	@1500
 			    location   	(707, 2840)
 			    fill_color 	13434879
 			    nlines     	3
@@ -36734,16 +36926,16 @@
 			fill_color 	13434879
 			width      	525
 			height     	206)
-		    (object AttachView "" @1496
+		    (object AttachView "" @1501
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1495
-			supplier   	@1475
+			client     	@1500
+			supplier   	@1480
 			vertices   	(list Points
 			    (1018, 2833)
 			    (1118, 2674))
 			line_style 	0)
-		    (object NoteView @1497
+		    (object NoteView @1502
 			location   	(2337, 2940)
 			font       	(object Font
 			    size       	10
@@ -36755,7 +36947,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1497
+			    Parent_View 	@1502
 			    location   	(2043, 2840)
 			    fill_color 	13434879
 			    nlines     	4
@@ -36766,16 +36958,16 @@
 			fill_color 	13434879
 			width      	612
 			height     	213)
-		    (object AttachView "" @1498
+		    (object AttachView "" @1503
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1497
-			supplier   	@1476
+			client     	@1502
+			supplier   	@1481
 			vertices   	(list Points
 			    (2354, 2833)
 			    (2384, 2664))
 			line_style 	0)
-		    (object NoteView @1499
+		    (object NoteView @1504
 			location   	(1632, 2940)
 			font       	(object Font
 			    size       	10
@@ -36787,7 +36979,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1499
+			    Parent_View 	@1504
 			    location   	(1360, 2840)
 			    fill_color 	13434879
 			    nlines     	4
@@ -36798,16 +36990,16 @@
 			fill_color 	13434879
 			width      	569
 			height     	213)
-		    (object AttachView "" @1500
+		    (object AttachView "" @1505
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1477
-			supplier   	@1499
+			client     	@1482
+			supplier   	@1504
 			vertices   	(list Points
 			    (1721, 2679)
 			    (1666, 2833))
 			line_style 	0)
-		    (object CategoryView "Use Case View::c.产品特性" @1501
+		    (object CategoryView "Use Case View::c.产品特性" @1506
 			location   	(1023, 1323)
 			font       	(object Font
 			    size       	10
@@ -36819,7 +37011,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1501
+			    Parent_View 	@1506
 			    location   	(824, 1239)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36832,7 +37024,7 @@
 			quidu      	"57367D9E02D9"
 			width      	410
 			height     	180)
-		    (object CategoryView "Use Case View::a.愿景" @1502
+		    (object CategoryView "Use Case View::a.愿景" @1507
 			location   	(1017, 882)
 			font       	(object Font
 			    size       	10
@@ -36844,7 +37036,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1502
+			    Parent_View 	@1507
 			    location   	(818, 798)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36857,67 +37049,67 @@
 			quidu      	"57368FB501BA"
 			width      	410
 			height     	180)
-		    (object ImportView "" @1503
+		    (object ImportView "" @1508
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5736914C0049"
-			client     	@1502
-			supplier   	@1501
+			client     	@1507
+			supplier   	@1506
 			vertices   	(list Points
 			    (1017, 972)
 			    (1020, 1178))
 			line_style 	0)
-		    (object ImportView "" @1504
+		    (object ImportView "" @1509
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691510215"
-			client     	@1501
-			supplier   	@1472
+			client     	@1506
+			supplier   	@1477
 			vertices   	(list Points
 			    (1228, 1323)
 			    (1539, 1323))
 			line_style 	0)
-		    (object ImportView "" @1505
+		    (object ImportView "" @1510
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691540396"
-			client     	@1501
-			supplier   	@1473
+			client     	@1506
+			supplier   	@1478
 			vertices   	(list Points
 			    (1168, 1413)
 			    (1542, 1644))
 			line_style 	0)
-		    (object ImportView "" @1506
+		    (object ImportView "" @1511
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691580045"
-			client     	@1501
-			supplier   	@1474
+			client     	@1506
+			supplier   	@1479
 			vertices   	(list Points
 			    (1101, 1413)
 			    (1638, 2033))
 			line_style 	0)
-		    (object ImportView "" @1507
+		    (object ImportView "" @1512
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5736916101BD"
-			client     	@1470
-			supplier   	@1502
+			client     	@1475
+			supplier   	@1507
 			vertices   	(list Points
 			    (1606, 528)
 			    (1222, 758))
 			line_style 	0)
-		    (object ImportView "" @1508
+		    (object ImportView "" @1513
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691660222"
-			client     	@1471
-			supplier   	@1502
+			client     	@1476
+			supplier   	@1507
 			vertices   	(list Points
 			    (1539, 885)
 			    (1222, 883))
 			line_style 	0)
-		    (object CategoryView "Use Case View::b.产品分类" @1509
+		    (object CategoryView "Use Case View::b.产品分类" @1514
 			location   	(324, 1323)
 			font       	(object Font
 			    size       	10
@@ -36929,7 +37121,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1509
+			    Parent_View 	@1514
 			    location   	(125, 1239)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36942,27 +37134,27 @@
 			quidu      	"57369181016A"
 			width      	410
 			height     	180)
-		    (object ImportView "" @1510
+		    (object ImportView "" @1515
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5736919B01DA"
-			client     	@1502
-			supplier   	@1509
+			client     	@1507
+			supplier   	@1514
 			vertices   	(list Points
 			    (872, 972)
 			    (529, 1191))
 			line_style 	0)
-		    (object ImportView "" @1511
+		    (object ImportView "" @1516
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691A001F8"
-			client     	@1509
-			supplier   	@1501
+			client     	@1514
+			supplier   	@1506
 			vertices   	(list Points
 			    (529, 1323)
 			    (817, 1323))
 			line_style 	0)
-		    (object CategoryView "Logical View::d.可变性模型" @1512
+		    (object CategoryView "Logical View::d.可变性模型" @1517
 			location   	(741, 1770)
 			font       	(object Font
 			    size       	10
@@ -36974,7 +37166,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1512
+			    Parent_View 	@1517
 			    location   	(531, 1685)
 			    fill_color 	13434879
 			    nlines     	2
@@ -36987,57 +37179,57 @@
 			quidu      	"573691B90098"
 			width      	432
 			height     	182)
-		    (object ImportView "" @1513
+		    (object ImportView "" @1518
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691CE022C"
-			client     	@1509
-			supplier   	@1512
+			client     	@1514
+			supplier   	@1517
 			vertices   	(list Points
 			    (408, 1413)
 			    (604, 1624))
 			line_style 	0)
-		    (object ImportView "" @1514
+		    (object ImportView "" @1519
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691D40232"
-			client     	@1512
-			supplier   	@1473
+			client     	@1517
+			supplier   	@1478
 			vertices   	(list Points
 			    (957, 1771)
 			    (1542, 1776))
 			line_style 	0)
-		    (object ImportView "" @1515
+		    (object ImportView "" @1520
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691DA03DD"
-			client     	@1512
-			supplier   	@1474
+			client     	@1517
+			supplier   	@1479
 			vertices   	(list Points
 			    (957, 1855)
 			    (1613, 2117))
 			line_style 	0)
-		    (object ImportView "" @1516
+		    (object ImportView "" @1521
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691E10114"
-			client     	@1512
-			supplier   	@1475
+			client     	@1517
+			supplier   	@1480
 			vertices   	(list Points
 			    (789, 1861)
 			    (1097, 2437))
 			line_style 	0)
-		    (object ImportView "" @1517
+		    (object ImportView "" @1522
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"573691E601A8"
-			client     	@1512
-			supplier   	@1477
+			client     	@1517
+			supplier   	@1482
 			vertices   	(list Points
 			    (855, 1861)
 			    (1567, 2432))
 			line_style 	0)
-		    (object NoteView @1518
+		    (object NoteView @1523
 			location   	(429, 456)
 			font       	(object Font
 			    size       	10
@@ -37049,7 +37241,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1518
+			    Parent_View 	@1523
 			    location   	(191, 390)
 			    fill_color 	13434879
 			    nlines     	2
@@ -37060,11 +37252,11 @@
 			fill_color 	13434879
 			width      	500
 			height     	144)
-		    (object AttachView "" @1519
+		    (object AttachView "" @1524
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1518
-			supplier   	@1502
+			client     	@1523
+			supplier   	@1507
 			vertices   	(list Points
 			    (529, 528)
 			    (817, 737))
