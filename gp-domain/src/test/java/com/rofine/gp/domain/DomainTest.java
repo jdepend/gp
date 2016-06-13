@@ -64,18 +64,13 @@ public class DomainTest {
 	}
 
 	/**
-	 * 在单位org111下，有9个部门，5个用户（admin，filler222，filler333，evaluater999，evaluater888）；
+	 * 在单位org111下，有9个部门，5个用户（admin，filler222，filler333，evaluater999，evaluater888
+	 * ）；
 	 * 创建1个方案，4个被考评部门（222，333，444，555），4个叶子指标（1，2，3，4），分别由部门999，888，777，666考核；
-	 * 建立指标和被考核部门的关联： 
-	 * 1->222 1->333; 
-	 * 2->222 2->333; 
-	 * 3->444 3->555; 
-	 * 4->444 4->555; 
-	 * 222部门用户filler222进行填报；
-	 * 333部门用户filler333进行填报； 
-	 * 999部门用户evaluater999进行打分； 
-	 * 888部门用户evaluater888进行打分； 
-	 * 确定部门222分数为64分【采用加权平均算法 （50 * 30 + 70 * 70）/（30 +70）= 64】；
+	 * 建立指标和被考核部门的关联： 1->222 1->333; 2->222 2->333; 3->444 3->555; 4->444
+	 * 4->555; 222部门用户filler222进行填报； 333部门用户filler333进行填报；
+	 * 999部门用户evaluater999进行打分； 888部门用户evaluater888进行打分； 确定部门222分数为64分【采用加权平均算法
+	 * （50 * 30 + 70 * 70）/（30 +70）= 64】；
 	 * 
 	 * @throws GpException
 	 */
@@ -396,6 +391,12 @@ public class DomainTest {
 		List<UnitScore> scores = unitScoreService.getScores(2016);
 
 		Logger.getLogger(DomainTest.class).info(scores);
+
+		for (UnitScore unitScore : scores) {
+			if (unitScore.getUnitId().equals("dept222") && unitScore.getSource().equals("target")) {
+				assertTrue(unitScore.getScore() == 64.0);
+			}
+		}
 
 	}
 
