@@ -8,6 +8,8 @@ import java.util.Date;
 import com.rofine.gp.platform.exception.GpException;
 
 public class DateUtil {
+	
+	//private 
 
 	public static Date getSysDate() {
 		return new Date();
