@@ -116,6 +116,9 @@ public class Scheme extends IdEntity {
 	 * @roseuid 573C16610395
 	 */
 	protected void checkStart() throws TargetException {
+		if(!this.state.equals(ObjectTargetExecute.State_Init)){
+			throw new TargetException("考核方案[" + name + "]的状态为[" + state + "]，不能启动");
+		}
 		if (this.targets.size() == 0) {
 			throw new TargetException("考核方案[" + this.name + "]没有关联指标");
 		}
