@@ -54,6 +54,28 @@ public class ObjectTargetExecuteDomainService {
 		return executeRepo.findRemindExecutes(sysDate);
 	}
 
+	public void fill(List<FillVO> fills, User user) throws TargetException {
+		Map<String, Float> fillMap = new HashMap<String, Float>();
+		for (FillVO fill : fills) {
+			fillMap.put(fill.getExecuteId(), fill.getScore());
+		}
+
+		List<ObjectTargetExecute> executes = executeRepo.findByIdIn(new ArrayList<String>(fillMap.keySet()));
+		for (ObjectTargetExecute execute : executes) {
+			if(!execute.getState().equals(ObjectTargetExecute.State_Filling)){
+				throw new TargetException("执行记录[" + execute.getEvaluateId() + "]的状态为[" + execute.getState() + "]，不能填报");
+			}
+			execute.setFillScore(fillMap.get(execute.getId()));
+			execute.setFillId(user.getId());
+			execute.setFillDate(DateUtil.getSysDate());
+			execute.setState(ObjectTargetExecute.State_Evaluating);
+		}
+
+		executeRepo.save(executes);
+
+		applicationContext.publishEvent(new ObjectTargetExecuteFilledEvent(executes));
+	}
+	
 	/**
 	 * @param evaluates
 	 * @param userId
@@ -68,6 +90,9 @@ public class ObjectTargetExecuteDomainService {
 
 		List<ObjectTargetExecute> executes = executeRepo.findByIdIn(new ArrayList<String>(evaluateMap.keySet()));
 		for (ObjectTargetExecute execute : executes) {
+			if(!execute.getState().equals(ObjectTargetExecute.State_Evaluating)){
+				throw new TargetException("执行记录[" + execute.getEvaluateId() + "]的状态为[" + execute.getState() + "]，不能打分");
+			}
 			execute.setEvaluateScore(evaluateMap.get(execute.getId()));
 			execute.setEvaluateId(user.getId());
 			execute.setEvaluateDate(DateUtil.getSysDate());
@@ -79,25 +104,6 @@ public class ObjectTargetExecuteDomainService {
 		executeRepo.save(executes);
 
 		applicationContext.publishEvent(new ObjectTargetExecuteEvalutedEvent(executes));
-	}
-
-	public void fill(List<FillVO> fills, User user) {
-		Map<String, Float> fillMap = new HashMap<String, Float>();
-		for (FillVO fill : fills) {
-			fillMap.put(fill.getExecuteId(), fill.getScore());
-		}
-
-		List<ObjectTargetExecute> executes = executeRepo.findByIdIn(new ArrayList<String>(fillMap.keySet()));
-		for (ObjectTargetExecute execute : executes) {
-			execute.setFillScore(fillMap.get(execute.getId()));
-			execute.setFillId(user.getId());
-			execute.setFillDate(DateUtil.getSysDate());
-			execute.setState(ObjectTargetExecute.State_Evaluating);
-		}
-
-		executeRepo.save(executes);
-
-		applicationContext.publishEvent(new ObjectTargetExecuteFilledEvent(executes));
 	}
 	
 	public void deleteExecutes(List<String> executeIds) {

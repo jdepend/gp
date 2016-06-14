@@ -37,7 +37,7 @@ public class ExecuteAppService {
 		return executeDomainService.getEvaluatingExecutes(schemeId, user);
 	}
 
-	public void fill(List<FillVO> fills, User user) {
+	public void fill(List<FillVO> fills, User user) throws TargetException {
 		executeDomainService.fill(fills, user);
 	}
 
