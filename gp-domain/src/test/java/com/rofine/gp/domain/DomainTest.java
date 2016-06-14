@@ -22,6 +22,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.rofine.gp.domain.organization.score.UnitScore;
 import com.rofine.gp.domain.organization.score.UnitScoreService;
+import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
 import com.rofine.gp.domain.organization.target.execute.FillVO;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
@@ -39,6 +40,7 @@ import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.user.UserUtil;
 import com.rofine.gp.platform.user.impl.UserImpl;
+import com.rofine.gp.platform.util.DateUtil;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
@@ -55,6 +57,16 @@ public class DomainTest {
 
 	@Autowired
 	private UnitScoreService unitScoreService;
+	
+	private Scheme scheme;
+	
+	private Target target1;
+	
+	private Target target2;
+	
+	private Target target3;
+	
+	private Target target4;
 
 	@BeforeClass
 	public static void testInit() {
@@ -65,17 +77,42 @@ public class DomainTest {
 
 	/**
 	 * 在单位org111下，有9个部门，5个用户（admin，filler222，filler333，evaluater999，evaluater888）；
-	 * 创建1个方案，4个被考评部门（222，333，444，555），4个叶子指标（1，2，3，4），分别由部门999，888，777，666考核；
+	 * 
+	 * 2016-01-15：
+	 * 
+	 * 创建1个方案，4个被考评部门（222，333，444，555），4个叶子指标（1（半年），2（半年），3（年），4（年）），分别由部门999，888，777，666考核；
 	 * 建立指标和被考核部门的关联： 
 	 * 1->222 1->333; 
 	 * 2->222 2->333; 
 	 * 3->444 3->555; 
-	 * 4->444 4->555; 
-	 * 222部门用户filler222进行填报； 
-	 * 333部门用户filler333进行填报；
-	 * 999部门用户evaluater999进行打分；
-	 * 888部门用户evaluater888进行打分；
-	 * 确定部门222分数为64分【采用加权平均算法（50 * 30 + 70 * 70）/（30 +70）= 64】；
+	 * 4->444 4->555;
+	 * 
+	 * 2016-06-15：
+	 * 
+	 * 222部门用户filler222进行填报40；
+	 * 333部门用户filler333进行填报20；
+	 * 999部门用户evaluater999进行打分25；
+	 * 888部门用户evaluater888进行打分35；
+	 * 
+	 * 2016-12-01：
+	 * 
+	 * 222部门用户filler222进行填报40；
+	 * 333部门用户filler333进行填报20；
+	 * 999部门用户evaluater999进行打分25；
+	 * 888部门用户evaluater888进行打分35；
+	 * 
+	 * 2017-01-20：
+	 * 
+	 * 关闭方案
+	 * 
+	 * 2017-02-20：
+	 * 
+	 * 汇总上一年度的部门成绩；
+	 * 
+	 * 确定部门222分数为64分
+	 * 其中上半年得分32 【采用加权平均算法（25 * 30 + 35 * 70）/（30 +70）= 32】；
+	 * 下半年得分32 【采用加权平均算法（25 * 30 + 35 * 70）/（30 +70）= 32】
+	 * 按着【加和获得部门年度成绩策略】，总分为64
 	 * 
 	 * @throws GpException
 	 */
@@ -86,7 +123,81 @@ public class DomainTest {
 		Page<Scheme> schemes = schemeDomainService.listScheme(pageable);
 
 		schemeAdminDomainService.deleteSchemes(schemes.getContent());
+		
+		DateUtil.setSysDate(DateUtil.createDate("2016-01-15"));
+		
+		//创建方案
+		this.createScheme();
 
+		// 启动方案
+		schemeDomainService.startScheme(scheme.getId());
+		
+		DateUtil.setSysDate(DateUtil.createDate("2016-06-15"));
+		
+		//执行
+		this.execute();
+		
+		// 监控指标执行
+		List<Target> targetStat1s = objectTargetExecuteDomainService.getTargetStats(scheme.getId());
+		TargetStatVO targetStatVO1;
+		for (Target target : targetStat1s) {
+			targetStatVO1 = target.getTargetStatVO();
+
+			if (targetStatVO1.getTargetId().equals(target1.getId())) {
+				assertTrue(targetStatVO1.getWaitEvaluateCount() == 0);
+				assertTrue(targetStatVO1.getEvaluatingCount() == 0);
+				assertTrue(targetStatVO1.getEvaluatedCount() == 2);
+				assertTrue(targetStatVO1.getOverdueEvaluateCount() == 0);
+			}
+
+			Logger.getLogger(DomainTest.class).info(targetStatVO1);
+		}
+
+		DateUtil.setSysDate(DateUtil.createDate("2016-12-01"));
+		
+		//执行
+		this.execute();
+		
+		// 监控指标执行
+		List<Target> targetStat2s = objectTargetExecuteDomainService.getTargetStats(scheme.getId());
+		TargetStatVO targetStatVO2;
+		for (Target target : targetStat2s) {
+			targetStatVO2 = target.getTargetStatVO();
+
+			if (targetStatVO2.getTargetId().equals(target1.getId())) {
+				assertTrue(targetStatVO2.getWaitEvaluateCount() == 0);
+				assertTrue(targetStatVO2.getEvaluatingCount() == 0);
+				assertTrue(targetStatVO2.getEvaluatedCount() == 4);
+				assertTrue(targetStatVO2.getOverdueEvaluateCount() == 0);
+			}
+
+			Logger.getLogger(DomainTest.class).info(targetStatVO2);
+		}
+		
+		DateUtil.setSysDate(DateUtil.createDate("2017-01-20"));
+
+		// 关闭方案
+		schemeDomainService.closeScheme(scheme.getId());
+
+		
+		DateUtil.setSysDate(DateUtil.createDate("2017-02-20"));
+		
+		// 汇总部门成绩
+		unitScoreService.create(2016);
+
+		List<UnitScore> scores = unitScoreService.getScores(2016);
+
+		Logger.getLogger(DomainTest.class).info(scores);
+
+		for (UnitScore unitScore : scores) {
+			if (unitScore.getUnitId().equals("dept222") && unitScore.getSource().equals("target")) {
+				assertTrue(unitScore.getScore() == 64.0);
+			}
+		}
+
+	}
+
+	private void createScheme() throws TargetException {
 		// 初始化方案制定User
 		User adminUser = new UserImpl();
 
@@ -99,7 +210,7 @@ public class DomainTest {
 		UserUtil.setUser(adminUser);
 
 		// 创建方案
-		Scheme scheme = new Scheme();
+		scheme = new Scheme();
 		scheme.setName("我的方案");
 		scheme.setYear(2016);
 		scheme.setTargetLevelCount(4);
@@ -174,47 +285,47 @@ public class DomainTest {
 		schemeDomainService.createTargetType(targetType_c2);
 
 		// 创建指标
-		Target target1 = new Target();
+		target1 = new Target();
 
 		target1.setName("指标1");
 		target1.setParent(targetType_c1);
 		target1.setWeight(30);
 		target1.setScheme(scheme);
 		target1.setSubjectId("dept999");// 设置考核部门
-		target1.setFrequencyType(Target.TargetFrequencyType_Year);
+		target1.setFrequencyType(Target.TargetFrequencyType_HalfYear);
 
 		schemeDomainService.createTarget(target1);
 
-		Target target2 = new Target();
+		target2 = new Target();
 
 		target2.setName("指标2");
 		target2.setParent(targetType_c1);
 		target2.setWeight(70);
 		target2.setScheme(scheme);
 		target2.setSubjectId("dept888");// 设置考核部门
-		target2.setFrequencyType(Target.TargetFrequencyType_Year);
+		target2.setFrequencyType(Target.TargetFrequencyType_HalfYear);
 
 		schemeDomainService.createTarget(target2);
 
-		Target target3 = new Target();
+		target3 = new Target();
 
 		target3.setName("指标3");
 		target3.setParent(targetType_c2);
 		target3.setWeight(50);
 		target3.setScheme(scheme);
 		target3.setSubjectId("dept777");// 设置考核部门
-		target3.setFrequencyType(Target.TargetFrequencyType_HalfYear);
+		target3.setFrequencyType(Target.TargetFrequencyType_Year);
 
 		schemeDomainService.createTarget(target3);
 
-		Target target4 = new Target();
+		target4 = new Target();
 
 		target4.setName("指标4");
 		target4.setParent(targetType_c2);
 		target4.setWeight(50);
 		target4.setScheme(scheme);
 		target4.setSubjectId("dept666");// 设置考核部门
-		target4.setFrequencyType(Target.TargetFrequencyType_HalfYear);
+		target4.setFrequencyType(Target.TargetFrequencyType_Year);
 
 		schemeDomainService.createTarget(target4);
 
@@ -251,9 +362,9 @@ public class DomainTest {
 		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
 		// target4->444,555
 		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
+	}
 
-		// 启动方案
-		schemeDomainService.startScheme(scheme.getId());
+	private void execute() throws TargetException {
 
 		// 填报用户222登录
 		User fillUser222 = new UserImpl();
@@ -335,7 +446,7 @@ public class DomainTest {
 		for (ObjectTargetExecute execute : executeEvaluate999s) {
 			evaluate999 = new EvaluateVO();
 			evaluate999.setExecuteId(execute.getId());
-			evaluate999.setScore(50.0F);
+			evaluate999.setScore(25.0F);
 
 			evaluate999s.add(evaluate999);
 		}
@@ -364,45 +475,12 @@ public class DomainTest {
 		for (ObjectTargetExecute execute : executeEvaluate888s) {
 			evaluate888 = new EvaluateVO();
 			evaluate888.setExecuteId(execute.getId());
-			evaluate888.setScore(70.0F);
+			evaluate888.setScore(35.0F);
 
 			evaluate888s.add(evaluate888);
 		}
 
 		objectTargetExecuteDomainService.evaluate(evaluate888s, evaluateUser888);
-
-		// 监控指标执行
-		List<Target> targetStats = objectTargetExecuteDomainService.getTargetStats(scheme.getId());
-		TargetStatVO targetStatVO;
-		for (Target target : targetStats) {
-			targetStatVO = target.getTargetStatVO();
-
-			if (targetStatVO.getTargetId().equals(target1.getId())) {
-				assertTrue(targetStatVO.getWaitEvaluateCount() == 0);
-				assertTrue(targetStatVO.getEvaluatingCount() == 0);
-				assertTrue(targetStatVO.getEvaluatedCount() == 2);
-				assertTrue(targetStatVO.getOverdueEvaluateCount() == 0);
-			}
-
-			Logger.getLogger(DomainTest.class).info(targetStatVO);
-		}
-
-		// 关闭方案
-		schemeDomainService.closeScheme(scheme.getId());
-
-		// 汇总部门成绩
-		unitScoreService.create(2016);
-
-		List<UnitScore> scores = unitScoreService.getScores(2016);
-
-		Logger.getLogger(DomainTest.class).info(scores);
-
-		for (UnitScore unitScore : scores) {
-			if (unitScore.getUnitId().equals("dept222") && unitScore.getSource().equals("target")) {
-				assertTrue(unitScore.getScore() == 64.0);
-			}
-		}
-
 	}
 
 }

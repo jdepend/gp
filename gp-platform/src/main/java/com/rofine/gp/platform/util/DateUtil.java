@@ -8,15 +8,28 @@ import java.util.Date;
 import com.rofine.gp.platform.exception.GpException;
 
 public class DateUtil {
-	
-	//private 
+
+	private static Date sysDate = null;
 
 	public static Date getSysDate() {
-		return new Date();
+		if (sysDate == null) {
+			sysDate = new Date();
+		}
+		return sysDate;
+	}
+
+	public static void setSysDate(Date sysDate1) {
+		sysDate = sysDate1;
+	}
+
+	public static void clearSysDate() {
+		sysDate = null;
 	}
 
 	public static int getSysYear() {
+		Date sysDate = getSysDate();
 		Calendar a = Calendar.getInstance();
+		a.setTime(sysDate);
 		return a.get(Calendar.YEAR);
 	}
 
