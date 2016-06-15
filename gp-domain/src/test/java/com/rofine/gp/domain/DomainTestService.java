@@ -1,26 +1,23 @@
-package com.rofine.gp.application;
+package com.rofine.gp.domain;
 
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.rofine.gp.domain.DomainTestService;
 import com.rofine.gp.domain.organization.score.UnitScore;
 import com.rofine.gp.domain.organization.score.UnitScoreService;
 import com.rofine.gp.domain.organization.target.TargetException;
@@ -43,13 +40,9 @@ import com.rofine.gp.platform.user.UserUtil;
 import com.rofine.gp.platform.user.impl.UserImpl;
 import com.rofine.gp.platform.util.DateUtil;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
-public class AppTest {
+@Service
+public class DomainTestService {
 	
-	@Autowired
-	private DomainTestService domainTestService;
-
 	@Autowired
 	private SchemeDomainService schemeDomainService;
 
@@ -71,8 +64,7 @@ public class AppTest {
 	private Target target3;
 	
 	private Target target4;
-
-	@BeforeClass
+	
 	public static void testInit() {
 		// 初始化Context
 		ApplicationContext applicationContext = SpringApplication.run(Application.class);
@@ -120,7 +112,6 @@ public class AppTest {
 	 * 
 	 * @throws GpException
 	 */
-	@Test
 	public void testDomain() throws GpException {
 		// 清空方案信息
 		Pageable pageable = new PageRequest(0, 1000000);
@@ -154,7 +145,7 @@ public class AppTest {
 				assertTrue(targetStatVO1.getOverdueEvaluateCount() == 0);
 			}
 
-			Logger.getLogger(AppTest.class).info(targetStatVO1);
+			Logger.getLogger(DomainTest.class).info(targetStatVO1);
 		}
 
 		DateUtil.setSysDate(DateUtil.createDate("2016-12-01"));
@@ -175,7 +166,7 @@ public class AppTest {
 				assertTrue(targetStatVO2.getOverdueEvaluateCount() == 0);
 			}
 
-			Logger.getLogger(AppTest.class).info(targetStatVO2);
+			Logger.getLogger(DomainTest.class).info(targetStatVO2);
 		}
 		
 		DateUtil.setSysDate(DateUtil.createDate("2017-01-20"));
@@ -191,7 +182,7 @@ public class AppTest {
 
 		List<UnitScore> scores = unitScoreService.getScores(2016);
 
-		Logger.getLogger(AppTest.class).info(scores);
+		Logger.getLogger(DomainTest.class).info(scores);
 
 		for (UnitScore unitScore : scores) {
 			if (unitScore.getUnitId().equals("dept222") && unitScore.getSource().equals("target")) {
