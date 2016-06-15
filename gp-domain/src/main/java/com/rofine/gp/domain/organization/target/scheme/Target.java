@@ -20,7 +20,7 @@ import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
 import com.rofine.gp.domain.organization.target.execute.TargetStatVO;
 
 @Entity
-@Table(name = "target")
+@Table(name = "domain_target")
 public class Target extends TargetComponent {
 
 	@Column(name = "subject_id", length = 36)

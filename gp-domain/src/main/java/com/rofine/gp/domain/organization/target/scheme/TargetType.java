@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "target_type")
+@Table(name = "domain_target_type")
 public class TargetType extends TargetComponent {
 
 	@OneToMany(mappedBy = "parent", cascade = { CascadeType.ALL })

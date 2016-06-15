@@ -55,7 +55,7 @@ public class DomainTestService {
 	@Autowired
 	private UnitScoreService unitScoreService;
 
-	private Scheme scheme;
+	protected Scheme scheme;
 
 	private Target target1;
 

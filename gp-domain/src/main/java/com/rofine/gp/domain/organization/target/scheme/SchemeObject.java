@@ -16,7 +16,7 @@ import javax.persistence.Table;
 import com.rofine.gp.domain.organization.target.TargetException;
 
 @Entity
-@Table(name = "scheme_object")
+@Table(name = "domain_scheme_object")
 public class SchemeObject extends SchemeObjectComponent {
 
 	@Column

@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "scheme_object_group")
+@Table(name = "domain_scheme_object_group")
 public class SchemeObjectGroup extends SchemeObjectComponent {
 	
 	@OneToMany(mappedBy = "group", cascade = { CascadeType.ALL })

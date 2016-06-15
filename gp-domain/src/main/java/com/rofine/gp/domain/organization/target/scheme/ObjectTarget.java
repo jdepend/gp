@@ -22,7 +22,7 @@ import com.rofine.gp.domain.organization.target.target.frequency.TargetFrequency
 import com.rofine.gp.platform.entity.IdEntity;
 
 @Entity
-@Table(name = "object_target")
+@Table(name = "domain_object_target")
 public class ObjectTarget extends IdEntity {
 
 	@ManyToOne(fetch = FetchType.LAZY)

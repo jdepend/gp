@@ -19,7 +19,7 @@ import com.rofine.gp.domain.organization.target.target.frequency.TargetFrequency
 import com.rofine.gp.platform.entity.IdEntity;
 
 @Entity
-@Table(name = "object_target_execute")
+@Table(name = "domain_object_target_execute")
 public class ObjectTargetExecute extends IdEntity {
 
 	@Column(name = "target_name", length = 512)

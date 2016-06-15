@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import com.rofine.gp.platform.entity.IdEntity;
 
 @Entity
-@Table(name = "unit_score")
+@Table(name = "domain_unit_score")
 public class UnitScore extends IdEntity {
 
 	@Column(name = "unit_id", length = 36)
