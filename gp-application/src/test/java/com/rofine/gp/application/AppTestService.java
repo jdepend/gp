@@ -26,20 +26,23 @@ public class AppTestService extends DomainTestService {
 	private ObjectTargetExecuteAuditService objectTargetExecuteAuditService;
 
 	/**
-	 * 增加审核用户audit_fill_222，audit_fill_333， audit_evaluater_999，audit_evaluater_999；
+	 * 增加审核用户audit_fill_222，audit_fill_333；
 	 * 
 	 * 2016-06-15：
 	 * 
 	 * 222部门用户filler222进行填报40；
 	 * 222部门用户audit_fill_222进行审核；
 	 * 333部门用户filler333进行填报20；
+	 * 333部门用户audit_fill_333进行审核；
 	 * 999部门用户evaluater999进行打分25；
 	 * 888部门用户evaluater888进行打分35；
 	 * 
 	 * 2016-12-01：
 	 * 
 	 * 222部门用户filler222进行填报40； 
+	 * 222部门用户audit_fill_222进行审核；
 	 * 333部门用户filler333进行填报20；
+	 * 333部门用户audit_fill_333进行审核；
 	 * 999部门用户evaluater999进行打分25； 
 	 * 888部门用户evaluater888进行打分35；
 	 * 
@@ -94,7 +97,34 @@ public class AppTestService extends DomainTestService {
 	}
 	
 	protected void auditFill333() {
-		// TODO Auto-generated method stub
+		// 填报审核用户333登录
+		User auditFillUser333 = new UserImpl();
+
+		auditFillUser333.setId("auditFiller333");
+		auditFillUser333.setName("填报审核用户333");
+		auditFillUser333.setOrgId("org111");
+		auditFillUser333.setDeptId("dept333");// 填报部门
+		auditFillUser333.setRoleIds(Arrays.asList("role_audit_fill_111", "role_audit_fill_222"));
+
+		UserUtil.setUser(auditFillUser333);
+
+		// 获取填报审核数据
+		List<ObjectTargetExecute> executeFill333s = objectTargetExecuteAuditService.getAuditFillingExecutes(
+				scheme.getId(), auditFillUser333);
+
+		assertTrue(executeFill333s.size() == 2);
+
+		List<AuditFillVO> audit333s = new ArrayList<AuditFillVO>();
+		AuditFillVO audit333;
+		for (ObjectTargetExecute execute : executeFill333s) {
+			audit333 = new AuditFillVO();
+			audit333.setExecuteId(execute.getId());
+			audit333.setResult(true);
+
+			audit333s.add(audit333);
+		}
+
+		objectTargetExecuteAuditService.auditFill(audit333s, auditFillUser333);
 
 	}
 
