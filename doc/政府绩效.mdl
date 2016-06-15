@@ -12346,7 +12346,7 @@
 								(object State "已创建"
 								    quid       	"5760B07300F5"
 								    type       	"Normal")
-								(object State "已填报"
+								(object State "已填报/待打分"
 								    quid       	"5760B13800F4"
 								    type       	"Normal")
 								(object State "已打分"
@@ -12359,7 +12359,7 @@
 								    quid       	"5760B2350356"
 								    stereotype 	"Optional"
 								    type       	"Normal")
-								(object State "已发布"
+								(object State "已发布/待填报"
 								    quid       	"5760B1250245"
 								    type       	"Normal")
 								(object State "已打分待审核"
@@ -12383,7 +12383,7 @@
 								(object State_Transition
 								    quid       	"5760B17F02AB"
 								    label      	""
-								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布"
+								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布/待填报"
 								    supplier_quidu 	"5760B1250245"
 								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已创建"
 								    client_quidu 	"5760B07300F5"
@@ -12394,9 +12394,9 @@
 								(object State_Transition
 								    quid       	"5760B19000AB"
 								    label      	""
-								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报"
+								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报/待打分"
 								    supplier_quidu 	"5760B13800F4"
-								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布"
+								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布/待填报"
 								    client_quidu 	"5760B1250245"
 								    Event      	(object Event "填报"
 									quid       	"5760B19000AC")
@@ -12407,7 +12407,7 @@
 								    label      	""
 								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已打分"
 								    supplier_quidu 	"5760B14D0144"
-								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报"
+								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报/待打分"
 								    client_quidu 	"5760B13800F4"
 								    Event      	(object Event "打分"
 									quid       	"5760B19C0306")
@@ -12437,7 +12437,7 @@
 								    label      	""
 								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已关闭"
 								    supplier_quidu 	"5760B16101EE"
-								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布"
+								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布/待填报"
 								    client_quidu 	"5760B1250245"
 								    Event      	(object Event "方案关闭"
 									quid       	"5760B1D4026D")
@@ -12448,7 +12448,7 @@
 								    label      	""
 								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已关闭"
 								    supplier_quidu 	"5760B16101EE"
-								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报"
+								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报/待打分"
 								    client_quidu 	"5760B13800F4"
 								    Event      	(object Event "方案关闭"
 									quid       	"5760B1F9002D")
@@ -12459,7 +12459,7 @@
 								    label      	""
 								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已打分"
 								    supplier_quidu 	"5760B14D0144"
-								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布"
+								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布/待填报"
 								    client_quidu 	"5760B1250245"
 								    Event      	(object Event "打分"
 									quid       	"5760B21C0164")
@@ -12470,7 +12470,7 @@
 								    label      	""
 								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报待审核"
 								    supplier_quidu 	"5760B2350356"
-								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布"
+								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布/待填报"
 								    client_quidu 	"5760B1250245"
 								    Event      	(object Event "填报"
 									quid       	"5760B28D03BE")
@@ -12479,7 +12479,7 @@
 								(object State_Transition
 								    quid       	"5760B2C9035D"
 								    label      	""
-								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报"
+								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报/待打分"
 								    supplier_quidu 	"5760B13800F4"
 								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报待审核"
 								    client_quidu 	"5760B2350356"
@@ -12490,7 +12490,7 @@
 								(object State_Transition
 								    quid       	"5760B2EB0213"
 								    label      	""
-								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布"
+								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已发布/待填报"
 								    supplier_quidu 	"5760B1250245"
 								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报待审核"
 								    client_quidu 	"5760B2350356"
@@ -12503,7 +12503,7 @@
 								    label      	""
 								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已打分待审核"
 								    supplier_quidu 	"5760B32600F5"
-								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报"
+								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报/待打分"
 								    client_quidu 	"5760B13800F4"
 								    Event      	(object Event "打分"
 									quid       	"5760B3560104")
@@ -12523,7 +12523,7 @@
 								(object State_Transition
 								    quid       	"5760B386039B"
 								    label      	""
-								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报"
+								    supplier   	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已填报/待打分"
 								    supplier_quidu 	"5760B13800F4"
 								    client     	"Logical View::04.分析模型::分析元素::领域层::指标考核::考核执行::计划考核执行记录::State/Activity Model8::已打分待审核"
 								    client_quidu 	"5760B32600F5"
@@ -12540,7 +12540,7 @@
 								    max_height 	28350
 								    max_width  	21600
 								    origin_x   	0
-								    origin_y   	4
+								    origin_y   	3
 								    items      	(list diagram_item_list
 									(object StateView "StartState" "$UNNAMED$194" @499
 									    location   	(900, 342)
@@ -12580,7 +12580,7 @@
 									    quidu      	"5760B07300F5"
 									    height     	134
 									    autoResize 	TRUE)
-									(object StateView "Normal" "已填报" @502
+									(object StateView "Normal" "已填报/待打分" @502
 									    location   	(906, 1425)
 									    font       	(object Font
 										size       	10
@@ -12599,7 +12599,7 @@
 										nlines     	2
 										max_width  	204
 										justify    	0
-										label      	"已填报")
+										label      	"已填报/待打分")
 									    icon_style 	"Icon"
 									    line_color 	3342489
 									    fill_color 	13434879
@@ -12790,7 +12790,7 @@
 									    width      	462
 									    height     	144
 									    autoResize 	TRUE)
-									(object StateView "Normal" "已发布" @511
+									(object StateView "Normal" "已发布/待填报" @511
 									    location   	(900, 1014)
 									    font       	(object Font
 										size       	10
@@ -12809,7 +12809,7 @@
 										nlines     	2
 										max_width  	204
 										justify    	0
-										label      	"已发布")
+										label      	"已发布/待填报")
 									    icon_style 	"Icon"
 									    line_color 	3342489
 									    fill_color 	13434879
@@ -12828,7 +12828,7 @@
 										default_color 	TRUE)
 									    label      	(object SegLabel @513
 										Parent_View 	@512
-										location   	(1017, 794)
+										location   	(1017, 793)
 										font       	(object Font
 										    size       	10
 										    face       	"Arial"
@@ -12956,7 +12956,7 @@
 										default_color 	TRUE)
 									    label      	(object SegLabel @519
 										Parent_View 	@518
-										location   	(586, 1436)
+										location   	(586, 1434)
 										font       	(object Font
 										    size       	10
 										    face       	"Arial"
@@ -13042,7 +13042,7 @@
 										default_color 	TRUE)
 									    label      	(object SegLabel @523
 										Parent_View 	@522
-										location   	(1409, 1338)
+										location   	(1409, 1339)
 										font       	(object Font
 										    size       	10
 										    face       	"Arial"
@@ -13085,7 +13085,7 @@
 										default_color 	TRUE)
 									    label      	(object SegLabel @525
 										Parent_View 	@524
-										location   	(1295, 829)
+										location   	(1295, 830)
 										font       	(object Font
 										    size       	10
 										    face       	"Arial"
@@ -13208,7 +13208,7 @@
 										default_color 	TRUE)
 									    label      	(object SegLabel @530
 										Parent_View 	@529
-										location   	(1442, 1951)
+										location   	(1442, 1950)
 										font       	(object Font
 										    size       	10
 										    face       	"Arial"
@@ -13252,7 +13252,7 @@
 										default_color 	TRUE)
 									    label      	(object SegLabel @532
 										Parent_View 	@531
-										location   	(1457, 1405)
+										location   	(1456, 1406)
 										font       	(object Font
 										    size       	10
 										    face       	"Arial"
@@ -13335,7 +13335,7 @@
 										default_color 	TRUE)
 									    label      	(object SegLabel @536
 										Parent_View 	@535
-										location   	(1334, 1223)
+										location   	(1333, 1224)
 										font       	(object Font
 										    size       	10
 										    face       	"Arial"
@@ -13361,11 +13361,11 @@
 									    vertices   	(list Points
 										(1928, 1347)
 										(1928, 1260)
-										(992, 1260)
-										(992, 1358))
+										(991, 1260)
+										(991, 1358))
 									    line_style 	3
 									    origin_attachment 	(1928, 1347)
-									    terminal_attachment 	(992, 1358)
+									    terminal_attachment 	(991, 1358)
 									    x_offset   	FALSE))))))
 						    (object Class "实际考核执行记录"
 							quid       	"5732F9EE000C"
@@ -26441,24 +26441,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"5754EF1A00E8"
-						compartment 	(object Compartment
-						    Parent_View 	@1022
-						    location   	(201, 725)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	16777215
-						    anchor     	2
-						    nlines     	2
-						    max_width  	0
-						    justify    	1)
 						width      	684
 						height     	186
 						annotation 	8
@@ -27489,14 +27471,14 @@
 					    fill_color 	16777215
 					    anchor     	2
 					    nlines     	2
-					    max_width  	428
+					    max_width  	422
 					    justify    	1)
 					width      	688
 					height     	232
 					annotation 	8
 					autoResize 	TRUE)
 				    (object CategoryView "Logical View::DesignModel::DesignElement::rest" @1063
-					location   	(1812, 1056)
+					location   	(1809, 999)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -27508,7 +27490,7 @@
 					    default_color 	TRUE)
 					label      	(object ItemLabel
 					    Parent_View 	@1063
-					    location   	(1331, 828)
+					    location   	(1328, 802)
 					    fill_color 	13434879
 					    nlines     	2
 					    max_width  	962
@@ -27519,7 +27501,7 @@
 					fill_color 	13434879
 					quidu      	"573FD1FE0248"
 					width      	975
-					height     	469)
+					height     	406)
 				    (object CategoryView "Logical View::DesignModel::DesignElement::portal" @1064
 					location   	(762, 1851)
 					font       	(object Font
@@ -27972,7 +27954,7 @@
 					quidu      	"575E1D660101"
 					compartment 	(object Compartment
 					    Parent_View 	@1075
-					    location   	(3605, 1213)
+					    location   	(3605, 1238)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -28332,7 +28314,7 @@
 					    fill_color 	16777215
 					    anchor     	2
 					    nlines     	4
-					    max_width  	363
+					    max_width  	359
 					    justify    	1)
 					width      	380
 					height     	332
@@ -28410,7 +28392,7 @@
 					    fill_color 	16777215
 					    anchor     	2
 					    nlines     	4
-					    max_width  	437
+					    max_width  	431
 					    justify    	1)
 					width      	450
 					height     	332
@@ -37572,24 +37554,6 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"5754EF1A00E8"
-				compartment 	(object Compartment
-				    Parent_View 	@1515
-				    location   	(1006, 8233)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	16777215
-				    anchor     	2
-				    nlines     	2
-				    max_width  	422
-				    justify    	1)
 				width      	688
 				height     	232
 				annotation 	8
