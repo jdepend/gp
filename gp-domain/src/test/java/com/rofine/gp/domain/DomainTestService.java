@@ -42,7 +42,7 @@ import com.rofine.gp.platform.util.DateUtil;
 
 @Service
 public class DomainTestService {
-	
+
 	@Autowired
 	private SchemeDomainService schemeDomainService;
 
@@ -54,17 +54,17 @@ public class DomainTestService {
 
 	@Autowired
 	private UnitScoreService unitScoreService;
-	
+
 	private Scheme scheme;
-	
+
 	private Target target1;
-	
+
 	private Target target2;
-	
+
 	private Target target3;
-	
+
 	private Target target4;
-	
+
 	public static void testInit() {
 		// 初始化Context
 		ApplicationContext applicationContext = SpringApplication.run(Application.class);
@@ -72,30 +72,24 @@ public class DomainTestService {
 	}
 
 	/**
-	 * 在单位org111下，有9个部门，5个用户（admin，filler222，filler333，evaluater999，evaluater888）；
+	 * 在单位org111下，有9个部门，5个用户（admin，filler222，filler333，evaluater999，evaluater888
+	 * ）；
 	 * 
 	 * 2016-01-15：
 	 * 
-	 * 创建1个方案，4个被考评部门（222，333，444，555），4个叶子指标（1（半年），2（半年），3（年），4（年）），分别由部门999，888，777，666考核；
-	 * 建立指标和被考核部门的关联： 
-	 * 1->222 1->333; 
-	 * 2->222 2->333; 
-	 * 3->444 3->555; 
-	 * 4->444 4->555;
+	 * 创建1个方案，4个被考评部门（222，333，444，555），4个叶子指标（1（半年），2（半年），3（年），4（年）），分别由部门999，
+	 * 888，777，666考核； 建立指标和被考核部门的关联： 1->222 1->333; 2->222 2->333; 3->444
+	 * 3->555; 4->444 4->555;
 	 * 
 	 * 2016-06-15：
 	 * 
-	 * 222部门用户filler222进行填报40；
-	 * 333部门用户filler333进行填报20；
-	 * 999部门用户evaluater999进行打分25；
-	 * 888部门用户evaluater888进行打分35；
+	 * 222部门用户filler222进行填报40； 333部门用户filler333进行填报20；
+	 * 999部门用户evaluater999进行打分25； 888部门用户evaluater888进行打分35；
 	 * 
 	 * 2016-12-01：
 	 * 
-	 * 222部门用户filler222进行填报40；
-	 * 333部门用户filler333进行填报20；
-	 * 999部门用户evaluater999进行打分25；
-	 * 888部门用户evaluater888进行打分35；
+	 * 222部门用户filler222进行填报40； 333部门用户filler333进行填报20；
+	 * 999部门用户evaluater999进行打分25； 888部门用户evaluater888进行打分35；
 	 * 
 	 * 2017-01-20：
 	 * 
@@ -105,10 +99,8 @@ public class DomainTestService {
 	 * 
 	 * 汇总上一年度的部门成绩；
 	 * 
-	 * 确定部门222分数为64分
-	 * 其中上半年得分32 【采用加权平均算法（25 * 30 + 35 * 70）/（30 +70）= 32】；
-	 * 下半年得分32 【采用加权平均算法（25 * 30 + 35 * 70）/（30 +70）= 32】
-	 * 按着【加和获得部门年度成绩策略】，总分为64
+	 * 确定部门222分数为64分 其中上半年得分32 【采用加权平均算法（25 * 30 + 35 * 70）/（30 +70）= 32】；
+	 * 下半年得分32 【采用加权平均算法（25 * 30 + 35 * 70）/（30 +70）= 32】 按着【加和获得部门年度成绩策略】，总分为64
 	 * 
 	 * @throws GpException
 	 */
@@ -118,20 +110,20 @@ public class DomainTestService {
 		Page<Scheme> schemes = schemeDomainService.listScheme(pageable);
 
 		schemeAdminDomainService.deleteSchemes(schemes.getContent());
-		
+
 		DateUtil.setSysDate(DateUtil.createDate("2016-01-15"));
-		
-		//创建方案
+
+		// 创建方案
 		this.createScheme();
 
 		// 启动方案
 		schemeDomainService.startScheme(scheme.getId());
-		
+
 		DateUtil.setSysDate(DateUtil.createDate("2016-06-15"));
-		
-		//执行
+
+		// 执行
 		this.execute();
-		
+
 		// 监控指标执行
 		List<Target> targetStat1s = objectTargetExecuteDomainService.getTargetStats(scheme.getId());
 		TargetStatVO targetStatVO1;
@@ -149,10 +141,10 @@ public class DomainTestService {
 		}
 
 		DateUtil.setSysDate(DateUtil.createDate("2016-12-01"));
-		
-		//执行
+
+		// 执行
 		this.execute();
-		
+
 		// 监控指标执行
 		List<Target> targetStat2s = objectTargetExecuteDomainService.getTargetStats(scheme.getId());
 		TargetStatVO targetStatVO2;
@@ -168,15 +160,14 @@ public class DomainTestService {
 
 			Logger.getLogger(DomainTest.class).info(targetStatVO2);
 		}
-		
+
 		DateUtil.setSysDate(DateUtil.createDate("2017-01-20"));
 
 		// 关闭方案
 		schemeDomainService.closeScheme(scheme.getId());
 
-		
 		DateUtil.setSysDate(DateUtil.createDate("2017-02-20"));
-		
+
 		// 汇总部门成绩
 		unitScoreService.create(2016);
 
@@ -192,7 +183,7 @@ public class DomainTestService {
 
 	}
 
-	private void createScheme() throws TargetException {
+	protected void createScheme() throws TargetException {
 		// 初始化方案制定User
 		User adminUser = new UserImpl();
 
@@ -359,8 +350,19 @@ public class DomainTestService {
 		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
 	}
 
-	private void execute() throws TargetException {
+	protected void execute() throws TargetException {
 
+		fill222();
+
+		fill333();
+
+		evaluate999();
+
+		evaluate888();
+
+	}
+
+	protected void fill222() throws TargetException {
 		// 填报用户222登录
 		User fillUser222 = new UserImpl();
 
@@ -390,6 +392,9 @@ public class DomainTestService {
 
 		objectTargetExecuteDomainService.fill(fill222s, fillUser222);
 
+	}
+
+	protected void fill333() throws TargetException {
 		// 填报用户333登录
 		User fillUser333 = new UserImpl();
 
@@ -418,7 +423,9 @@ public class DomainTestService {
 		}
 
 		objectTargetExecuteDomainService.fill(fill333s, fillUser333);
+	}
 
+	protected void evaluate999() throws TargetException {
 		// 考核用户999登录
 		User evaluateUser999 = new UserImpl();
 
@@ -447,7 +454,9 @@ public class DomainTestService {
 		}
 
 		objectTargetExecuteDomainService.evaluate(evaluate999s, evaluateUser999);
+	}
 
+	protected void evaluate888() throws TargetException {
 		// 考核用户888登录
 		User evaluateUser888 = new UserImpl();
 
