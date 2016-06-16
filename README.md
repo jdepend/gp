@@ -1,5 +1,4 @@
 # gp-DDD
-# ======
 
 - 1、采用eclipse\jdk8\maven\springboot构建；
 - 2、将应用划分为platform、domain、application、listener、portal、mobile、rest、test八个工程；
