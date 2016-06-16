@@ -82,4 +82,8 @@ public class ObjectTargetExecuteAuditService {
 
 	}
 
+	public void clear() {
+		auditRepo.deleteAll();
+	}
+
 }

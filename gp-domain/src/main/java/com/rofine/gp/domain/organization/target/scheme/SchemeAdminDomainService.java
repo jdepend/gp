@@ -22,4 +22,8 @@ public class SchemeAdminDomainService {
 	public void deleteSchemes(List<Scheme> schemes) {
 		schemeRepo.delete(schemes);
 	}
+
+	public void clearSchemes() {
+		schemeRepo.deleteAll();
+	}
 }

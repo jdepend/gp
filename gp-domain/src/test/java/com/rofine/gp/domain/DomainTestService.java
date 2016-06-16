@@ -105,11 +105,8 @@ public class DomainTestService {
 	 * @throws GpException
 	 */
 	public void testDomain() throws GpException {
-		// 清空方案信息
-		Pageable pageable = new PageRequest(0, 1000000);
-		Page<Scheme> schemes = schemeDomainService.listScheme(pageable);
-
-		schemeAdminDomainService.deleteSchemes(schemes.getContent());
+		
+		this.clear();
 
 		DateUtil.setSysDate(DateUtil.createDate("2016-01-15"));
 
@@ -181,6 +178,10 @@ public class DomainTestService {
 			}
 		}
 
+	}
+
+	protected void clear() {
+		schemeAdminDomainService.clearSchemes();
 	}
 
 	protected void createScheme() throws TargetException {

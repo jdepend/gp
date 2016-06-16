@@ -12,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.rofine.gp.application.notification.NotificationService;
 import com.rofine.gp.application.notification.NotificationVO;
+import com.rofine.gp.application.organization.target.execute.audit.AuditFillVO;
+import com.rofine.gp.application.organization.target.execute.audit.ObjectTargetExecuteAuditService;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
 import com.rofine.gp.domain.organization.target.execute.FillVO;
@@ -29,8 +31,15 @@ public class ExecuteAppService {
 	@Autowired
 	private NotificationService notificationService;
 
+	@Autowired
+	private ObjectTargetExecuteAuditService objectTargetExecuteAuditService;
+
 	public List<ObjectTargetExecute> getFillingExecutes(String schemeId, User user) {
 		return executeDomainService.getFillingExecutes(schemeId, user);
+	}
+
+	public List<ObjectTargetExecute> getAuditFillingExecutes(String schemeId, User user) {
+		return objectTargetExecuteAuditService.getAuditFillingExecutes(schemeId, user);
 	}
 
 	public List<ObjectTargetExecute> getEvaluatingExecutes(String schemeId, User user) {
@@ -39,6 +48,10 @@ public class ExecuteAppService {
 
 	public void fill(List<FillVO> fills, User user) throws TargetException {
 		executeDomainService.fill(fills, user);
+	}
+
+	public void auditFill(List<AuditFillVO> auditFills, User user) throws TargetException {
+		objectTargetExecuteAuditService.auditFill(auditFills, user);
 	}
 
 	/**
@@ -67,7 +80,8 @@ public class ExecuteAppService {
 		executeDomainService.deleteExecutes(executeIds);
 	}
 
-	@Scheduled(cron = "0 0 01 * * ?")//每天早1点执行一次
+	@Scheduled(cron = "0 0 01 * * ?")
+	// 每天早1点执行一次
 	public void remind() {
 
 		List<ObjectTargetExecute> executes = executeDomainService.getRemindExecutes();

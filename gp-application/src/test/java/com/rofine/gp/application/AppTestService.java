@@ -128,4 +128,13 @@ public class AppTestService extends DomainTestService {
 
 	}
 
+	@Override
+	protected void clear() {
+		super.clear();
+		
+		objectTargetExecuteAuditService.clear();
+	}
+	
+	
+
 }
