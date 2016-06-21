@@ -1,10 +1,13 @@
 package com.rofine.gp.domain.organization.target.target.score.impl.def;
 
+import org.springframework.stereotype.Service;
+
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
 import com.rofine.gp.domain.organization.target.scheme.ObjectTarget;
 import com.rofine.gp.domain.organization.target.target.score.ObjectTargetScoreCalculator;
 
+@Service
 public class DefalutObjectTargetScoreCalculator implements ObjectTargetScoreCalculator {
 
 	@Override

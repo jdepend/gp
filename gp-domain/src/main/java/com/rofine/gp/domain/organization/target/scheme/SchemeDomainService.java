@@ -6,17 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
-import com.rofine.gp.domain.organization.target.target.score.TargetScoreCalculatorFactory;
+import com.rofine.gp.domain.organization.target.target.score.ObjectScoreCalculator;
+import com.rofine.gp.domain.organization.target.target.score.ObjectTargetScoreCalculator;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.util.DateUtil;
@@ -36,6 +35,12 @@ public class SchemeDomainService {
 
 	@Autowired
 	private ApplicationContext applicationContext;
+	
+	@Autowired
+	private ObjectTargetScoreCalculator objectTargetScoreCalculator;
+	
+	@Autowired
+	private ObjectScoreCalculator objectScoreCalculator;
 
 	/**
 	 * @param schemeId
@@ -63,11 +68,11 @@ public class SchemeDomainService {
 	 */
 	public void syncScore(ObjectTargetExecute execute) throws TargetException {
 
-		TargetScoreCalculatorFactory.getObjectTargetScoreCalculator().calculate(execute.getObjectTarget());
+		objectTargetScoreCalculator.calculate(execute.getObjectTarget());
 
 		execute.getObjectTarget().save();
 
-		TargetScoreCalculatorFactory.getSchemeObjectCalculator().calculate(execute.getObjectTarget().getObject());
+		objectScoreCalculator.calculate(execute.getObjectTarget().getObject());
 
 		execute.getObjectTarget().getObject().save();
 	}
