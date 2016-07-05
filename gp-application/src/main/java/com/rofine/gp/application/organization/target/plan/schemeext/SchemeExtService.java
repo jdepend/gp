@@ -32,4 +32,8 @@ public class SchemeExtService {
 	public SchemeExt getScheme(String schemeId) {
 		return schemeExtRepo.findOne(schemeId);
 	}
+
+	public void clearSchemeExts() {
+		schemeExtRepo.deleteAll();
+	}
 }

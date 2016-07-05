@@ -54,6 +54,8 @@ public class DomainTestService {
 
 	@Autowired
 	private UnitScoreService unitScoreService;
+	
+	protected User adminUser;
 
 	protected Scheme scheme;
 
@@ -186,7 +188,7 @@ public class DomainTestService {
 
 	protected void createScheme() throws TargetException {
 		// 初始化方案制定User
-		User adminUser = new UserImpl();
+		adminUser = new UserImpl();
 
 		adminUser.setId("admin");
 		adminUser.setName("管理员用户");
@@ -197,12 +199,7 @@ public class DomainTestService {
 		UserUtil.setUser(adminUser);
 
 		// 创建方案
-		scheme = new Scheme();
-		scheme.setName("我的方案");
-		scheme.setYear(2016);
-		scheme.setTargetLevelCount(4);
-
-		schemeDomainService.createScheme(scheme, adminUser);
+		this.createSchemeSelf();
 
 		// 创建被考核对象
 		SchemeObject object222 = new SchemeObject();
@@ -349,6 +346,16 @@ public class DomainTestService {
 		schemeDomainService.target2object(scheme.getId(), target3.getId(), objects);
 		// target4->444,555
 		schemeDomainService.target2object(scheme.getId(), target4.getId(), objects);
+	}
+	
+	protected void createSchemeSelf() {
+		// 创建方案
+		scheme = new Scheme();
+		scheme.setName("我的方案");
+		scheme.setYear(2016);
+		scheme.setTargetLevelCount(4);
+
+		schemeDomainService.createScheme(scheme, adminUser);
 	}
 
 	protected void execute() throws TargetException {

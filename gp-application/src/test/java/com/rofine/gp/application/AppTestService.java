@@ -11,9 +11,12 @@ import org.springframework.stereotype.Service;
 
 import com.rofine.gp.application.organization.target.execute.audit.AuditFillVO;
 import com.rofine.gp.application.organization.target.execute.audit.ObjectTargetExecuteAuditService;
+import com.rofine.gp.application.organization.target.plan.PlanAppService;
+import com.rofine.gp.application.organization.target.plan.SchemeVO;
 import com.rofine.gp.domain.DomainTestService;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.user.UserUtil;
@@ -21,6 +24,9 @@ import com.rofine.gp.platform.user.impl.UserImpl;
 
 @Service
 public class AppTestService extends DomainTestService {
+	
+	@Autowired
+	private PlanAppService planAppService;
 	
 	@Autowired
 	private ObjectTargetExecuteAuditService objectTargetExecuteAuditService;
@@ -63,7 +69,21 @@ public class AppTestService extends DomainTestService {
 
 		evaluate888();
 	}
+	
+	@Override
+	protected void createSchemeSelf() {
+		// 创建方案
+		SchemeVO schemeVO = new SchemeVO();
+		schemeVO.setName("我的方案");
+		schemeVO.setYear(2016);
+		schemeVO.setTargetLevelCount(4);
+		schemeVO.setDescription("这是我的方案");
 
+		planAppService.createScheme(schemeVO, adminUser);
+		
+		scheme = schemeVO.getScheme();
+	}
+	
 	protected void auditFill222() {
 		// 填报审核用户222登录
 		User auditFillUser222 = new UserImpl();
@@ -130,11 +150,6 @@ public class AppTestService extends DomainTestService {
 
 	@Override
 	protected void clear() {
-		super.clear();
-		
-		objectTargetExecuteAuditService.clear();
+		planAppService.clearSchemes();
 	}
-	
-	
-
 }

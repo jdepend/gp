@@ -13,10 +13,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.rofine.gp.application.organization.target.execute.audit.ObjectTargetExecuteAuditService;
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExt;
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExtService;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.scheme.Scheme;
+import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObjectVO;
@@ -33,6 +35,12 @@ public class PlanAppService {
 
 	@Autowired
 	private SchemeExtService schemeExtService;
+	
+	@Autowired
+	private SchemeAdminDomainService schemeAdminDomainService;
+	
+	@Autowired
+	private ObjectTargetExecuteAuditService objectTargetExecuteAuditService;
 
 	/**
 	 * @throws TargetException
@@ -70,6 +78,7 @@ public class PlanAppService {
 	public void createScheme(SchemeVO schemeVO, User user) {
 		Scheme scheme = schemeVO.getScheme();
 		schemeDomainService.createScheme(scheme, user);
+		schemeVO.setId(scheme.getId());
 
 		SchemeExt schemeExt = schemeVO.getSchemeExt();
 		schemeExt.setId(scheme.getId());
@@ -128,10 +137,23 @@ public class PlanAppService {
 	}
 
 	public SchemeVO getScheme(String schemeId) {
+		
 		Scheme scheme = schemeDomainService.getScheme(schemeId);
 		
 		SchemeExt schemeExt = schemeExtService.getScheme(schemeId);
 		
-		return null;
+		SchemeVO schemeVO = new SchemeVO(scheme, schemeExt);
+		
+		return schemeVO;
+	}
+
+	public void clearSchemes() {
+		
+		schemeAdminDomainService.clearSchemes();
+		
+		schemeExtService.clearSchemeExts();
+		
+		objectTargetExecuteAuditService.clear();
+		
 	}
 }

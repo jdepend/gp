@@ -24,12 +24,9 @@ public class UnitScoreService {
 	}
 
 	public void create(int year) {
-
 		unitScoreRepo.deleteByYear(year);
-
 		for (UnitScoreLoader loader : loaders) {
 			Map<String, Float> scores = loader.loadScore(year);
-
 			List<UnitScore> unitScores = new ArrayList<UnitScore>();
 			UnitScore unitScore;
 			for (String unitId : scores.keySet()) {
@@ -38,12 +35,9 @@ public class UnitScoreService {
 				unitScore.setScore(scores.get(unitId));
 				unitScore.setYear(year);
 				unitScore.setSource(loader.getSource());
-
 				unitScores.add(unitScore);
 			}
-
 			unitScoreRepo.save(unitScores);
 		}
 	}
-
 }
