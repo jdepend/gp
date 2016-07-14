@@ -21114,8 +21114,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeDomainService"
-								quidu      	"573C2E590125"
 								language   	"Java")
 							    (object Class "Target"
 								attributes 	(list Attribute_Set
@@ -21198,8 +21196,6 @@
 								    (object ClassAttribute "subjectId"
 									quid       	"573A7907032D"
 									type       	"String"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::Target"
-								quidu      	"573BDEDD008B"
 								language   	"Java")
 							    (object Class "TargetRepo"
 								attributes 	(list Attribute_Set)
@@ -21225,8 +21221,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::TargetRepo"
-								quidu      	"573C2E590183"
 								language   	"Java")
 							    (object Class "ObjectTarget"
 								attributes 	(list Attribute_Set
@@ -21309,8 +21303,6 @@
 									type       	"Float")
 								    (object ClassAttribute "weight"
 									quid       	"573ACF92029A"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::ObjectTarget"
-								quidu      	"573BDEDD0048"
 								language   	"Java")
 							    (object Class "ObjectTargetRepo"
 								attributes 	(list Attribute_Set)
@@ -21336,8 +21328,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::ObjectTargetRepo"
-								quidu      	"573C2E590177"
 								language   	"Java")
 							    (object Class "Scheme"
 								attributes 	(list Attribute_Set
@@ -21644,8 +21634,6 @@
 								class_attributes 	(list class_attribute_list
 								    (object ClassAttribute "state"
 									quid       	"573C20440162"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::Scheme"
-								quidu      	"573BDEDD00A6"
 								language   	"Java")
 							    (object Class "SchemeObject"
 								attributes 	(list Attribute_Set
@@ -21705,8 +21693,6 @@
 								    (object ClassAttribute "objectId"
 									quid       	"573BCDCC029F"
 									type       	"String"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeObject"
-								quidu      	"573BDEDD000A"
 								language   	"Java")
 							    (object Class "SchemeObjectGroup"
 								attributes 	(list Attribute_Set
@@ -21731,8 +21717,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeObjectGroup"
-								quidu      	"573BDEDC03E3"
 								language   	"Java")
 							    (object Class "TargetType"
 								attributes 	(list Attribute_Set
@@ -21762,8 +21746,6 @@
 									quid       	"573BCB57019E")
 								    (object ClassAttribute "level"
 									quid       	"573BCB60024C"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::TargetType"
-								quidu      	"573BDEDD0095"
 								language   	"Java")
 							    (object Class "TargetComponent"
 								attributes 	(list Attribute_Set
@@ -21787,8 +21769,6 @@
 								    (object ClassAttribute "weight"
 									quid       	"573BCB740358"
 									type       	"int"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::TargetComponent"
-								quidu      	"573BDEDD0081"
 								language   	"Java"
 								abstract   	TRUE)
 							    (object Class "SchemeObjectComponent"
@@ -21809,8 +21789,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeObjectComponent"
-								quidu      	"573BDEDD009D"
 								language   	"Java"
 								abstract   	TRUE)
 							    (object Class "SchemeRepo"
@@ -21847,8 +21825,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeRepo"
-								quidu      	"573C2E590187"
 								language   	"Java")
 							    (object Class "SchemeCreatedEvent"
 								quid       	"5754EDE10265")
@@ -22177,8 +22153,6 @@
 									type       	"Float")
 								    (object ClassAttribute "state"
 									quid       	"573A7FBB018C"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecute"
-								quidu      	"573BDEDD0018"
 								language   	"Java")
 							    (object Class "ObjectTargetExecuteDomainService"
 								attributes 	(list Attribute_Set)
@@ -22257,8 +22231,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteDomainService"
-								quidu      	"573C2E590146"
 								language   	"Java")
 							    (object Class "ObjectTargetExecuteRepo"
 								attributes 	(list Attribute_Set)
@@ -22318,8 +22290,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteRepo"
-								quidu      	"573C2E590173"
 								language   	"Java")
 							    (object Class "EvaluateVO"
 								attributes 	(list Attribute_Set)
@@ -22340,8 +22310,6 @@
 									quid       	"573A8B36000A")
 								    (object ClassAttribute "score"
 									quid       	"573A8B4E0012"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::execute::EvaluateVO"
-								quidu      	"573C2E590154"
 								language   	"Java")
 							    (object Class "TargetStateVO"
 								attributes 	(list Attribute_Set)
@@ -22376,8 +22344,6 @@
 								    (object ClassAttribute "overdueEvaluateCount"
 									quid       	"573BD2D40132"
 									type       	"int"))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::execute::TargetStateVO"
-								quidu      	"573C2E590165"
 								language   	"Java")
 							    (object Class "ObjectTargetExecuteDataLoader"
 								quid       	"5751386B0035"
@@ -22795,8 +22761,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::TargetDomainService"
-								quidu      	"573C2E590135"
 								language   	"Java")
 							    (object Class_Category "score"
 								quid       	"573AD0E602F2"
@@ -22817,8 +22781,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetExecuteScoreCalculator"
-									quidu      	"573BDEDD0078"
 									language   	"Java")
 								    (object Class "ObjectTargetScoreCalculator"
 									attributes 	(list Attribute_Set)
@@ -22840,8 +22802,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetScoreCalculator"
-									quidu      	"573BDEDD006E"
 									language   	"Java")
 								    (object Class "TargetScoreCalculatorFactory"
 									attributes 	(list Attribute_Set)
@@ -22900,8 +22860,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::score::TargetScoreCalculatorFactory"
-									quidu      	"573BDEDD005C"
 									language   	"Java")
 								    (object Class "ObjectScoreCalculator"
 									attributes 	(list Attribute_Set)
@@ -22927,8 +22885,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectScoreCalculator"
-									quidu      	"573BDEDD0064"
 									language   	"Java"))
 								logical_presentations 	(list unit_reference_list))
 							    (object Class_Category "frequency"
@@ -22968,8 +22924,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::frequency::HalfYearTargetFrequencyType"
-									quidu      	"573BDEDD00AF"
 									language   	"Java")
 								    (object Class "YearTargetFrequencyType"
 									attributes 	(list Attribute_Set)
@@ -23004,8 +22958,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::frequency::YearTargetFrequencyType"
-									quidu      	"573BDEDD002C"
 									language   	"Java")
 								    (object Class "TargetFrequencyType"
 									attributes 	(list Attribute_Set
@@ -23031,8 +22983,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::frequency::TargetFrequencyType"
-									quidu      	"573BDEDD0051"
 									language   	"Java")
 								    (object Class "TargetFrequency"
 									attributes 	(list Attribute_Set)
@@ -23061,8 +23011,6 @@
 										quid       	"573A6B100033")
 									    (object ClassAttribute "limitDate"
 										quid       	"573A6B5802BD"))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::frequency::TargetFrequency"
-									quidu      	"573BDEDD0025"
 									language   	"Java")
 								    (object Class "QuarterTargetFrequencyType"
 									attributes 	(list Attribute_Set)
@@ -23097,8 +23045,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::frequency::QuarterTargetFrequencyType"
-									quidu      	"573BDEDD003D"
 									language   	"Java")
 								    (object Class "MonthTargetFrequencyType"
 									attributes 	(list Attribute_Set)
@@ -23133,8 +23079,6 @@
 										concurrency 	"Sequential"
 										opExportControl 	"Public"
 										uid        	0))
-									module     	"Component View::DesignModel::DesignElement::domain::organization::target::target::frequency::MonthTargetFrequencyType"
-									quidu      	"573BDEDD0034"
 									language   	"Java"))
 								logical_presentations 	(list unit_reference_list)))
 							logical_presentations 	(list unit_reference_list
@@ -25811,8 +25755,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::application::organization::target::plan::PlanAppService"
-								quidu      	"573C2E960048"
 								language   	"Java")
 							    (object Class "SchemeExtService"
 								quid       	"5754E9B0001D")
@@ -25899,8 +25841,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::application::organization::target::execute::ExecuteAppService"
-								quidu      	"573C2E960064"
 								language   	"Java")
 							    (object Class_Category "audit"
 								quid       	"5760FB4E015D"
@@ -26253,8 +26193,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::portal::organization::target::plan::PlanController"
-								quidu      	"573C2EC80255"
 								language   	"Java"))
 							logical_presentations 	(list unit_reference_list))
 						    (object Class_Category "execute"
@@ -26300,8 +26238,6 @@
 									concurrency 	"Sequential"
 									opExportControl 	"Public"
 									uid        	0))
-								module     	"Component View::DesignModel::DesignElement::portal::organization::target::execute::ExecuteController"
-								quidu      	"573C2EC80239"
 								language   	"Java"))
 							logical_presentations 	(list unit_reference_list)))
 						logical_presentations 	(list unit_reference_list
@@ -36549,7 +36485,7 @@
 		logical_models 	(list unit_reference_list)
 		logical_presentations 	(list unit_reference_list
 		    (object ClassDiagram "Main"
-			quid       	"5735956402DF"
+			quid       	"578748E3005C"
 			title      	"Main"
 			zoom       	100
 			max_height 	28350
@@ -39110,604 +39046,7 @@
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"572BE87803DA"
-	physical_models 	(list unit_reference_list
-	    (object SubSystem "temp"
-		quid       	"573BDD2A0196"
-		physical_models 	(list unit_reference_list
-		    (object module "NewClass" "NotAModuleType" "NotAModulePart"
-			attributes 	(list Attribute_Set
-			    (object Attribute
-				tool       	"Java"
-				name       	"FileName"
-				value      	"D:\\Program Files\\Java\\jdk1.8.0_91\\temp\\NewClass.java")
-			    (object Attribute
-				tool       	"Java"
-				name       	"RootPath"
-				value      	"D:\\Program Files\\Java\\jdk1.8.0_91"))
-			quid       	"573BDD2A019A"
-			stereotype 	""
-			language   	"Java"))
-		physical_presentations 	(list unit_reference_list))
-	    (object SubSystem "DesignModel"
-		quid       	"573BDEDC03DA"
-		physical_models 	(list unit_reference_list
-		    (object SubSystem "DesignElement"
-			quid       	"573BDEDC03DC"
-			physical_models 	(list unit_reference_list
-			    (object SubSystem "domain"
-				quid       	"573BDEDC03DD"
-				physical_models 	(list unit_reference_list
-				    (object SubSystem "organization"
-					quid       	"573BDEDC03DE"
-					physical_models 	(list unit_reference_list
-					    (object SubSystem "target"
-						quid       	"573BDEDC03E0"
-						physical_models 	(list unit_reference_list
-						    (object SubSystem "scheme"
-							quid       	"573BDEDC03E1"
-							physical_models 	(list unit_reference_list
-							    (object module "SchemeObjectGroup" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\SchemeObjectGroup.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDC03E3"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeObjectGroup"
-								quidu      	"573A75220298")
-							    (object module "SchemeObject" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\SchemeObject.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD000A"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeObject"
-								quidu      	"573A73F201FB")
-							    (object module "ObjectTarget" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\ObjectTarget.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD0048"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::ObjectTarget"
-								quidu      	"5739BC2301AE")
-							    (object module "TargetComponent" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\TargetComponent.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD0081"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::TargetComponent"
-								quidu      	"573A76FE027A")
-							    (object module "Target" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\Target.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD008B"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::Target"
-								quidu      	"5739B84900EE")
-							    (object module "TargetType" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\TargetType.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD0095"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::TargetType"
-								quidu      	"573A75C103E6")
-							    (object module "SchemeObjectComponent" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\SchemeObjectComponent.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD009D"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeObjectComponent"
-								quidu      	"573BCCA5039D")
-							    (object module "Scheme" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\Scheme.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD00A6"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::Scheme"
-								quidu      	"573A7335005D")
-							    (object module "SchemeDomainService" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\SchemeDomainService.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590125"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeDomainService"
-								quidu      	"5739B724019A")
-							    (object module "ObjectTargetRepo" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\ObjectTargetRepo.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590177"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::ObjectTargetRepo"
-								quidu      	"5739BC3401F4")
-							    (object module "TargetRepo" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\TargetRepo.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590183"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::TargetRepo"
-								quidu      	"5739B83202AA")
-							    (object module "SchemeRepo" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\SchemeRepo.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590187"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::scheme::SchemeRepo"
-								quidu      	"573C01E6023A"))
-							physical_presentations 	(list unit_reference_list))
-						    (object SubSystem "execute"
-							quid       	"573BDEDD0017"
-							physical_models 	(list unit_reference_list
-							    (object module "ObjectTargetExecute" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\execute\\ObjectTargetExecute.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573BDEDD0018"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecute"
-								quidu      	"573A6826014A")
-							    (object module "ObjectTargetExecuteDomainService" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\execute\\ObjectTargetExecuteDomainService.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590146"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteDomainService"
-								quidu      	"573A68A401F2")
-							    (object module "EvaluateVO" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\execute\\EvaluateVO.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590154"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::execute::EvaluateVO"
-								quidu      	"573A8B2102E5")
-							    (object module "TargetStateVO" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\execute\\TargetStateVO.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590165"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::execute::TargetStateVO"
-								quidu      	"573BD1850282")
-							    (object module "ObjectTargetExecuteRepo" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\execute\\ObjectTargetExecuteRepo.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590173"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::execute::ObjectTargetExecuteRepo"
-								quidu      	"573A68EA033B"))
-							physical_presentations 	(list unit_reference_list))
-						    (object SubSystem "target"
-							quid       	"573BDEDD0023"
-							physical_models 	(list unit_reference_list
-							    (object module "TargetDomainService" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\TargetDomainService.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-								quid       	"573C2E590135"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::TargetDomainService"
-								quidu      	"5739B865030D")
-							    (object SubSystem "frequency"
-								quid       	"573BDEDD0024"
-								physical_models 	(list unit_reference_list
-								    (object module "TargetFrequency" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\frequency\\TargetFrequency.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD0025"
-									stereotype 	""
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::frequency::TargetFrequency"
-									quidu      	"573A6A4C00D4")
-								    (object module "YearTargetFrequencyType" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\frequency\\YearTargetFrequencyType.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD002C"
-									stereotype 	""
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::frequency::YearTargetFrequencyType"
-									quidu      	"573A7CA00280")
-								    (object module "MonthTargetFrequencyType" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\frequency\\MonthTargetFrequencyType.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD0034"
-									stereotype 	""
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::frequency::MonthTargetFrequencyType"
-									quidu      	"573A7EB60011")
-								    (object module "QuarterTargetFrequencyType" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\frequency\\QuarterTargetFrequencyType.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD003D"
-									stereotype 	""
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::frequency::QuarterTargetFrequencyType"
-									quidu      	"573A7ECC0387")
-								    (object module "TargetFrequencyType" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\frequency\\TargetFrequencyType.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD0051"
-									stereotype 	""
-									realized_interfaces 	(list realize_rel_list
-									    (object Realize_Relationship
-										quid       	"573BDEDD0056"
-										supplier   	"Logical View::DesignModel::DesignElement::domain::organization::target::target::frequency::TargetFrequencyType"
-										quidu      	"573A69CA015C"))
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::frequency::TargetFrequencyType"
-									quidu      	"573A69CA015C")
-								    (object module "HalfYearTargetFrequencyType" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\frequency\\HalfYearTargetFrequencyType.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD00AF"
-									stereotype 	""
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::frequency::HalfYearTargetFrequencyType"
-									quidu      	"573BD6A3020B"))
-								physical_presentations 	(list unit_reference_list))
-							    (object SubSystem "score"
-								quid       	"573BDEDD005B"
-								physical_models 	(list unit_reference_list
-								    (object module "TargetScoreCalculatorFactory" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\score\\TargetScoreCalculatorFactory.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD005C"
-									stereotype 	""
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::score::TargetScoreCalculatorFactory"
-									quidu      	"573AD1D80102")
-								    (object module "ObjectScoreCalculator" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\score\\ObjectScoreCalculator.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD0064"
-									stereotype 	""
-									realized_interfaces 	(list realize_rel_list
-									    (object Realize_Relationship
-										quid       	"573BDEDD0069"
-										supplier   	"Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectScoreCalculator"
-										quidu      	"573AD13403E4"))
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectScoreCalculator"
-									quidu      	"573AD13403E4")
-								    (object module "ObjectTargetScoreCalculator" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\score\\ObjectTargetScoreCalculator.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD006E"
-									stereotype 	""
-									realized_interfaces 	(list realize_rel_list
-									    (object Realize_Relationship
-										quid       	"573BDEDD0073"
-										supplier   	"Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetScoreCalculator"
-										quidu      	"573AD127018A"))
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetScoreCalculator"
-									quidu      	"573AD127018A")
-								    (object module "ObjectTargetExecuteScoreCalculator" "NotAModuleType" "NotAModulePart"
-									attributes 	(list Attribute_Set
-									    (object Attribute
-										tool       	"Java"
-										name       	"FileName"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\target\\score\\ObjectTargetExecuteScoreCalculator.java")
-									    (object Attribute
-										tool       	"Java"
-										name       	"RootPath"
-										value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain"))
-									quid       	"573BDEDD0078"
-									stereotype 	""
-									realized_interfaces 	(list realize_rel_list
-									    (object Realize_Relationship
-										quid       	"573BDEDD007D"
-										supplier   	"Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetExecuteScoreCalculator"
-										quidu      	"573AD1030125"))
-									language   	"Java"
-									class      	"Logical View::DesignModel::DesignElement::domain::organization::target::target::score::ObjectTargetExecuteScoreCalculator"
-									quidu      	"573AD1030125"))
-								physical_presentations 	(list unit_reference_list)))
-							physical_presentations 	(list unit_reference_list)))
-						physical_presentations 	(list unit_reference_list)))
-					physical_presentations 	(list unit_reference_list)))
-				physical_presentations 	(list unit_reference_list))
-			    (object SubSystem "application"
-				quid       	"573C2E960044"
-				physical_models 	(list unit_reference_list
-				    (object SubSystem "organization"
-					quid       	"573C2E960045"
-					physical_models 	(list unit_reference_list
-					    (object SubSystem "target"
-						quid       	"573C2E960046"
-						physical_models 	(list unit_reference_list
-						    (object SubSystem "plan"
-							quid       	"573C2E960047"
-							physical_models 	(list unit_reference_list
-							    (object module "PlanAppService" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-application\\src\\main\\java\\com\\rofine\\gp\\application\\DesignModel\\DesignElement\\application\\organization\\target\\plan\\PlanAppService.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-application\\src\\main\\java\\com\\rofine\\gp\\application"))
-								quid       	"573C2E960048"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::application::organization::target::plan::PlanAppService"
-								quidu      	"5739B14302AB"))
-							physical_presentations 	(list unit_reference_list))
-						    (object SubSystem "execute"
-							quid       	"573C2E960063"
-							physical_models 	(list unit_reference_list
-							    (object module "ExecuteAppService" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-application\\src\\main\\java\\com\\rofine\\gp\\application\\DesignModel\\DesignElement\\application\\organization\\target\\execute\\ExecuteAppService.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-application\\src\\main\\java\\com\\rofine\\gp\\application"))
-								quid       	"573C2E960064"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::application::organization::target::execute::ExecuteAppService"
-								quidu      	"573A87A00353"))
-							physical_presentations 	(list unit_reference_list)))
-						physical_presentations 	(list unit_reference_list)))
-					physical_presentations 	(list unit_reference_list)))
-				physical_presentations 	(list unit_reference_list))
-			    (object SubSystem "portal"
-				quid       	"573C2EC80235"
-				physical_models 	(list unit_reference_list
-				    (object SubSystem "organization"
-					quid       	"573C2EC80236"
-					physical_models 	(list unit_reference_list
-					    (object SubSystem "target"
-						quid       	"573C2EC80237"
-						physical_models 	(list unit_reference_list
-						    (object SubSystem "execute"
-							quid       	"573C2EC80238"
-							physical_models 	(list unit_reference_list
-							    (object module "ExecuteController" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-portal\\src\\main\\java\\com\\rofine\\gp\\portal\\DesignModel\\DesignElement\\portal\\organization\\target\\execute\\ExecuteController.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-portal\\src\\main\\java\\com\\rofine\\gp\\portal"))
-								quid       	"573C2EC80239"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::portal::organization::target::execute::ExecuteController"
-								quidu      	"573A86B30181"))
-							physical_presentations 	(list unit_reference_list))
-						    (object SubSystem "plan"
-							quid       	"573C2EC80254"
-							physical_models 	(list unit_reference_list
-							    (object module "PlanController" "NotAModuleType" "NotAModulePart"
-								attributes 	(list Attribute_Set
-								    (object Attribute
-									tool       	"Java"
-									name       	"FileName"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-portal\\src\\main\\java\\com\\rofine\\gp\\portal\\DesignModel\\DesignElement\\portal\\organization\\target\\plan\\PlanController.java")
-								    (object Attribute
-									tool       	"Java"
-									name       	"RootPath"
-									value      	"E:\\my_workspace\\workprojects\\201605产品研发\\project\\gp-portal\\src\\main\\java\\com\\rofine\\gp\\portal"))
-								quid       	"573C2EC80255"
-								stereotype 	""
-								language   	"Java"
-								class      	"Logical View::DesignModel::DesignElement::portal::organization::target::plan::PlanController"
-								quidu      	"5739B21C00DB"))
-							physical_presentations 	(list unit_reference_list)))
-						physical_presentations 	(list unit_reference_list)))
-					physical_presentations 	(list unit_reference_list)))
-				physical_presentations 	(list unit_reference_list)))
-			physical_presentations 	(list unit_reference_list)))
-		physical_presentations 	(list unit_reference_list)))
+	physical_models 	(list unit_reference_list)
 	physical_presentations 	(list unit_reference_list
 	    (object Module_Diagram "Main"
 		quid       	"572BE87D0113"
