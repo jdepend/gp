@@ -1,5 +1,7 @@
 package com.rofine.gp.domain.organization.target.scheme;
 
+import com.rofine.gp.domain.organization.target.scheme.model.SchemeObject;
+
 public class SchemeObjectVO {
 
 	private String objectId;

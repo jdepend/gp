@@ -1,6 +1,6 @@
 //Source file: E:\\my_workspace\\workprojects\\201605��Ʒ�з�\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\Scheme.java
 
-package com.rofine.gp.domain.organization.target.scheme;
+package com.rofine.gp.domain.organization.target.scheme.model;
 
 import java.util.Date;
 import java.util.List;
@@ -16,7 +16,8 @@ import javax.persistence.UniqueConstraint;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.rofine.gp.domain.organization.target.TargetException;
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.scheme.SchemeObjectVO;
 import com.rofine.gp.platform.entity.IdEntity;
 import com.rofine.gp.platform.exception.GpException;
 

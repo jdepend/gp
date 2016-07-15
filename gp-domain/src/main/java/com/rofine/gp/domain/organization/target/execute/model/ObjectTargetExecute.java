@@ -1,6 +1,6 @@
 //Source file: E:\\my_workspace\\workprojects\\201605��Ʒ�з�\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\execute\\ObjectTargetExecute.java
 
-package com.rofine.gp.domain.organization.target.execute;
+package com.rofine.gp.domain.organization.target.execute.model;
 
 import java.util.Date;
 
@@ -12,9 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.rofine.gp.domain.organization.target.scheme.ObjectTarget;
-import com.rofine.gp.domain.organization.target.scheme.Scheme;
-import com.rofine.gp.domain.organization.target.scheme.Target;
+import com.rofine.gp.domain.organization.target.scheme.model.ObjectTarget;
+import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
+import com.rofine.gp.domain.organization.target.scheme.model.Target;
 import com.rofine.gp.domain.organization.target.target.frequency.TargetFrequency;
 import com.rofine.gp.platform.entity.IdEntity;
 

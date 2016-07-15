@@ -1,6 +1,6 @@
 //Source file: E:\\my_workspace\\workprojects\\201605��Ʒ�з�\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\ObjectTarget.java
 
-package com.rofine.gp.domain.organization.target.scheme;
+package com.rofine.gp.domain.organization.target.scheme.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.rofine.gp.domain.organization.target.TargetException;
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
 import com.rofine.gp.domain.organization.target.target.frequency.TargetFrequency;
 import com.rofine.gp.domain.organization.target.target.frequency.TargetFrequencyType;
 import com.rofine.gp.domain.organization.target.target.frequency.TargetFrequencyTypeFactory;

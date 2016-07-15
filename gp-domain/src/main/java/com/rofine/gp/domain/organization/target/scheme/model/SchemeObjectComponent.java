@@ -1,6 +1,6 @@
 //Source file: E:\\my_workspace\\workprojects\\201605��Ʒ�з�\\project\\gp-domain\\src\\main\\java\\com\\rofine\\gp\\domain\\DesignModel\\DesignElement\\domain\\organization\\target\\scheme\\SchemeObjectComponent.java
 
-package com.rofine.gp.domain.organization.target.scheme;
+package com.rofine.gp.domain.organization.target.scheme.model;
 
 import javax.persistence.Column;
 import javax.persistence.FetchType;

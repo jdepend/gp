@@ -1,4 +1,4 @@
-package com.rofine.gp.domain.organization.target.execute;
+package com.rofine.gp.domain.organization.target.execute.event;
 
 import org.springframework.context.ApplicationEvent;
 

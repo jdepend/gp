@@ -9,6 +9,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
+import com.rofine.gp.domain.organization.target.scheme.repo.SchemeRepo;
+
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class SchemeAdminDomainService {

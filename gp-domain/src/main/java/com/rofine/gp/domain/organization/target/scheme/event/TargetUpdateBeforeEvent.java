@@ -1,6 +1,8 @@
-package com.rofine.gp.domain.organization.target.scheme;
+package com.rofine.gp.domain.organization.target.scheme.event;
 
 import org.springframework.context.ApplicationEvent;
+
+import com.rofine.gp.domain.organization.target.scheme.model.Target;
 
 public class TargetUpdateBeforeEvent extends ApplicationEvent {
 

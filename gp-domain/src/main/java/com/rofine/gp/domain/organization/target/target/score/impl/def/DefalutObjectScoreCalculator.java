@@ -3,8 +3,8 @@ package com.rofine.gp.domain.organization.target.target.score.impl.def;
 import org.springframework.stereotype.Service;
 
 import com.rofine.gp.domain.organization.target.TargetException;
-import com.rofine.gp.domain.organization.target.scheme.ObjectTarget;
-import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
+import com.rofine.gp.domain.organization.target.scheme.model.ObjectTarget;
+import com.rofine.gp.domain.organization.target.scheme.model.SchemeObject;
 import com.rofine.gp.domain.organization.target.target.score.ObjectScoreCalculator;
 
 @Service

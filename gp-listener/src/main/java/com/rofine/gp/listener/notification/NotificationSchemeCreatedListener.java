@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.rofine.gp.application.notification.NotificationService;
 import com.rofine.gp.application.notification.NotificationVO;
-import com.rofine.gp.domain.organization.target.scheme.Scheme;
-import com.rofine.gp.domain.organization.target.scheme.SchemeCreatedEvent;
+import com.rofine.gp.domain.organization.target.scheme.event.SchemeCreatedEvent;
+import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
 
 @Service
 //@Async

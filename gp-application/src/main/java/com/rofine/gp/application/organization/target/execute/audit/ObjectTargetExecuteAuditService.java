@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecuteRepo;
+import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.execute.repo.ObjectTargetExecuteRepo;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.util.DateUtil;
 

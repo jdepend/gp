@@ -17,9 +17,9 @@ import com.rofine.gp.application.organization.target.execute.audit.ObjectTargetE
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.EvaluateVO;
 import com.rofine.gp.domain.organization.target.execute.FillVO;
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
 import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecuteDomainService;
-import com.rofine.gp.domain.organization.target.scheme.Target;
+import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.scheme.model.Target;
 import com.rofine.gp.platform.user.User;
 
 @Service

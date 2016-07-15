@@ -5,7 +5,7 @@ import java.util.Date;
 import org.springframework.beans.BeanUtils;
 
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExt;
-import com.rofine.gp.domain.organization.target.scheme.Scheme;
+import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
 
 public class SchemeVO {
 

@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Service;
 
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecuteFilledEvent;
+import com.rofine.gp.domain.organization.target.execute.event.ObjectTargetExecuteFilledEvent;
+import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
 
 @Service
 public class ObjectTargetExecuteFilledListener implements ApplicationListener<ObjectTargetExecuteFilledEvent> {

@@ -3,7 +3,7 @@
 package com.rofine.gp.domain.organization.target.target.score;
 
 import com.rofine.gp.domain.organization.target.TargetException;
-import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
+import com.rofine.gp.domain.organization.target.scheme.model.SchemeObject;
 
 public interface ObjectScoreCalculator 
 {

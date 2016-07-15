@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
+import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
 
 public interface RoleObjectTargetExecuteRepo extends CrudRepository<ObjectTargetExecute, String> {
 

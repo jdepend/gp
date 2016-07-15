@@ -3,7 +3,7 @@ package com.rofine.gp.listener.notification;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Service;
 
-import com.rofine.gp.domain.organization.target.scheme.SchemeStartedEvent;
+import com.rofine.gp.domain.organization.target.scheme.event.SchemeStartedEvent;
 
 @Service
 public class NotificationSchemeStartedListener implements ApplicationListener<SchemeStartedEvent> {

@@ -1,4 +1,4 @@
-package com.rofine.gp.domain.organization.target.scheme;
+package com.rofine.gp.domain.organization.target.scheme.load;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.rofine.gp.domain.organization.score.UnitScoreLoader;
+import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
+import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
+import com.rofine.gp.domain.organization.target.scheme.model.SchemeObject;
 
 @Service
 public class TargetUnitScoreLoader implements UnitScoreLoader {

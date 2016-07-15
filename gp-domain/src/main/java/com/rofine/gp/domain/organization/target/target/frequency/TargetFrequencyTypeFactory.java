@@ -1,7 +1,7 @@
 package com.rofine.gp.domain.organization.target.target.frequency;
 
 import com.rofine.gp.domain.organization.target.TargetException;
-import com.rofine.gp.domain.organization.target.scheme.Target;
+import com.rofine.gp.domain.organization.target.scheme.model.Target;
 
 public class TargetFrequencyTypeFactory {
 

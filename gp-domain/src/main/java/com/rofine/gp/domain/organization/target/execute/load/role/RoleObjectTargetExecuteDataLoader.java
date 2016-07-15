@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecute;
-import com.rofine.gp.domain.organization.target.execute.ObjectTargetExecuteDataLoader;
+import com.rofine.gp.domain.organization.target.execute.load.ObjectTargetExecuteDataLoader;
+import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.util.DateUtil;
 

@@ -1,8 +1,10 @@
-package com.rofine.gp.domain.organization.target.scheme;
+package com.rofine.gp.domain.organization.target.scheme.event;
 
 import java.util.List;
 
 import org.springframework.context.ApplicationEvent;
+
+import com.rofine.gp.domain.organization.target.scheme.SchemeObjectVO;
 
 public class Target2ObjectCreatedEvent extends ApplicationEvent {
 

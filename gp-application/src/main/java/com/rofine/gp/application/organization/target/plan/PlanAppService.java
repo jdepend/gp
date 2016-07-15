@@ -17,13 +17,13 @@ import com.rofine.gp.application.organization.target.execute.audit.ObjectTargetE
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExt;
 import com.rofine.gp.application.organization.target.plan.schemeext.SchemeExtService;
 import com.rofine.gp.domain.organization.target.TargetException;
-import com.rofine.gp.domain.organization.target.scheme.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.SchemeAdminDomainService;
 import com.rofine.gp.domain.organization.target.scheme.SchemeDomainService;
-import com.rofine.gp.domain.organization.target.scheme.SchemeObject;
 import com.rofine.gp.domain.organization.target.scheme.SchemeObjectVO;
-import com.rofine.gp.domain.organization.target.scheme.Target;
-import com.rofine.gp.domain.organization.target.scheme.TargetType;
+import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
+import com.rofine.gp.domain.organization.target.scheme.model.SchemeObject;
+import com.rofine.gp.domain.organization.target.scheme.model.Target;
+import com.rofine.gp.domain.organization.target.scheme.model.TargetType;
 import com.rofine.gp.platform.user.User;
 
 @Service
