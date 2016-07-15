@@ -5,6 +5,7 @@ package com.rofine.gp.portal.login;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,10 +19,36 @@ import com.rofine.gp.platform.user.UserUtil;
 import com.rofine.gp.platform.user.impl.UserImpl;
 
 @Controller
-@RequestMapping(value = "/login")
 public class LoginController {
+	
+	private Logger logger = Logger.getLogger(LoginController.class);
 
-	@RequestMapping(value = "/user/{userId}/org/{orgId}/dept/{deptId}/role/{roleIds}", method = RequestMethod.GET)
+	private static final String LOGIN_PAGE = "account/login";
+	private static final String UNAUTHORIZED_PAGE = "account/unauthorized";
+
+	@RequestMapping(value = "login", method = RequestMethod.GET)
+	public String login() {
+		return LOGIN_PAGE;
+	}
+	
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public String fail1(Model model) {
+		model.addAttribute("msg", "登录失败！");
+		return LOGIN_PAGE;
+	}
+
+	@RequestMapping(value = "login/success", method = RequestMethod.GET)
+	public String success() {
+		return "redirect:/index";
+	}
+	
+	@RequestMapping(value = "unauthorized", method = RequestMethod.GET)
+	public String unauthorized(Model model) {
+		model.addAttribute("msg", "您不能访问该资源！");
+		return UNAUTHORIZED_PAGE;
+	}
+
+	@RequestMapping(value = "login/user/{userId}/org/{orgId}/dept/{deptId}/role/{roleIds}", method = RequestMethod.GET)
 	public String login(@PathVariable String userId, @PathVariable String orgId, @PathVariable String deptId, @PathVariable String roleIds, Model model) {
 		
 		model.addAttribute("userId", userId);
@@ -32,7 +59,7 @@ public class LoginController {
 		return "login";
 	}
 
-	@RequestMapping(value = "/user/{userId}/org/{orgId}/dept/{deptId}/role/{roleIds}", method = RequestMethod.POST)
+	@RequestMapping(value = "login/user/{userId}/org/{orgId}/dept/{deptId}/role/{roleIds}", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Object> login(@ModelAttribute("user") UserImpl user) throws TargetException {
 

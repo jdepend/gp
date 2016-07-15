@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>gp-portal</artifactId>
 	<name>gp-portal</name>
-	<packaging>war</packaging>  
+	<packaging>war</packaging>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -39,24 +39,46 @@
 			<artifactId>gp-rest</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
+
+		<!-- SECURITY begin -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<!-- SECURITY end -->
 	</dependencies>
-	
+
 	<build>
 		<plugins>
-		    <!-- 
+			<!-- 
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-                    <path>/gp</path>
-                    <port>8082</port>
-                    <uriEncoding>UTF-8</uriEncoding>
-                    <url>http://localhost:8082/gp</url>
-                    <server>tomcat7</server>
-                </configuration>
+					<path>/gp</path>
+					<port>8082</port>
+					<uriEncoding>UTF-8</uriEncoding>
+					<url>http://localhost:8082/gp</url>
+					<server>tomcat7</server>
+				</configuration>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -78,7 +100,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			-->
+			 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -95,5 +117,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	 
+
 </project>

@@ -13,10 +13,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import com.rofine.gp.platform.bean.ApplicationContextUtil;
 
 @EnableAutoConfiguration
-@EnableJpaRepositories(basePackages = { "com.rofine.gp.*" })
-@EntityScan(basePackages = { "com.rofine.gp.*" })
-@ComponentScan(basePackages = { "com.rofine.gp.*" })
-@ImportResource(locations={"classpath:application-bean.xml"})
+@EnableJpaRepositories(basePackages = { "com.rofine.gp.*","org.apache.shiro.*" })
+@EntityScan(basePackages = { "com.rofine.gp.*","org.apache.shiro.*" })
+@ComponentScan(basePackages = { "com.rofine.gp.*","org.apache.shiro.*" })
+@ImportResource(locations={"classpath:application-bean.xml","classpath:spring-shiro.xml"})
 @EnableScheduling
 @EnableAsync
 public class Application {
