@@ -18,7 +18,7 @@
 	</bean>
 
 	<!-- 項目自定义的Realm -->
-	<bean id="shiroRealm" class="org.apache.shiro.realm.text.IniRealm">
+	<bean id="shiroRealm" class="com.rofine.gp.portal.security.GpRealm">
 		<property name="resourcePath" value="classpath:shiro-users.ini"/>
 	</bean>
 	
@@ -26,7 +26,6 @@
     <bean id="formAuthenticationFilter" class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
         <property name="usernameParam" value="username"/>
         <property name="passwordParam" value="password"/>
-        <property name="loginUrl" value="/login.jsp"/>
     </bean>
 
 	<!-- Shiro Filter -->
