@@ -36,8 +36,7 @@ import com.rofine.gp.domain.organization.target.scheme.model.TargetType;
 import com.rofine.gp.platform.bean.ApplicationContextUtil;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
-import com.rofine.gp.platform.user.UserUtil;
-import com.rofine.gp.platform.user.impl.UserImpl;
+import com.rofine.gp.platform.user.UserImpl;
 import com.rofine.gp.platform.util.DateUtil;
 
 @Service
@@ -195,8 +194,6 @@ public class DomainTestService {
 		adminUser.setOrgId("org111");
 		adminUser.setDeptId("dept111");
 		adminUser.setRoleIds(Arrays.asList("role111", "role222"));
-
-		UserUtil.setUser(adminUser);
 
 		// 创建方案
 		this.createSchemeSelf();
@@ -380,8 +377,6 @@ public class DomainTestService {
 		fillUser222.setDeptId("dept222");// 填报部门
 		fillUser222.setRoleIds(Arrays.asList("role_fill_111", "role_fill_222"));
 
-		UserUtil.setUser(fillUser222);
-
 		// 获取填报数据
 		List<ObjectTargetExecute> executeFill222s = objectTargetExecuteDomainService.getFillingExecutes(scheme.getId(),
 				fillUser222);
@@ -412,8 +407,6 @@ public class DomainTestService {
 		fillUser333.setDeptId("dept333");// 填报部门
 		fillUser333.setRoleIds(Arrays.asList("role_fill_111", "role_fill_222"));
 
-		UserUtil.setUser(fillUser333);
-
 		// 获取填报数据
 		List<ObjectTargetExecute> executeFill333s = objectTargetExecuteDomainService.getFillingExecutes(scheme.getId(),
 				fillUser333);
@@ -443,8 +436,6 @@ public class DomainTestService {
 		evaluateUser999.setDeptId("dept999");// 考核部门
 		evaluateUser999.setRoleIds(Arrays.asList("role_evaluate_999", "role_evaluate_999"));
 
-		UserUtil.setUser(evaluateUser999);
-
 		// 获取打分数据
 		List<ObjectTargetExecute> executeEvaluate999s = objectTargetExecuteDomainService.getEvaluatingExecutes(
 				scheme.getId(), evaluateUser999);
@@ -473,8 +464,6 @@ public class DomainTestService {
 		evaluateUser888.setOrgId("org111");
 		evaluateUser888.setDeptId("dept888");// 考核部门
 		evaluateUser888.setRoleIds(Arrays.asList("role_evaluate_888", "role_evaluate_888"));
-
-		UserUtil.setUser(evaluateUser888);
 
 		// 获取打分数据
 		List<ObjectTargetExecute> executeEvaluate888s = objectTargetExecuteDomainService.getEvaluatingExecutes(

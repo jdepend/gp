@@ -1,6 +1,7 @@
-package com.rofine.gp.platform.user;
+package com.rofine.gp.application.user;
 
 import com.rofine.gp.platform.exception.GpException;
+import com.rofine.gp.platform.user.User;
 
 public class UserUtil {
 	

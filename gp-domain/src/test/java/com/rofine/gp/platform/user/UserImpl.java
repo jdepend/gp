@@ -1,4 +1,4 @@
-package com.rofine.gp.platform.user.impl;
+package com.rofine.gp.platform.user;
 
 import java.util.List;
 

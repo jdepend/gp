@@ -6,9 +6,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
-import com.rofine.gp.platform.user.User;
-import com.rofine.gp.platform.user.impl.UserImpl;
-
 @Service
 public class CacheTestService {
 
@@ -16,16 +13,25 @@ public class CacheTestService {
 	private StringRedisTemplate redisTemplate;
 
 	public void testRedis() {
+		
+		redisTemplate.delete("test");
+		
 		redisTemplate.opsForValue().append("test", "test");
 	}
 
-	@Cacheable(value = "userCache", key = "#userId")
-	public User testEhcache(String userId) {
-		return new UserImpl();
+	@Cacheable(value = "testCache", key = "#testId")
+	public CacheVO testEhcache(String testId) {
+		
+		CacheVO cacheVO = new CacheVO();
+		
+		cacheVO.setId("test");
+		cacheVO.setName("测试");
+		
+		return cacheVO;
 	}
 
-	@CacheEvict(value = "userCache", key = "#userId")
-	public void testDeleteEhcache(String userId) {
+	@CacheEvict(value = "testCache", key = "#testId")
+	public void testDeleteEhcache(String testId) {
 
 	}
 

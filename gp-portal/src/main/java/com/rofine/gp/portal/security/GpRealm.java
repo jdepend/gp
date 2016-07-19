@@ -11,9 +11,9 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.rofine.gp.application.user.UserService;
+import com.rofine.gp.application.user.UserUtil;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
-import com.rofine.gp.platform.user.UserUtil;
 
 public class GpRealm extends IniRealm {
 	
