@@ -8,13 +8,17 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.text.IniRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import com.rofine.gp.application.user.UserService;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.user.UserUtil;
-import com.rofine.gp.platform.user.impl.UserImpl;
 
 public class GpRealm extends IniRealm {
+	
+	@Autowired
+	private UserService userService;
 
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(
@@ -24,8 +28,7 @@ public class GpRealm extends IniRealm {
 
 		String userId = (String) token.getPrincipal();
 
-		User user = new UserImpl();
-		user.setId(userId);
+		User user = userService.getUser(userId);
 		UserUtil.setUser(user);
 
 		return info;
