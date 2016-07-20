@@ -8,6 +8,7 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.text.IniRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.SimplePrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.rofine.gp.application.user.UserService;
@@ -29,8 +30,11 @@ public class GpRealm extends IniRealm {
 		String userId = (String) token.getPrincipal();
 
 		User user = userService.getUser(userId);
-		UserUtil.setUser(user);
-
+		
+		SimplePrincipalCollection principals = (SimplePrincipalCollection)info.getPrincipals();
+		principals.clear();
+		principals.add(user, "userId");
+		
 		return info;
 	}
 

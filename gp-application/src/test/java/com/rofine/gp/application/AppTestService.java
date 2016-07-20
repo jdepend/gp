@@ -13,11 +13,9 @@ import com.rofine.gp.application.organization.target.execute.audit.AuditFillVO;
 import com.rofine.gp.application.organization.target.execute.audit.ObjectTargetExecuteAuditService;
 import com.rofine.gp.application.organization.target.plan.PlanAppService;
 import com.rofine.gp.application.organization.target.plan.SchemeVO;
-import com.rofine.gp.application.user.UserUtil;
 import com.rofine.gp.domain.DomainTestService;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.execute.model.ObjectTargetExecute;
-import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
 import com.rofine.gp.platform.user.UserImpl;
@@ -94,8 +92,6 @@ public class AppTestService extends DomainTestService {
 		auditFillUser222.setDeptId("dept222");// 填报部门
 		auditFillUser222.setRoleIds(Arrays.asList("role_audit_fill_111", "role_audit_fill_222"));
 
-		UserUtil.setUser(auditFillUser222);
-
 		// 获取填报审核数据
 		List<ObjectTargetExecute> executeFill222s = objectTargetExecuteAuditService.getAuditFillingExecutes(
 				scheme.getId(), auditFillUser222);
@@ -125,8 +121,6 @@ public class AppTestService extends DomainTestService {
 		auditFillUser333.setOrgId("org111");
 		auditFillUser333.setDeptId("dept333");// 填报部门
 		auditFillUser333.setRoleIds(Arrays.asList("role_audit_fill_111", "role_audit_fill_222"));
-
-		UserUtil.setUser(auditFillUser333);
 
 		// 获取填报审核数据
 		List<ObjectTargetExecute> executeFill333s = objectTargetExecuteAuditService.getAuditFillingExecutes(
