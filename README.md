@@ -12,7 +12,7 @@
 - 10、采用可捕获异常来定义业务异常，并建立异常树来分类业务异常；
 - 11、通过实体关系获取实体将不再通过Repo来获取，只通过实体上的引用获取；
 - 12、当通过定制条件获取实体时使用Repo；
-- 13、除了创建实体外，其他操作尽量在DomainService后通过Repo.fin实例化实体；
+- 13、除了创建实体外，其他操作尽量在DomainService后通过Repo.find实例化实体；
 - 14、领域逻辑尽量附着在实体上，其次是DomainService；
 - 15、非领域逻辑不允许被DomainService和Entity依赖；
 - 16、领域事件由DomainService抛出；

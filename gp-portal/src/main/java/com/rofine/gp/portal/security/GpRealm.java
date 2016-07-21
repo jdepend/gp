@@ -1,6 +1,6 @@
 package com.rofine.gp.portal.security;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -29,7 +29,7 @@ public class GpRealm extends IniRealm {
 		User user = userService.getUser(userId);
 		
 		SimpleAccount simpleAccount = (SimpleAccount)info;
-		user.setRoleIds((List<String>)simpleAccount.getRoles());
+		user.setRoleIds(new ArrayList<String>(simpleAccount.getRoles()));
 		
 		SimplePrincipalCollection principals = (SimplePrincipalCollection)info.getPrincipals();
 		principals.clear();
