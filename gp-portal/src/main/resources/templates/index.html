@@ -8,6 +8,6 @@
 <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 </head>
 <body>
-	Welcome <input type="text" name="userName" value="James Carrot" th:value="${user.name}" />!
+	Welcome <label th:text="${user.name}" /> !
 </body>
 </html>

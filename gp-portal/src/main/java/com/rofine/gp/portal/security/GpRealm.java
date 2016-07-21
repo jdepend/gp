@@ -23,6 +23,9 @@ public class GpRealm extends IniRealm {
 			AuthenticationToken token) throws AuthenticationException {
 
 		AuthenticationInfo info = super.doGetAuthenticationInfo(token);
+		if(info == null){
+			return null;
+		}
 
 		String userId = (String) token.getPrincipal();
 

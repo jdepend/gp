@@ -11,6 +11,7 @@
 	<div class="login">
 		<div class="login-form">
 			<form name="f" th:action="@{/login}" method="POST">
+			    <p style="color: red; margin-left: 10px;" th:text="${msg}" />
 				<div class="control-group">
 					<div class="controls">
 						<div
