@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.rofine.gp.application.organization.target.plan.PlanAppService;
 import com.rofine.gp.application.organization.target.plan.SchemeVO;
-import com.rofine.gp.application.user.UserUtil;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.domain.organization.target.scheme.model.Scheme;
 import com.rofine.gp.domain.organization.target.scheme.model.SchemeObject;
@@ -29,6 +28,7 @@ import com.rofine.gp.domain.organization.target.scheme.model.Target;
 import com.rofine.gp.domain.organization.target.scheme.model.TargetType;
 import com.rofine.gp.platform.exception.GpException;
 import com.rofine.gp.platform.user.User;
+import com.rofine.gp.portal.security.UserUtil;
 
 @Controller
 @RequestMapping(value = "/scheme")

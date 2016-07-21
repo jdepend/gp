@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.rofine.gp.application.user.UserUtil;
 import com.rofine.gp.domain.organization.target.TargetException;
 import com.rofine.gp.platform.user.UserImpl;
+import com.rofine.gp.portal.security.UserUtil;
 
 @Controller
 public class LoginController {
