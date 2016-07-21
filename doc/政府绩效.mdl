@@ -7776,11 +7776,11 @@
 								vertices   	(list Points
 								    (3918, 2482)
 								    (3918, 2603)
-								    (2844, 2603)
-								    (2844, 2356))
+								    (2843, 2603)
+								    (2843, 2356))
 								line_style 	3
 								origin_attachment 	(3918, 2482)
-								terminal_attachment 	(2844, 2356)
+								terminal_attachment 	(2843, 2356)
 								label      	(object SegLabel @320
 								    Parent_View 	@319
 								    location   	(2912, 2499)
@@ -8112,11 +8112,11 @@
 								supplier   	@321
 								vertices   	(list Points
 								    (3119, 1357)
-								    (2227, 1357)
-								    (2227, 1496))
+								    (2225, 1357)
+								    (2225, 1496))
 								line_style 	3
 								origin_attachment 	(3119, 1357)
-								terminal_attachment 	(2227, 1496)
+								terminal_attachment 	(2225, 1496)
 								label      	(object SegLabel @337
 								    Parent_View 	@336
 								    location   	(2313, 1426)
@@ -10225,11 +10225,11 @@
 								supplier   	@422
 								vertices   	(list Points
 								    (506, 3441)
-								    (382, 3441)
-								    (382, 2956))
+								    (381, 3441)
+								    (381, 2956))
 								line_style 	3
 								origin_attachment 	(506, 3441)
-								terminal_attachment 	(382, 2956)
+								terminal_attachment 	(381, 2956)
 								label      	(object SegLabel @432
 								    Parent_View 	@431
 								    location   	(451, 3016)
@@ -13274,11 +13274,11 @@
 									    vertices   	(list Points
 										(1928, 1347)
 										(1928, 1260)
-										(989, 1260)
-										(989, 1358))
+										(988, 1260)
+										(988, 1358))
 									    line_style 	3
 									    origin_attachment 	(1928, 1347)
-									    terminal_attachment 	(989, 1358)
+									    terminal_attachment 	(988, 1358)
 									    x_offset   	FALSE)
 									(object TransView "" @533
 									    font       	(object Font
@@ -14863,11 +14863,11 @@
 								supplier   	@562
 								vertices   	(list Points
 								    (342, 1692)
-								    (154, 1692)
-								    (154, 1039))
+								    (153, 1692)
+								    (153, 1039))
 								line_style 	3
 								origin_attachment 	(342, 1692)
-								terminal_attachment 	(154, 1039)
+								terminal_attachment 	(153, 1039)
 								label      	(object SegLabel @603
 								    Parent_View 	@602
 								    location   	(216, 1576)
@@ -15472,11 +15472,11 @@
 								supplier   	@615
 								vertices   	(list Points
 								    (2573, 1999)
-								    (2709, 1999)
-								    (2709, 1048))
+								    (2708, 1999)
+								    (2708, 1048))
 								line_style 	3
 								origin_attachment 	(2573, 1999)
-								terminal_attachment 	(2709, 1048))))
+								terminal_attachment 	(2708, 1048))))
 						    (object AttachView "" @634
 							stereotype 	TRUE
 							line_color 	3342489
@@ -26556,24 +26556,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"5787456B02AC"
-						compartment 	(object Compartment
-						    Parent_View 	@1025
-						    location   	(653, 915)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	13434879
-						    anchor     	2
-						    nlines     	3
-						    max_width  	290
-						    justify    	1)
 						width      	404
 						height     	282
 						annotation 	8
@@ -26604,24 +26586,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"578745E10223"
-						compartment 	(object Compartment
-						    Parent_View 	@1026
-						    location   	(701, 2269)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	13434879
-						    anchor     	2
-						    nlines     	2
-						    max_width  	171
-						    justify    	1)
 						width      	326
 						height     	232
 						annotation 	8
@@ -26662,24 +26626,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"5739B724019A"
-						compartment 	(object Compartment
-						    Parent_View 	@1028
-						    location   	(1598, 116)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	13434879
-						    anchor     	2
-						    nlines     	7
-						    max_width  	494
-						    justify    	1)
 						width      	512
 						height     	482
 						annotation 	8
@@ -26710,24 +26656,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"573A68A401F2"
-						compartment 	(object Compartment
-						    Parent_View 	@1029
-						    location   	(1574, 853)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	13434879
-						    anchor     	2
-						    nlines     	5
-						    max_width  	725
-						    justify    	1)
 						width      	746
 						height     	382
 						annotation 	8
@@ -26778,24 +26706,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"57563DB50211"
-						compartment 	(object Compartment
-						    Parent_View 	@1032
-						    location   	(1661, 1409)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	13434879
-						    anchor     	2
-						    nlines     	4
-						    max_width  	263
-						    justify    	1)
 						width      	374
 						height     	332
 						annotation 	8
@@ -26836,24 +26746,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"5739B14302AB"
-						compartment 	(object Compartment
-						    Parent_View 	@1034
-						    location   	(1701, 2024)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	13434879
-						    anchor     	2
-						    nlines     	4
-						    max_width  	363
-						    justify    	1)
 						width      	384
 						height     	332
 						annotation 	8
@@ -26934,24 +26826,6 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"5787475002E3"
-						compartment 	(object Compartment
-						    Parent_View 	@1038
-						    location   	(135, 1587)
-						    font       	(object Font
-							size       	10
-							face       	"Arial"
-							bold       	FALSE
-							italics    	FALSE
-							underline  	FALSE
-							strike     	FALSE
-							color      	0
-							default_color 	TRUE)
-						    icon_style 	"Icon"
-						    fill_color 	13434879
-						    anchor     	2
-						    nlines     	3
-						    max_width  	291
-						    justify    	1)
 						width      	312
 						height     	282
 						annotation 	8
@@ -38193,23 +38067,6 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"578744A500AB"
-				compartment 	(object Compartment
-				    Parent_View 	@1548
-				    location   	(1362, 514)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    anchor     	2
-				    nlines     	6
-				    max_width  	266
-				    justify    	0)
 				width      	58
 				height     	58
 				annotation 	8
@@ -38527,7 +38384,7 @@
 			    (1757, 2432))
 			line_style 	0)
 		    (object NoteView @1566
-			location   	(2508, 351)
+			location   	(2547, 351)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -38539,27 +38396,27 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1566
-			    location   	(2283, 261)
+			    location   	(2284, 264)
 			    fill_color 	13434879
 			    nlines     	3
-			    max_width  	415
+			    max_width  	490
 			    justify    	1
-			    label      	"描述目标组织范围、业务目标、识别业务流程")
+			    label      	"描述目标组织范围、业务目标、服务对象、识别业务流程")
 			line_color 	3342489
 			fill_color 	13434879
-			width      	475
-			height     	193)
+			width      	550
+			height     	187)
 		    (object AttachView "" @1567
 			stereotype 	TRUE
 			line_color 	3342489
 			client     	@1566
 			supplier   	@1551
 			vertices   	(list Points
-			    (2270, 377)
-			    (1963, 413))
+			    (2271, 380)
+			    (1963, 414))
 			line_style 	0)
 		    (object NoteView @1568
-			location   	(2517, 813)
+			location   	(2598, 792)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -38571,27 +38428,27 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1568
-			    location   	(2279, 710)
+			    location   	(2279, 673)
 			    fill_color 	13434879
 			    nlines     	4
-			    max_width  	441
+			    max_width  	603
 			    justify    	1
-			    label      	"描述业务流程步骤、参与的岗位、业务实体及其规则")
+			    label      	"描述业务流程步骤、参与的岗位、业务实体及其规则；通过增加待建软件系统改进业务流程")
 			line_color 	3342489
 			fill_color 	13434879
-			width      	501
-			height     	219)
+			width      	663
+			height     	250)
 		    (object AttachView "" @1569
 			stereotype 	TRUE
 			line_color 	3342489
 			client     	@1568
 			supplier   	@1552
 			vertices   	(list Points
-			    (2266, 836)
-			    (1976, 865))
+			    (2266, 829)
+			    (1976, 862))
 			line_style 	0)
 		    (object NoteView @1570
-			location   	(2559, 1221)
+			location   	(2613, 1221)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -38603,15 +38460,15 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1570
-			    location   	(2290, 1112)
+			    location   	(2291, 1112)
 			    fill_color 	13434879
 			    nlines     	4
-			    max_width  	503
+			    max_width  	609
 			    justify    	1
-			    label      	"将业务步骤转化成系统使用场景，总结使用系统的用户")
+			    label      	"将业务步骤/待建软件系统的职责转化成系统使用场景，总结使用系统的用户")
 			line_color 	3342489
 			fill_color 	13434879
-			width      	563
+			width      	669
 			height     	231)
 		    (object AttachView "" @1571
 			stereotype 	TRUE
@@ -38619,11 +38476,11 @@
 			client     	@1570
 			supplier   	@1553
 			vertices   	(list Points
-			    (2277, 1255)
-			    (1970, 1294))
+			    (2278, 1259)
+			    (1970, 1296))
 			line_style 	0)
 		    (object NoteView @1572
-			location   	(2571, 1689)
+			location   	(2613, 1692)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -38635,24 +38492,24 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1572
-			    location   	(2292, 1583)
+			    location   	(2291, 1583)
 			    fill_color 	13434879
 			    nlines     	4
-			    max_width  	522
+			    max_width  	609
 			    justify    	1
-			    label      	"分析使用系统的场景，识别完成场景的软件中的概念及其规则")
+			    label      	"分析使用系统的场景，识别完成场景的软件中的概念及其规则；规划系统的概念性组成")
 			line_color 	3342489
 			fill_color 	13434879
-			width      	582
-			height     	225)
+			width      	669
+			height     	231)
 		    (object AttachView "" @1573
 			stereotype 	TRUE
 			line_color 	3342489
 			client     	@1572
 			supplier   	@1554
 			vertices   	(list Points
-			    (2279, 1719)
-			    (1973, 1754))
+			    (2278, 1725)
+			    (1973, 1756))
 			line_style 	0)
 		    (object NoteView @1574
 			location   	(2640, 2067)
@@ -38672,7 +38529,7 @@
 			    nlines     	4
 			    max_width  	659
 			    justify    	1
-			    label      	"将软件中的概念推进到设计层面，建立软件系统的逻辑结构")
+			    label      	"将软件中的概念推进到设计层面，建立软件系统的逻辑结构，总结设计规范")
 			line_color 	3342489
 			fill_color 	13434879
 			width      	719
@@ -38704,7 +38561,7 @@
 			    nlines     	3
 			    max_width  	465
 			    justify    	1
-			    label      	"将软件结构中的实体映射成数据库表")
+			    label      	"将软件结构中的实体映射成数据库表或其他可持久化对象")
 			line_color 	3342489
 			fill_color 	13434879
 			width      	525
@@ -38736,7 +38593,7 @@
 			    nlines     	4
 			    max_width  	552
 			    justify    	1
-			    label      	"将逻辑结构映射为运行和部署结构")
+			    label      	"将逻辑结构映射为运行和部署结构，说明性能、安全性等方面的考虑")
 			line_color 	3342489
 			fill_color 	13434879
 			width      	612
@@ -38768,7 +38625,7 @@
 			    nlines     	4
 			    max_width  	509
 			    justify    	1
-			    label      	"将逻辑结构映射为开发工程结构")
+			    label      	"将逻辑结构映射为开发工程结构，确定开发环境、要求等")
 			line_color 	3342489
 			fill_color 	13434879
 			width      	569
@@ -39013,7 +38870,7 @@
 			    (1567, 2432))
 			line_style 	0)
 		    (object NoteView @1599
-			location   	(429, 456)
+			location   	(588, 471)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -39027,22 +38884,89 @@
 			    Parent_View 	@1599
 			    location   	(191, 390)
 			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	440
+			    nlines     	3
+			    max_width  	759
 			    justify    	1
-			    label      	"解决谁的什么问题")
+			    label      	
+|解决谁的什么问题
+|另附：《商业理由》钱是怎么挣的
+			    )
 			line_color 	3342489
 			fill_color 	13434879
-			width      	500
-			height     	144)
+			width      	819
+			height     	175)
 		    (object AttachView "" @1600
 			stereotype 	TRUE
 			line_color 	3342489
 			client     	@1599
 			supplier   	@1583
 			vertices   	(list Points
-			    (529, 528)
-			    (817, 737))
+			    (679, 558)
+			    (865, 737))
+			line_style 	0)
+		    (object NoteView @1601
+			location   	(330, 2136)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1601
+			    location   	(114, 2027)
+			    fill_color 	13434879
+			    nlines     	4
+			    max_width  	397
+			    justify    	1
+			    label      	"通过划分组件、抽象实体、识别接口等手段应对业务和产品需求")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	457
+			height     	231)
+		    (object AttachView "" @1602
+			stereotype 	TRUE
+			line_color 	3342489
+			client     	@1601
+			supplier   	@1593
+			vertices   	(list Points
+			    (457, 2020)
+			    (638, 1861))
+			line_style 	0)
+		    (object NoteView @1603
+			location   	(408, 897)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1603
+			    location   	(198, 831)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	384
+			    justify    	1
+			    label      	"可被软件支持的卖点")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	444
+			height     	144)
+		    (object AttachView "" @1604
+			stereotype 	TRUE
+			line_color 	3342489
+			client     	@1603
+			supplier   	@1582
+			vertices   	(list Points
+			    (512, 969)
+			    (817, 1180))
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"572BE87803DA"
