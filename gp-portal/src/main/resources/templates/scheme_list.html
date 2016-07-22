@@ -31,7 +31,10 @@
 							<td th:text="${scheme.state}"></td>                   
 							<td th:text="${scheme.description}"></td>             
 						</tr>                                                         
-					</table>                                                              
+					</table>
+					<form name="createObjectForm" method="GET" th:action="@{/scheme/create}">
+						<input type="submit" value="创建" class="btn btn-default"></input> 
+					</form>                                                           
 				</div>                                                                        
 			</div>                                                                                
 		</div>                                                                                        
