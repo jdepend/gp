@@ -59,6 +59,17 @@ public class PlanController {
 		return rtn;
 
 	}
+	
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public String listScheme(Model model) {
+
+		Pageable pageable = new PageRequest(0, 20);
+		Page<SchemeVO> schemes = planAppService.listScheme(pageable);
+
+		model.addAttribute("schemes", schemes);
+
+		return "scheme_list";
+	}
 
 	@RequestMapping(value = "/list/page/{page}/size/{size}", method = RequestMethod.GET)
 	public String listScheme(Model model, @PathVariable int page, @PathVariable int size) {

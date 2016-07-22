@@ -1,32 +1,41 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    layout:decorator="base/layout">
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Bootstrap 101 Template</title>
-<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
 </head>
-<body>
-	<form name="createObjectForm" method="POST">
-		<div>
-			<table border="1">
-				<tr>
-				    <th>Id</th>
-					<th>名字</th>
-					<th>年度</th>
-					<th>状态</th>
-					<th>描述</th>
-				</tr>
-				<tr th:each="scheme,schemeStat : ${schemes.content}">
-					<td th:text="${scheme.id}"></td>
-					<td th:text="${scheme.name}"></td>
-					<td th:text="${scheme.year}"></td>
-					<td th:text="${scheme.state}"></td>
-					<td th:text="${scheme.description}"></td>
-				</tr>
-			</table>
-		</div>
-	</form>
-</body>
+<body class="no-trans">                                                                                       
+	<!-- banner start -->                                                                                 
+	<!-- ================ -->                                                                             
+	<div layout:fragment="content" id="banner" class="banner">                                            
+		<div class="banner-image"></div>                                                              
+		<div class="banner-caption">                                                                  
+			<div class="container">                                                               
+				<div>                                                                         
+					<table border="1">                                                    
+						<tr>                                                          
+						    <th>Id</th>                                               
+							<th>名字</th>                                         
+							<th>年度</th>                                         
+							<th>状态</th>                                         
+							<th>描述</th>                                         
+						</tr>                                                         
+						<tr th:each="scheme,schemeStat : ${schemes.content}">         
+							<td th:text="${scheme.id}"></td>                      
+							<td th:text="${scheme.name}"></td>                    
+							<td th:text="${scheme.year}"></td>                    
+							<td th:text="${scheme.state}"></td>                   
+							<td th:text="${scheme.description}"></td>             
+						</tr>                                                         
+					</table>                                                              
+				</div>                                                                        
+			</div>                                                                                
+		</div>                                                                                        
+	</div>                                                                                                
+	<!-- banner end -->                                                                                   
+</body>                                                                                                       
 </html>
