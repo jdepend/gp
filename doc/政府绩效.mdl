@@ -63,7 +63,7 @@
 	gridY      	3
 	defaultFont 	(object Font
 	    size       	10
-	    face       	"Arial"
+	    face       	"ËÎÌו"
 	    bold       	FALSE
 	    italics    	FALSE
 	    underline  	FALSE
@@ -31881,7 +31881,7 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"573AD51D0350"
-						width      	57
+						width      	686
 						height     	2842
 						icon_height 	57
 						icon_width 	57
@@ -31990,7 +31990,7 @@
 						    y_coord    	16
 						    Nested     	TRUE))
 					    (object InterObjView "$UNNAMED$261" @1260
-						location   	(6336, 225)
+						location   	(6363, 225)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -32002,7 +32002,7 @@
 						    default_color 	TRUE)
 						label      	(object ItemLabel
 						    Parent_View 	@1260
-						    location   	(6336, 251)
+						    location   	(6363, 251)
 						    anchor_loc 	1
 						    nlines     	2
 						    max_width  	526
@@ -32013,14 +32013,14 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"573AD54C01C8"
-						width      	57
+						width      	538
 						height     	2842
 						icon_height 	57
 						icon_width 	57
 						icon_y_offset 	0
 						annotation 	1
 						Focus_Of_Control 	(object Focus_Of_Control "" @1261
-						    location   	(6336, 1767)
+						    location   	(6363, 1767)
 						    line_color 	3342489
 						    InterObjView 	@1260
 						    height     	90
@@ -32094,7 +32094,7 @@
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"573AD59A00C9"
-						width      	57
+						width      	432
 						height     	2842
 						icon_height 	57
 						icon_width 	57
@@ -32560,7 +32560,7 @@
 						    default_color 	TRUE)
 						label      	(object SegLabel @1290
 						    Parent_View 	@1289
-						    location   	(6109, 1723)
+						    location   	(6122, 1723)
 						    font       	(object Font
 							size       	10
 							face       	"Arial"
@@ -32585,7 +32585,7 @@
 						Focus_Src  	@1258
 						Focus_Entry 	@1261
 						origin     	(5898, 1767)
-						terminus   	(6320, 1767)
+						terminus   	(6347, 1767)
 						ordinal    	11)
 					    (object SelfMessView "setScore( )" @1291
 						location   	(3, 1872)
