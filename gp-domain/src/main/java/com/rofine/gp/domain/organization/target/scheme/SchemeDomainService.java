@@ -94,14 +94,17 @@ public class SchemeDomainService {
 
 	/**
 	 * @param schemeId
+	 * @throws TargetException 
 	 * @roseuid 573BC90901EE
 	 */
-	public List<TargetType> getTargetTypes(String schemeId) {
-
-		List<TargetType> types = new ArrayList<TargetType>();
-
-		return types;
-
+	public List<TargetType> getTargetTypes(String schemeId) throws TargetException {
+		
+		Scheme scheme = this.schemeRepo.findOne(schemeId);
+		if (scheme == null) {
+			throw new TargetException("schemeId=" + schemeId + "不存在");
+		}
+		
+		return scheme.getTargetTypes();
 	}
 
 	public Scheme createScheme(Scheme scheme, User user) {
