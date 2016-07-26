@@ -12,7 +12,6 @@
 	<!-- banner start -->                                                                                 
 	<!-- ================ -->                                                                             
 	<div layout:fragment="content" id="banner" class="banner">                                            
-		<div class="banner-image"></div>                                                              
 		<div class="banner-caption">                                                                  
 			<div class="container">                                                               
 				<div>                                                                         
@@ -22,14 +21,19 @@
 							<th>名字</th>                                         
 							<th>年度</th>                                         
 							<th>状态</th>                                         
-							<th>描述</th>                                         
+							<th>描述</th>
+							<th>操作</th>                                         
 						</tr>                                                         
 						<tr th:each="scheme,schemeStat : ${schemes.content}">         
 							<td th:text="${scheme.id}"></td>                      
 							<td th:text="${scheme.name}"></td>                    
 							<td th:text="${scheme.year}"></td>                    
 							<td th:text="${scheme.state}"></td>                   
-							<td th:text="${scheme.description}"></td>             
+							<td th:text="${scheme.description}"></td>
+							<td>
+							<input type="submit" value="启动" class="btn btn-default startBtn" th:if="${scheme.state =='init'}"></input>
+							<input type="submit" value="关闭" class="btn btn-default" th:if="${scheme.state =='started'}"></input>
+							</td>             
 						</tr>                                                         
 					</table>
 					<form name="createObjectForm" method="GET" th:action="@{/scheme/create}">
@@ -40,5 +44,15 @@
 		</div>                                                                                        
 	</div>                                                                                                
 	<!-- banner end -->                                                                                   
-</body>                                                                                                       
+</body>
+<script type="text/javascript">
+	alert("xxx");
+	debugger;
+	$('.startBtn').click(
+		function(){
+		   debugger;
+           
+        }
+	);
+</script>
 </html>
