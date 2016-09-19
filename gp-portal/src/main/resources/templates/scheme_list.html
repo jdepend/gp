@@ -31,10 +31,31 @@
 							<td th:text="${scheme.state}"></td>                   
 							<td th:text="${scheme.description}"></td>
 							<td>
-							<input type="submit" value="启动" class="btn btn-default startBtn" th:if="${scheme.state =='init'}"></input>
+							
+							<a href="start.html" class="btn btn-default"
+				               th:href="@{'/scheme/' + ${scheme.id} + '/target/type/create'}" 
+				               th:if="${scheme.state =='init'}">创建指标类型</a>
+							
+							<a href="start.html" class="btn btn-default"
+				               th:href="@{'/scheme/' + ${scheme.id} + '/target/create'}" 
+				               th:if="${scheme.state =='init'}">创建指标</a>
+							
+							<a href="start.html" class="btn btn-default"
+				               th:href="@{'/scheme/' + ${scheme.id} + '/target/list'}" 
+				               th:if="${scheme.state =='init'}">指标列表</a>
+							
+							<a href="start.html" class="btn btn-default"
+				               th:href="@{'/scheme/' + ${scheme.id} + '/object/create'}" 
+				               th:if="${scheme.state =='init'}">创建被考核对象</a>
+							
+							<a href="start.html" class="btn btn-default"
+				               th:href="@{'/scheme/' + ${scheme.id} + '/start'}" 
+				               th:if="${scheme.state =='init'}">启动</a>
+							
 							<a href="close.html" class="btn btn-default"
 				               th:href="@{'/scheme/' + ${scheme.id} + '/close'}" 
 				               th:if="${scheme.state =='started'}">关闭</a>
+				               
 							</td>             
 						</tr>                                                         
 					</table>
@@ -47,14 +68,4 @@
 	</div>                                                                                                
 	<!-- banner end -->                                                                                   
 </body>
-<script type="text/javascript">
-	alert("xxx");
-	debugger;
-	$('.startBtn').click(
-		function(){
-		   debugger;
-           
-        }
-	);
-</script>
 </html>

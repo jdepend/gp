@@ -27,11 +27,11 @@ public class User2Impl extends SuperEntity implements User {
 	private String name;
 
 	@NotEmpty(message = "部门不能为空")
-	@Column(length = 36)
+	@Column(length = 36, name = "dept_id")
 	private String deptId;
 
 	@NotEmpty(message = "单位不能为空")
-	@Column(length = 36)
+	@Column(length = 36, name = "org_id")
 	private String orgId;
 
 	@Transient
